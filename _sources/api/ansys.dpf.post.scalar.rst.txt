@@ -1,0 +1,4 @@
+.. automodule:: ansys.dpf.post.scalar
+   :members:
+   :undoc-members:
+   :show-inheritance:

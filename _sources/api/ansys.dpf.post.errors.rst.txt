@@ -1,0 +1,4 @@
+.. automodule:: ansys.dpf.post.errors
+   :members:
+   :undoc-members:
+   :show-inheritance:

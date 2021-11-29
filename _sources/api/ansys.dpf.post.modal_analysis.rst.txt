@@ -1,0 +1,4 @@
+.. automodule:: ansys.dpf.post.modal_analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:

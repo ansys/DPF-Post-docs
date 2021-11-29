@@ -1,0 +1,4 @@
+.. automodule:: ansys.dpf.post.vector
+   :members:
+   :undoc-members:
+   :show-inheritance:

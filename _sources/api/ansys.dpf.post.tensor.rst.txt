@@ -1,0 +1,4 @@
+.. automodule:: ansys.dpf.post.tensor
+   :members:
+   :undoc-members:
+   :show-inheritance:

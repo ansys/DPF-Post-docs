@@ -1,0 +1,10 @@
+ansys.dpf.post.examples package
+===============================
+
+Module contents
+---------------
+
+.. automodule:: ansys.dpf.post.examples
+   :members:
+   :undoc-members:
+   :show-inheritance:
