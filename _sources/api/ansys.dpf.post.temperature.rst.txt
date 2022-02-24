@@ -1,4 +1,0 @@
-.. automodule:: ansys.dpf.post.temperature
-   :members:
-   :undoc-members:
-   :show-inheritance:

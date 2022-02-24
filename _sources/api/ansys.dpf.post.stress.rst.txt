@@ -1,4 +1,0 @@
-.. automodule:: ansys.dpf.post.stress
-   :members:
-   :undoc-members:
-   :show-inheritance:

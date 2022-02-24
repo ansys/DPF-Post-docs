@@ -1,4 +1,0 @@
-.. automodule:: ansys.dpf.post.displacement
-   :members:
-   :undoc-members:
-   :show-inheritance:

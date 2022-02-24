@@ -1,4 +1,0 @@
-.. automodule:: ansys.dpf.post.dpf_solution
-   :members:
-   :undoc-members:
-   :show-inheritance:
