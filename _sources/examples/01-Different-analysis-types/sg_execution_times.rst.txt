@@ -5,14 +5,14 @@
 
 Computation times
 =================
-**00:04.111** total execution time for **examples_01-Different-analysis-types** files:
+**00:04.106** total execution time for **examples_01-Different-analysis-types** files:
 
 +--------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_01-Different-analysis-types_02-modal-analysis.py` (``02-modal-analysis.py``)         | 00:01.553 | 0.0 MB |
+| :ref:`sphx_glr_examples_01-Different-analysis-types_02-modal-analysis.py` (``02-modal-analysis.py``)         | 00:01.536 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_01-Different-analysis-types_01-static-analysis.py` (``01-static-analysis.py``)       | 00:01.347 | 0.0 MB |
+| :ref:`sphx_glr_examples_01-Different-analysis-types_01-static-analysis.py` (``01-static-analysis.py``)       | 00:01.354 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_01-Different-analysis-types_03-harmonic-analysis.py` (``03-harmonic-analysis.py``)   | 00:00.705 | 0.0 MB |
+| :ref:`sphx_glr_examples_01-Different-analysis-types_03-harmonic-analysis.py` (``03-harmonic-analysis.py``)   | 00:00.704 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_01-Different-analysis-types_04-transient-analysis.py` (``04-transient-analysis.py``) | 00:00.506 | 0.0 MB |
+| :ref:`sphx_glr_examples_01-Different-analysis-types_04-transient-analysis.py` (``04-transient-analysis.py``) | 00:00.513 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------------+-----------+--------+

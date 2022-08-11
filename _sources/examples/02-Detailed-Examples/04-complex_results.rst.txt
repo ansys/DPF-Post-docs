@@ -159,10 +159,10 @@ imaginary values)
 
  .. code-block:: none
 
-    Maximum displacement at phase 39.0: [[4.64261309e-310 4.64261256e-310 1.58101007e-322]]
+    Maximum displacement at phase 39.0: [[4.65134148e-310 4.65134148e-310 1.58101007e-322]]
     There are 1 fields
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f9cf4740cd0>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f20495ad460>
 
 
 
@@ -186,7 +186,7 @@ imaginary values)
  .. code-block:: none
 
 
-    DPFArray([[4.64261270e-310, 2.76952555e-009, 4.10914321e-010]])
+    DPFArray([[4.65134244e-310, 2.76952555e-009, 4.10914321e-010]])
 
 
 
