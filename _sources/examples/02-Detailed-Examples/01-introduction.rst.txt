@@ -242,7 +242,7 @@ the result must be set.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.037 seconds)
+   **Total running time of the script:** ( 0 minutes  0.102 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_01-introduction.py:
