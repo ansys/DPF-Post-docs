@@ -188,7 +188,7 @@ in the XX direction.
 
 
     Maximum data at stress field: [1.e-323 4.e-323]
-    Maximum SX at Field 0: 4.6750914991031e-310
+    Maximum SX at Field 0: 4.64890578701365e-310
 
 
 
@@ -237,12 +237,12 @@ directions, including 'XX', 'XY, 'XZ', 'XY', 'YZ', and 'XZ'.
       Data:6 components and 2 elementary data 
 
 
-    Maximum data at stress field: [[4.67509173e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+    Maximum data at stress field: [[4.64890579e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
       1.10325826e+011 1.85580244e+011]
      [1.53671424e+013 4.21781549e+008 3.78202198e+012 2.07950475e+011
       1.57995981e+011 1.09972131e+012]]
     Maximum Stress Tensors at Field 0:
-     [4.67509155e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+     [4.64890577e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
      1.10325826e+011 1.85580244e+011]
     Minimum Stress Field:
      DPF stress_1.s Field
@@ -252,12 +252,12 @@ directions, including 'XX', 'XY, 'XZ', 'XY', 'YZ', and 'XZ'.
       Data:6 components and 2 elementary data 
 
 
-    Minimum data at stress field: [[ 4.67509155e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+    Minimum data at stress field: [[ 4.64890577e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
       -2.42143056e+011 -3.09138563e+011]
      [-1.49601458e+013 -2.63695614e+008 -3.77945626e+012 -3.35432675e+011
       -1.57190152e+011 -9.66123233e+011]]
     Minimum Stress Tensors at Field 0:
-     [ 4.67509153e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+     [ 4.64890576e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
      -2.42143056e+011 -3.09138563e+011]
 
 
@@ -289,7 +289,7 @@ Use <subresult>.plot_contour() to plot a result.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.760 seconds)
+   **Total running time of the script:** ( 0 minutes  2.362 seconds)
 
 
 .. _sphx_glr_download_examples_00-Overview_00-overview_example.py:
