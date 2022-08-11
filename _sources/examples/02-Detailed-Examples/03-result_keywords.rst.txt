@@ -77,8 +77,6 @@ calling a result from a solution object.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     element_scoping: list, int or dpf.core.Scoping
@@ -87,6 +85,10 @@ calling a result from a solution object.
     mapdl_grouping: int. Write 186 to get mapdl_elements solid_186.
     named_selection: str. Name of named_selection.
     node_scoping: list, int or dpf.core.Scoping
+    path: DpfPath object that
+                contains a list of coordinates,
+                e.g. [[0.1, 0.0, 0.0],
+                [0.0, 0.1, 0.0]].
     set: int
     time: float
     time_scoping: list, int or dpf.core.Scoping
@@ -125,27 +127,25 @@ calling a result from a solution object.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-1.89351567e+10, -1.76835359e+10, -1.23315384e+10,
-             1.27527844e+10,  5.75103130e+09,  4.30928026e+09],
-           [ 2.26888166e+09, -1.98936699e+10, -4.28985472e+09,
-             3.73483930e+10,  1.28815250e+07,  2.29405491e+09],
-           [ 4.62267494e+09,  4.15775621e+10,  1.28377395e+10,
-             1.36264980e+10,  5.61091738e+09,  4.14261606e+09],
-           [ 3.07029586e+10,  6.01620111e+10,  9.52341402e+09,
-             2.26091377e+10, -1.73616087e+10, -4.64480973e+09],
-           [ 3.09432279e+10, -2.77392410e+09, -6.13098650e+09,
-             9.00784538e+09,  3.47990848e+08, -2.41304392e+10],
-           [ 2.80970793e+10,  5.10227200e+09,  4.87711840e+08,
-             1.04294881e+10,  1.77319514e+09, -3.26250573e+09],
-           [-3.35771187e+09, -7.58900634e+09, -5.19623475e+09,
-            -9.62379008e+08,  7.06462080e+07, -8.84417984e+08],
-           [-1.66533110e+10, -5.39330662e+09, -1.18382500e+10,
-            -3.91451443e+09,  7.81984448e+08,  1.12681376e+08]])
+    DPFArray([[-1.89351567e+10, -1.76835359e+10, -1.23315384e+10,
+                1.27527844e+10,  5.75103130e+09,  4.30928026e+09],
+              [ 2.26888166e+09, -1.98936699e+10, -4.28985472e+09,
+                3.73483930e+10,  1.28815250e+07,  2.29405491e+09],
+              [ 4.62267494e+09,  4.15775621e+10,  1.28377395e+10,
+                1.36264980e+10,  5.61091738e+09,  4.14261606e+09],
+              [ 3.07029586e+10,  6.01620111e+10,  9.52341402e+09,
+                2.26091377e+10, -1.73616087e+10, -4.64480973e+09],
+              [ 3.09432279e+10, -2.77392410e+09, -6.13098650e+09,
+                9.00784538e+09,  3.47990848e+08, -2.41304392e+10],
+              [ 2.80970793e+10,  5.10227200e+09,  4.87711840e+08,
+                1.04294881e+10,  1.77319514e+09, -3.26250573e+09],
+              [-3.35771187e+09, -7.58900634e+09, -5.19623475e+09,
+               -9.62379008e+08,  7.06462080e+07, -8.84417984e+08],
+              [-1.66533110e+10, -5.39330662e+09, -1.18382500e+10,
+               -3.91451443e+09,  7.81984448e+08,  1.12681376e+08]])
 
 
 
@@ -170,8 +170,6 @@ calling a result from a solution object.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -201,12 +199,10 @@ calling a result from a solution object.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f3372f3a290>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f9cf4740d90>
 
 
 
@@ -236,8 +232,6 @@ calling a result from a solution object.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     DPF  Time/Freq Support: 
@@ -246,7 +240,7 @@ calling a result from a solution object.
     1              1.000000       1              1               
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f3372ef5b10>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f9cf46e1430>
 
 
 
@@ -272,12 +266,10 @@ calling a result from a solution object.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f3372ecab50>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f9cf46dd6d0>
 
 
 
@@ -303,8 +295,6 @@ calling a result from a solution object.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -344,8 +334,6 @@ Same keywords can be used here. For complex result, the keyword
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Stress result.
@@ -362,28 +350,23 @@ Same keywords can be used here. For complex result, the keyword
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.274 seconds)
+   **Total running time of the script:** ( 0 minutes  0.084 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_03-result_keywords.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 03-result_keywords.py <03-result_keywords.py>`
 
-     :download:`Download Python source code: 03-result_keywords.py <03-result_keywords.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 03-result_keywords.ipynb <03-result_keywords.ipynb>`
+      :download:`Download Jupyter notebook: 03-result_keywords.ipynb <03-result_keywords.ipynb>`
 
 
 .. only:: html

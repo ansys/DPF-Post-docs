@@ -68,8 +68,6 @@ using Ansys Mechanical
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Modal Analysis Solution object.
@@ -79,14 +77,14 @@ using Ansys Mechanical
     ------------------------------
     DPF  DataSources: 
       Result files:
-         result key: rst and path: /home/vsts/.local/share/ansys-dpf-core/examples/testing/modal_allKindOfComplexity.rst 
+         result key: rst and path: /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/dpf/core/examples/testing/modal_allKindOfComplexity.rst 
       Secondary files:
 
 
     DPF Model
     ------------------------------
     Modal analysis
-    Unit system: Metric (m, kg, N, s, V, A)
+    Unit system: MKS: m, kg, N, s, V, A, degC
     Physics Type: Mecanic
     Available results:
          -  displacement: Nodal Displacement
@@ -208,8 +206,6 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -233,18 +229,16 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-1.17102876, -1.30206342, -1.1938849 ],
-           [-1.69750554, -1.68258886, -0.76327262],
-           [-2.24465543, -2.66699745, -1.36365734],
-           ...,
-           [ 0.        ,  0.        ,  0.        ],
-           [ 0.        ,  0.        ,  0.        ],
-           [ 0.        ,  0.        ,  0.        ]])
+    DPFArray([[-1.17102876, -1.30206342, -1.1938849 ],
+              [-1.69750554, -1.68258886, -0.76327262],
+              [-2.24465543, -2.66699745, -1.36365734],
+              ...,
+              [ 0.        ,  0.        ,  0.        ],
+              [ 0.        ,  0.        ,  0.        ],
+              [ 0.        ,  0.        ,  0.        ]])
 
 
 
@@ -264,12 +258,10 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[3.63870030e+05, 8.31378342e+20, 5.99358159e+21]])
+    DPFArray([[4.64261154e-310, 8.31378342e+020, 5.99358159e+021]])
 
 
 
@@ -289,12 +281,10 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-3.55151557e+05, -8.31378342e+20, -5.99358159e+21]])
+    DPFArray([[ 4.64261261e-310, -8.31378342e+020, -5.99358159e+021]])
 
 
 
@@ -314,12 +304,10 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([3.63870030e+05, 8.31378342e+20, 5.99358159e+21])
+    DPFArray([4.64261156e-310, 8.31378342e+020, 5.99358159e+021])
 
 
 
@@ -339,12 +327,10 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([-3.55151557e+05, -8.31378342e+20, -5.99358159e+21])
+    DPFArray([ 4.64261298e-310, -8.31378342e+020, -5.99358159e+021])
 
 
 
@@ -387,8 +373,6 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -413,8 +397,6 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -438,8 +420,6 @@ field for imaginary values.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -513,8 +493,6 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -530,28 +508,23 @@ The result file must contain those results.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.186 seconds)
+   **Total running time of the script:** ( 0 minutes  1.553 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_02-modal-analysis.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 02-modal-analysis.py <02-modal-analysis.py>`
 
-     :download:`Download Python source code: 02-modal-analysis.py <02-modal-analysis.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 02-modal-analysis.ipynb <02-modal-analysis.ipynb>`
+      :download:`Download Jupyter notebook: 02-modal-analysis.ipynb <02-modal-analysis.ipynb>`
 
 
 .. only:: html

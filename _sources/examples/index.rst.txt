@@ -1,9 +1,5 @@
 :orphan:
 
-
-
-.. _sphx_glr_examples:
-
 .. _gallery:
 
 ========
@@ -12,15 +8,16 @@ Examples
 Here are a series of examples DPF-Post module with ``ansys-dpf-post``.
 
 
+
 .. raw:: html
 
-    <div class="sphx-glr-clear"></div>
+    <div class="sphx-glr-thumbnails">
 
 
+.. raw:: html
 
-.. _sphx_glr_examples_00-Overview:
+    </div>
 
-.. _ref_overview:
 
 DPF-Post Overview
 ~~~~~~~~~~~~~~~~~
@@ -30,33 +27,30 @@ Here are a quick overview of DPF-Post module with ``ansys-dpf-post``.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF Overview of the POST API">
 
 .. only:: html
 
- .. figure:: /examples/00-Overview/images/thumb/sphx_glr_00-overview_example_thumb.png
-     :alt: ANSYS DPF Overview of the POST API
+  .. image:: /examples/00-Overview/images/thumb/sphx_glr_00-overview_example_thumb.png
+    :alt: ANSYS DPF Overview of the POST API
 
-     :ref:`sphx_glr_examples_00-Overview_00-overview_example.py`
+  :ref:`sphx_glr_examples_00-Overview_00-overview_example.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF Overview of the POST API</div>
+    </div>
+
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/00-Overview/00-overview_example
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_examples_01-Different-analysis-types:
-
-.. _ref_different_analysis:
 
 DPF-Post Analysis Types
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,24 +61,25 @@ Here are a series of analysis type focused examples with
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Static Analysis">
 
 .. only:: html
 
- .. figure:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_01-static-analysis_thumb.png
-     :alt: Static Analysis
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_01-static-analysis_thumb.png
+    :alt: Static Analysis
 
-     :ref:`sphx_glr_examples_01-Different-analysis-types_01-static-analysis.py`
+  :ref:`sphx_glr_examples_01-Different-analysis-types_01-static-analysis.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Static Analysis</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/01-Different-analysis-types/01-static-analysis
 
 .. raw:: html
 
@@ -92,20 +87,16 @@ Here are a series of analysis type focused examples with
 
 .. only:: html
 
- .. figure:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_02-modal-analysis_thumb.png
-     :alt: ANSYS DPF-Post: Modal Analysis
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_02-modal-analysis_thumb.png
+    :alt: ANSYS DPF-Post: Modal Analysis
 
-     :ref:`sphx_glr_examples_01-Different-analysis-types_02-modal-analysis.py`
+  :ref:`sphx_glr_examples_01-Different-analysis-types_02-modal-analysis.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post: Modal Analysis</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/01-Different-analysis-types/02-modal-analysis
 
 .. raw:: html
 
@@ -113,20 +104,16 @@ Here are a series of analysis type focused examples with
 
 .. only:: html
 
- .. figure:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_03-harmonic-analysis_thumb.png
-     :alt: ANSYS DPF-Post: Harmonic Analysis
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_03-harmonic-analysis_thumb.png
+    :alt: ANSYS DPF-Post: Harmonic Analysis
 
-     :ref:`sphx_glr_examples_01-Different-analysis-types_03-harmonic-analysis.py`
+  :ref:`sphx_glr_examples_01-Different-analysis-types_03-harmonic-analysis.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post: Harmonic Analysis</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/01-Different-analysis-types/03-harmonic-analysis
 
 .. raw:: html
 
@@ -134,29 +121,21 @@ Here are a series of analysis type focused examples with
 
 .. only:: html
 
- .. figure:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_04-transient-analysis_thumb.png
-     :alt: ANSYS DPF-Post: Transient Anaysis
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_04-transient-analysis_thumb.png
+    :alt: ANSYS DPF-Post: Transient Anaysis
 
-     :ref:`sphx_glr_examples_01-Different-analysis-types_04-transient-analysis.py`
+  :ref:`sphx_glr_examples_01-Different-analysis-types_04-transient-analysis.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post: Transient Anaysis</div>
+    </div>
+
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/01-Different-analysis-types/04-transient-analysis
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_examples_02-Detailed-Examples:
-
-.. _ref_detailed_examples:
 
 DPF-Post Detailed Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,24 +145,25 @@ Here are a series of detailed examples with the ``ansys-dpf-post`` module.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF Introduction to POST API">
 
 .. only:: html
 
- .. figure:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_01-introduction_thumb.png
-     :alt: ANSYS DPF Introduction to POST API
+  .. image:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_01-introduction_thumb.png
+    :alt: ANSYS DPF Introduction to POST API
 
-     :ref:`sphx_glr_examples_02-Detailed-Examples_01-introduction.py`
+  :ref:`sphx_glr_examples_02-Detailed-Examples_01-introduction.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF Introduction to POST API</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/02-Detailed-Examples/01-introduction
 
 .. raw:: html
 
@@ -191,20 +171,16 @@ Here are a series of detailed examples with the ``ansys-dpf-post`` module.
 
 .. only:: html
 
- .. figure:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_02-basics_thumb.png
-     :alt: ANSYS DPF Basic Features of the POST API
+  .. image:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_02-basics_thumb.png
+    :alt: ANSYS DPF Basic Features of the POST API
 
-     :ref:`sphx_glr_examples_02-Detailed-Examples_02-basics.py`
+  :ref:`sphx_glr_examples_02-Detailed-Examples_02-basics.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF Basic Features of the POST API</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/02-Detailed-Examples/02-basics
 
 .. raw:: html
 
@@ -212,20 +188,16 @@ Here are a series of detailed examples with the ``ansys-dpf-post`` module.
 
 .. only:: html
 
- .. figure:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_03-result_keywords_thumb.png
-     :alt: ANSYS DPF-POST Use result keywords
+  .. image:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_03-result_keywords_thumb.png
+    :alt: ANSYS DPF-POST Use result keywords
 
-     :ref:`sphx_glr_examples_02-Detailed-Examples_03-result_keywords.py`
+  :ref:`sphx_glr_examples_02-Detailed-Examples_03-result_keywords.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-POST Use result keywords</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /examples/02-Detailed-Examples/03-result_keywords
 
 .. raw:: html
 
@@ -233,10 +205,33 @@ Here are a series of detailed examples with the ``ansys-dpf-post`` module.
 
 .. only:: html
 
- .. figure:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_04-complex_results_thumb.png
-     :alt: Compute Complex Results from Modal or Harmonic Analyses
+  .. image:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_04-complex_results_thumb.png
+    :alt: Compute Complex Results from Modal or Harmonic Analyses
 
-     :ref:`sphx_glr_examples_02-Detailed-Examples_04-complex_results.py`
+  :ref:`sphx_glr_examples_02-Detailed-Examples_04-complex_results.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Compute Complex Results from Modal or Harmonic Analyses</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF-Post request results on specific path">
+
+.. only:: html
+
+  .. image:: /examples/02-Detailed-Examples/images/thumb/sphx_glr_05-result_on_path_of_coordinates_thumb.png
+    :alt: ANSYS DPF-Post request results on specific path
+
+  :ref:`sphx_glr_examples_02-Detailed-Examples_05-result_on_path_of_coordinates.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post request results on specific path</div>
+    </div>
+
 
 .. raw:: html
 
@@ -245,11 +240,11 @@ Here are a series of detailed examples with the ``ansys-dpf-post`` module.
 
 .. toctree::
    :hidden:
+   :includehidden:
 
-   /examples/02-Detailed-Examples/04-complex_results
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
+   /examples/00-Overview/index.rst
+   /examples/01-Different-analysis-types/index.rst
+   /examples/02-Detailed-Examples/index.rst
 
 
 

@@ -17,6 +17,7 @@ Submodules
 
    ansys.dpf.post.common
    ansys.dpf.post.displacement
+   ansys.dpf.post.dpf_path
    ansys.dpf.post.dpf_solution
    ansys.dpf.post.electric_results
    ansys.dpf.post.errors
@@ -42,6 +43,4 @@ Module contents
 ---------------
 
 .. automodule:: ansys.dpf.post
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   :inherited-members:

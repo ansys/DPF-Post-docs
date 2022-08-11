@@ -1,4 +1,2 @@
 .. automodule:: ansys.dpf.post.transient_analysis
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   :inherited-members:

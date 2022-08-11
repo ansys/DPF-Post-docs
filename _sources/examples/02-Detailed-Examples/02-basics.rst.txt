@@ -106,12 +106,10 @@ First will be created a displacement result.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-1.82645944e-06, -1.04473039e+01, -2.94677257e-04]])
+    DPFArray([[ 4.64261257e-310, -1.04473039e+001, -2.94677257e-004]])
 
 
 
@@ -144,41 +142,34 @@ First will be created a displacement result.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([1.67799854e+10, 2.72813681e-08, 3.21780912e+09, 4.87186215e+07,
-           7.36908062e+07, 1.88455508e+09])
+    DPFArray([4.64261255e-310, 2.72813681e-008, 3.21780912e+009,
+              4.87186215e+007, 7.36908062e+007, 1.88455508e+009])
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.272 seconds)
+   **Total running time of the script:** ( 0 minutes  0.171 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_02-basics.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 02-basics.py <02-basics.py>`
 
-     :download:`Download Python source code: 02-basics.py <02-basics.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 02-basics.ipynb <02-basics.ipynb>`
+      :download:`Download Jupyter notebook: 02-basics.ipynb <02-basics.ipynb>`
 
 
 .. only:: html

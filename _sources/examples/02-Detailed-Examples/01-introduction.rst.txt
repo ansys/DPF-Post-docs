@@ -83,8 +83,6 @@ Use the helpers
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Static Analysis Solution object.
@@ -94,14 +92,14 @@ Use the helpers
     ------------------------------
     DPF  DataSources: 
       Result files:
-         result key: rst and path: /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/ansys/dpf/core/examples/ASimpleBar.rst 
+         result key: rst and path: /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/dpf/core/examples/ASimpleBar.rst 
       Secondary files:
 
 
     DPF Model
     ------------------------------
     Static analysis
-    Unit system: Metric (m, kg, N, s, V, A)
+    Unit system: MKS: m, kg, N, s, V, A, degC
     Physics Type: Mecanic
     Available results:
          -  displacement: Nodal Displacement
@@ -147,11 +145,9 @@ the result must be set.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Help on class locations in module ansys.dpf.core.common:
+    Help on class locations in module ansys.dpf.gate.common:
 
     class locations(builtins.object)
      |  Contains strings for scoping and field locations.
@@ -223,8 +219,6 @@ the result must be set.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     element_scoping: list, int or dpf.core.Scoping
@@ -233,6 +227,10 @@ the result must be set.
     mapdl_grouping: int. Write 186 to get mapdl_elements solid_186.
     named_selection: str. Name of named_selection.
     node_scoping: list, int or dpf.core.Scoping
+    path: DpfPath object that
+                contains a list of coordinates,
+                e.g. [[0.1, 0.0, 0.0],
+                [0.0, 0.1, 0.0]].
     set: int
     time: float
     time_scoping: list, int or dpf.core.Scoping
@@ -244,28 +242,23 @@ the result must be set.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.118 seconds)
+   **Total running time of the script:** ( 0 minutes  0.037 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_01-introduction.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 01-introduction.py <01-introduction.py>`
 
-     :download:`Download Python source code: 01-introduction.py <01-introduction.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 01-introduction.ipynb <01-introduction.ipynb>`
+      :download:`Download Jupyter notebook: 01-introduction.ipynb <01-introduction.ipynb>`
 
 
 .. only:: html

@@ -66,8 +66,6 @@ here we load the solution
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Transient Analysis Solution object.
@@ -77,14 +75,14 @@ here we load the solution
     ------------------------------
     DPF  DataSources: 
       Result files:
-         result key: rst and path: /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/ansys/dpf/core/examples/msup_transient_plate1.rst 
+         result key: rst and path: /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/dpf/core/examples/msup_transient_plate1.rst 
       Secondary files:
 
 
     DPF Model
     ------------------------------
     Transient analysis
-    Unit system: Metric (m, kg, N, s, V, A)
+    Unit system: MKS: m, kg, N, s, V, A, degC
     Physics Type: Mecanic
     Available results:
          -  displacement: Nodal Displacement
@@ -179,8 +177,6 @@ Get a displacement result and compute data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -204,18 +200,16 @@ Get a displacement result and compute data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[ 5.61632273e-13,  3.10611157e-03,  5.94938168e-05],
-           [-1.05541516e-06,  3.10082257e-03,  5.95757695e-05],
-           [-8.84684396e-07,  3.71348576e-03,  6.27895677e-05],
-           ...,
-           [ 6.28518184e-13,  4.03518595e-03, -6.41156710e-05],
-           [ 8.04525074e-07,  4.03115424e-03,  6.41884022e-05],
-           [-8.04523717e-07,  4.03115424e-03, -6.41884020e-05]])
+    DPFArray([[ 5.61632273e-13,  3.10611157e-03,  5.94938168e-05],
+              [-1.05541516e-06,  3.10082257e-03,  5.95757695e-05],
+              [-8.84684396e-07,  3.71348576e-03,  6.27895677e-05],
+              ...,
+              [ 6.28518184e-13,  4.03518595e-03, -6.41156710e-05],
+              [ 8.04525074e-07,  4.03115424e-03,  6.41884022e-05],
+              [-8.04523717e-07,  4.03115424e-03, -6.41884020e-05]])
 
 
 
@@ -235,12 +229,10 @@ Get a displacement result and compute data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[2.45659911e-06, 1.07453069e-02, 7.28477714e-05]])
+    DPFArray([[4.64261301e-310, 1.07453069e-002, 7.28477714e-005]])
 
 
 
@@ -260,12 +252,10 @@ Get a displacement result and compute data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-2.45659907e-06,  0.00000000e+00, -7.28477714e-05]])
+    DPFArray([[ 4.64261283e-310,  0.00000000e+000, -7.28477714e-005]])
 
 
 
@@ -285,12 +275,10 @@ Get a displacement result and compute data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([2.45659911e-06, 1.07453069e-02, 7.28477714e-05])
+    DPFArray([4.64261260e-310, 1.07453069e-002, 7.28477714e-005])
 
 
 
@@ -310,12 +298,10 @@ Get a displacement result and compute data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([-2.45659907e-06,  0.00000000e+00, -7.28477714e-05])
+    DPFArray([ 4.64261189e-310,  0.00000000e+000, -7.28477714e-005])
 
 
 
@@ -343,8 +329,6 @@ Get a stress result and plot a contour
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -368,8 +352,6 @@ Get a stress result and plot a contour
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -441,8 +423,6 @@ Get an elastic_strain result and plot a chart
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -458,28 +438,23 @@ The result file must contain those results.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.849 seconds)
+   **Total running time of the script:** ( 0 minutes  0.506 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_04-transient-analysis.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 04-transient-analysis.py <04-transient-analysis.py>`
 
-     :download:`Download Python source code: 04-transient-analysis.py <04-transient-analysis.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 04-transient-analysis.ipynb <04-transient-analysis.ipynb>`
+      :download:`Download Jupyter notebook: 04-transient-analysis.ipynb <04-transient-analysis.ipynb>`
 
 
 .. only:: html

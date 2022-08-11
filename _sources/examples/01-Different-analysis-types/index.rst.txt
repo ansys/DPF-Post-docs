@@ -1,0 +1,99 @@
+
+
+.. _sphx_glr_examples_01-Different-analysis-types:
+
+.. _ref_different_analysis:
+
+DPF-Post Analysis Types
+~~~~~~~~~~~~~~~~~~~~~~~
+Here are a series of analysis type focused examples with
+``ansys-dpf-post`` module.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Static Analysis">
+
+.. only:: html
+
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_01-static-analysis_thumb.png
+    :alt: Static Analysis
+
+  :ref:`sphx_glr_examples_01-Different-analysis-types_01-static-analysis.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Static Analysis</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF-Post: Modal Analysis">
+
+.. only:: html
+
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_02-modal-analysis_thumb.png
+    :alt: ANSYS DPF-Post: Modal Analysis
+
+  :ref:`sphx_glr_examples_01-Different-analysis-types_02-modal-analysis.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post: Modal Analysis</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF-Post: Harmonic Analysis">
+
+.. only:: html
+
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_03-harmonic-analysis_thumb.png
+    :alt: ANSYS DPF-Post: Harmonic Analysis
+
+  :ref:`sphx_glr_examples_01-Different-analysis-types_03-harmonic-analysis.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post: Harmonic Analysis</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF-Post: Transient Anaysis">
+
+.. only:: html
+
+  .. image:: /examples/01-Different-analysis-types/images/thumb/sphx_glr_04-transient-analysis_thumb.png
+    :alt: ANSYS DPF-Post: Transient Anaysis
+
+  :ref:`sphx_glr_examples_01-Different-analysis-types_04-transient-analysis.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post: Transient Anaysis</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-Different-analysis-types/01-static-analysis
+   /examples/01-Different-analysis-types/02-modal-analysis
+   /examples/01-Different-analysis-types/03-harmonic-analysis
+   /examples/01-Different-analysis-types/04-transient-analysis
+

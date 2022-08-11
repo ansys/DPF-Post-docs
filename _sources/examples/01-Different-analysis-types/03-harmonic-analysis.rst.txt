@@ -66,8 +66,6 @@ Here we load the solution
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Harmonic Analysis Solution object.
@@ -77,14 +75,14 @@ Here we load the solution
     ------------------------------
     DPF  DataSources: 
       Result files:
-         result key: rst and path: /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/ansys/dpf/core/examples/complex.rst 
+         result key: rst and path: /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/dpf/core/examples/complex.rst 
       Secondary files:
 
 
     DPF Model
     ------------------------------
     Harmonic analysis
-    Unit system: Metric (m, kg, N, s, V, A)
+    Unit system: MKS: m, kg, N, s, V, A, degC
     Physics Type: Mecanic
     Available results:
          -  displacement: Nodal Displacement
@@ -98,8 +96,11 @@ Here we load the solution
          -  co_energy: Elemental co-energy
          -  incremental_energy: Elemental incremental energy
          -  elastic_strain: ElementalNodal Strain
+         -  elemental_heat_generation: Elemental Elemental Heat Generation
          -  structural_temperature: ElementalNodal Temperature
          -  electric_potential: Nodal Electric Potential
+         -  electric_flux_density: ElementalNodal Electric flux density
+         -  electric_field: ElementalNodal Electric field
     ------------------------------
     DPF  Meshed Region: 
       4802 nodes 
@@ -164,8 +165,6 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -189,18 +188,16 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[ 2.65783929e-09, -5.98949034e-10,  8.34267891e-11],
-           [ 2.63846617e-09, -3.00204960e-10,  8.27306877e-11],
-           [ 2.50179982e-09, -2.86371281e-10,  6.29386453e-11],
-           ...,
-           [-1.70840238e-09, -2.73504676e-09,  3.48706947e-11],
-           [-1.57038405e-09, -2.71125223e-09,  6.79105278e-11],
-           [-1.57311157e-09, -2.71904943e-09,  0.00000000e+00]])
+    DPFArray([[ 2.65783929e-09, -5.98949034e-10,  8.34267891e-11],
+              [ 2.63846617e-09, -3.00204960e-10,  8.27306877e-11],
+              [ 2.50179982e-09, -2.86371281e-10,  6.29386453e-11],
+              ...,
+              [-1.70840238e-09, -2.73504676e-09,  3.48706947e-11],
+              [-1.57038405e-09, -2.71125223e-09,  6.79105278e-11],
+              [-1.57311157e-09, -2.71904943e-09,  0.00000000e+00]])
 
 
 
@@ -220,13 +217,11 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[2.76941713e-09, 2.76940199e-09, 4.10914311e-10],
-           [6.53706736e-13, 6.53416337e-13, 9.25220948e-14]])
+    DPFArray([[4.64261261e-310, 4.64260968e-310, 4.10914311e-010],
+              [6.53706736e-013, 6.53416337e-013, 9.25220948e-014]])
 
 
 
@@ -246,13 +241,11 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-2.76946046e-09, -2.76952549e-09,  0.00000000e+00],
-           [-6.53727285e-13, -6.53452004e-13, -1.66091913e-13]])
+    DPFArray([[ 4.64261261e-310,  4.64260968e-310,  0.00000000e+000],
+              [-6.53727285e-013, -6.53452004e-013, -1.66091913e-013]])
 
 
 
@@ -272,12 +265,10 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([2.76941713e-09, 2.76940199e-09, 4.10914311e-10])
+    DPFArray([4.64261376e-310, 4.64260968e-310, 4.10914311e-010])
 
 
 
@@ -297,12 +288,10 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([-2.76946046e-09, -2.76952549e-09,  0.00000000e+00])
+    DPFArray([4.64261376e-310, 4.64260968e-310, 0.00000000e+000])
 
 
 
@@ -344,8 +333,6 @@ Get a stress result and deals with amplitude
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -373,8 +360,6 @@ Get a stress result and deals with amplitude
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -398,8 +383,6 @@ Get a stress result and deals with amplitude
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -473,8 +456,6 @@ field for imaginary values.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -511,28 +492,23 @@ The result file must contain those results.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.099 seconds)
+   **Total running time of the script:** ( 0 minutes  0.705 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_03-harmonic-analysis.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 03-harmonic-analysis.py <03-harmonic-analysis.py>`
 
-     :download:`Download Python source code: 03-harmonic-analysis.py <03-harmonic-analysis.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 03-harmonic-analysis.ipynb <03-harmonic-analysis.ipynb>`
+      :download:`Download Jupyter notebook: 03-harmonic-analysis.ipynb <03-harmonic-analysis.ipynb>`
 
 
 .. only:: html

@@ -60,8 +60,6 @@ module API.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -105,8 +103,6 @@ imaginary values)
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -130,8 +126,6 @@ imaginary values)
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -163,14 +157,12 @@ imaginary values)
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Maximum displacement at phase 39.0: [[2.15187123e-09 2.15185939e-09 3.19282171e-10]]
+    Maximum displacement at phase 39.0: [[4.64261309e-310 4.64261256e-310 1.58101007e-322]]
     There are 1 fields
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f3372f08cd0>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f9cf4740cd0>
 
 
 
@@ -191,40 +183,33 @@ imaginary values)
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[2.76946052e-09, 2.76952555e-09, 4.10914321e-10]])
+    DPFArray([[4.64261270e-310, 2.76952555e-009, 4.10914321e-010]])
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.063 seconds)
+   **Total running time of the script:** ( 0 minutes  0.028 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_04-complex_results.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 04-complex_results.py <04-complex_results.py>`
 
-     :download:`Download Python source code: 04-complex_results.py <04-complex_results.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 04-complex_results.ipynb <04-complex_results.ipynb>`
+      :download:`Download Jupyter notebook: 04-complex_results.ipynb <04-complex_results.ipynb>`
 
 
 .. only:: html

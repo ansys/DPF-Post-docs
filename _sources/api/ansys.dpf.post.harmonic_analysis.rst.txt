@@ -1,4 +1,2 @@
 .. automodule:: ansys.dpf.post.harmonic_analysis
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   :inherited-members:

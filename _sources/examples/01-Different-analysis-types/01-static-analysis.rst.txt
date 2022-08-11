@@ -68,8 +68,6 @@ Here we load the solution
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Static Analysis Solution object.
@@ -79,14 +77,14 @@ Here we load the solution
     ------------------------------
     DPF  DataSources: 
       Result files:
-         result key: rst and path: /home/vsts/.local/share/ansys-dpf-core/examples/testing/allKindOfComplexity.rst 
+         result key: rst and path: /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/dpf/core/examples/testing/allKindOfComplexity.rst 
       Secondary files:
 
 
     DPF Model
     ------------------------------
     Static analysis
-    Unit system: Metric (m, kg, N, s, V, A)
+    Unit system: MKS: m, kg, N, s, V, A, degC
     Physics Type: Mecanic
     Available results:
          -  displacement: Nodal Displacement
@@ -102,7 +100,7 @@ Here we load the solution
          -  incremental_energy: Elemental incremental energy
          -  elastic_strain: ElementalNodal Strain
          -  thermal_strain: ElementalNodal Thermal Strains
-         -  thermal_strains_eqv: None Thermal Strains eqv
+         -  thermal_strains_eqv: ElementalNodal Thermal Strains eqv
          -  swelling_strains: ElementalNodal Swelling Strains
          -  structural_temperature: ElementalNodal Temperature
     ------------------------------
@@ -149,8 +147,6 @@ Get a displacement result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Displacement result.
@@ -179,8 +175,6 @@ Get a displacement result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -204,18 +198,16 @@ Get a displacement result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[ 9.84182297e-06,  5.13025031e-06, -6.66435651e-07],
-           [ 9.95996777e-06,  4.93526360e-06, -6.25236961e-07],
-           [ 9.93154893e-06,  5.88552090e-06, -7.83251832e-07],
-           ...,
-           [ 5.00000000e-03, -1.54556837e-04,  0.00000000e+00],
-           [ 5.00000000e-03, -1.56813550e-04,  0.00000000e+00],
-           [ 5.00000000e-03, -1.66125455e-04,  0.00000000e+00]])
+    DPFArray([[ 9.84182297e-06,  5.13025031e-06, -6.66435651e-07],
+              [ 9.95996777e-06,  4.93526360e-06, -6.25236961e-07],
+              [ 9.93154893e-06,  5.88552090e-06, -7.83251832e-07],
+              ...,
+              [ 5.00000000e-03, -1.54556837e-04,  0.00000000e+00],
+              [ 5.00000000e-03, -1.56813550e-04,  0.00000000e+00],
+              [ 5.00000000e-03, -1.66125455e-04,  0.00000000e+00]])
 
 
 
@@ -235,12 +227,10 @@ Get a displacement result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[8.50619058e+04, 1.04659292e+01, 3.73620870e+05]])
+    DPFArray([[4.64261256e-310, 1.04659292e+001, 3.73620870e+005]])
 
 
 
@@ -260,12 +250,10 @@ Get a displacement result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-1.82645944e-06, -1.04473039e+01, -2.94677257e-04]])
+    DPFArray([[ 4.64261299e-310, -1.04473039e+001, -2.94677257e-004]])
 
 
 
@@ -285,12 +273,10 @@ Get a displacement result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([8.50619058e+04, 1.04659292e+01, 3.73620870e+05])
+    DPFArray([4.64261171e-310, 1.04659292e+001, 3.73620870e+005])
 
 
 
@@ -310,12 +296,10 @@ Get a displacement result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([-1.82645944e-06, -1.04473039e+01, -2.94677257e-04])
+    DPFArray([ 4.64261255e-310, -1.04473039e+001, -2.94677257e-004])
 
 
 
@@ -343,8 +327,6 @@ Get a stress result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -368,8 +350,6 @@ Get a stress result
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -441,8 +421,6 @@ Get an elastic_strain result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -468,8 +446,6 @@ Here is the plastic strain result
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -498,8 +474,6 @@ and the temperature result
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Scalar object. 
@@ -515,28 +489,23 @@ and the temperature result
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.817 seconds)
+   **Total running time of the script:** ( 0 minutes  1.347 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_01-static-analysis.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 01-static-analysis.py <01-static-analysis.py>`
 
-     :download:`Download Python source code: 01-static-analysis.py <01-static-analysis.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 01-static-analysis.ipynb <01-static-analysis.ipynb>`
+      :download:`Download Jupyter notebook: 01-static-analysis.ipynb <01-static-analysis.ipynb>`
 
 
 .. only:: html

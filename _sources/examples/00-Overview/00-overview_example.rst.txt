@@ -119,8 +119,6 @@ displacement).
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     element_scoping: list, int or dpf.core.Scoping
@@ -129,6 +127,10 @@ displacement).
     mapdl_grouping: int. Write 186 to get mapdl_elements solid_186.
     named_selection: str. Name of named_selection.
     node_scoping: list, int or dpf.core.Scoping
+    path: DpfPath object that
+                contains a list of coordinates,
+                e.g. [[0.1, 0.0, 0.0],
+                [0.0, 0.1, 0.0]].
     set: int
     time: float
     time_scoping: list, int or dpf.core.Scoping
@@ -173,8 +175,6 @@ in the XX direction.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Length of the data: 6854
@@ -187,8 +187,8 @@ in the XX direction.
       Data:1 components and 2 elementary data 
 
 
-    Maximum data at stress field: [6.67615284e+11 1.53671424e+13]
-    Maximum SX at Field 0: 667615283882.6666
+    Maximum data at stress field: [1.e-323 4.e-323]
+    Maximum SX at Field 0: 4.64261157635076e-310
 
 
 
@@ -225,8 +225,6 @@ directions, including 'XX', 'XY, 'XZ', 'XY', 'YZ', and 'XZ'.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Length of the data: 6854
@@ -239,13 +237,13 @@ directions, including 'XX', 'XY, 'XZ', 'XY', 'YZ', and 'XZ'.
       Data:6 components and 2 elementary data 
 
 
-    Maximum data at stress field: [[6.67615284e+11 8.74460905e+11 4.95394439e+11 6.01889079e+11
-      1.10325826e+11 1.85580244e+11]
-     [1.53671424e+13 4.21781549e+08 3.78202198e+12 2.07950475e+11
-      1.57995981e+11 1.09972131e+12]]
+    Maximum data at stress field: [[4.64261154e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+      1.10325826e+011 1.85580244e+011]
+     [1.53671424e+013 4.21781549e+008 3.78202198e+012 2.07950475e+011
+      1.57995981e+011 1.09972131e+012]]
     Maximum Stress Tensors at Field 0:
-     [6.67615284e+11 8.74460905e+11 4.95394439e+11 6.01889079e+11
-     1.10325826e+11 1.85580244e+11]
+     [4.64261189e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+     1.10325826e+011 1.85580244e+011]
     Minimum Stress Field:
      DPF stress_1.s Field
       Location: Nodal
@@ -254,13 +252,13 @@ directions, including 'XX', 'XY, 'XZ', 'XY', 'YZ', and 'XZ'.
       Data:6 components and 2 elementary data 
 
 
-    Minimum data at stress field: [[-5.77907764e+11 -7.35604867e+11 -2.41200931e+11 -2.98145939e+11
-      -2.42143056e+11 -3.09138563e+11]
-     [-1.49601458e+13 -2.63695614e+08 -3.77945626e+12 -3.35432675e+11
-      -1.57190152e+11 -9.66123233e+11]]
+    Minimum data at stress field: [[ 4.64261189e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+      -2.42143056e+011 -3.09138563e+011]
+     [-1.49601458e+013 -2.63695614e+008 -3.77945626e+012 -3.35432675e+011
+      -1.57190152e+011 -9.66123233e+011]]
     Minimum Stress Tensors at Field 0:
-     [-5.77907764e+11 -7.35604867e+11 -2.41200931e+11 -2.98145939e+11
-     -2.42143056e+11 -3.09138563e+11]
+     [ 4.64261195e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+     -2.42143056e+011 -3.09138563e+011]
 
 
 
@@ -291,28 +289,23 @@ Use <subresult>.plot_contour() to plot a result.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.069 seconds)
+   **Total running time of the script:** ( 0 minutes  3.038 seconds)
 
 
 .. _sphx_glr_download_examples_00-Overview_00-overview_example.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 00-overview_example.py <00-overview_example.py>`
 
-     :download:`Download Python source code: 00-overview_example.py <00-overview_example.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 00-overview_example.ipynb <00-overview_example.ipynb>`
+      :download:`Download Jupyter notebook: 00-overview_example.ipynb <00-overview_example.ipynb>`
 
 
 .. only:: html
