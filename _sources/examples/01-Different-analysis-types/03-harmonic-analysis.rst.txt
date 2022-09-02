@@ -230,8 +230,8 @@ Get the maximum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([[0.00000000e+00, 2.76940199e-09, 4.10914311e-10],
-              [6.53706736e-13, 6.53416337e-13, 9.25220948e-14]])
+    DPFArray([[4.66805552e-310, 4.66805243e-310, 4.10914311e-010],
+              [6.53706736e-013, 6.53416337e-013, 9.25220948e-014]])
 
 
 
@@ -257,8 +257,8 @@ Get the minimum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([[ 4.68160191e-310,  4.68159941e-310,  0.00000000e+000],
-              [-6.53727285e-013, -6.53452004e-013, -1.66091913e-013]])
+    DPFArray([[ 0.00000000e+00, -2.76952549e-09,  0.00000000e+00],
+              [-6.53727285e-13, -6.53452004e-13, -1.66091913e-13]])
 
 
 
@@ -284,7 +284,7 @@ Get the maximum data value over a targeted field.
  .. code-block:: none
 
 
-    DPFArray([4.68160191e-310, 2.76940199e-009, 4.10914311e-010])
+    DPFArray([4.66805461e-310, 4.66805243e-310, 4.10914311e-010])
 
 
 
@@ -310,7 +310,7 @@ Get the minimum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([ 4.68160715e-310, -2.76952549e-009,  0.00000000e+000])
+    DPFArray([4.66805461e-310, 4.66805243e-310, 0.00000000e+000])
 
 
 
@@ -557,7 +557,7 @@ to get the elastic strain result.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.888 seconds)
+   **Total running time of the script:** ( 0 minutes  1.065 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_03-harmonic-analysis.py:

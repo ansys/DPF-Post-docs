@@ -241,7 +241,7 @@ Get a subresult.
  .. code-block:: none
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7fee0eec6370>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f37895a6f10>
 
 
 
@@ -282,7 +282,7 @@ Filter the result on a time, time scoping, and a set.
     1              1.000000       1              1               
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7fee0eecda00>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f378a48dc70>
 
 
 
@@ -331,7 +331,7 @@ Filter for only MAPDL elements of type solid 186.
  .. code-block:: none
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7fee0efa8be0>
+    <ansys.dpf.post.result_data.ResultData object at 0x7f378a4bd940>
 
 
 
@@ -417,7 +417,7 @@ result, you can also use the keyword ``phase``, which has a float value.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.093 seconds)
+   **Total running time of the script:** ( 0 minutes  0.114 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_03-result_keywords.py:

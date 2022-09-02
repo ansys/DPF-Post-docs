@@ -191,7 +191,7 @@ This code gets the subresult ``SX``, which is the stress tensor in the XX direct
 
 
     Maximum data at stress field: [1.e-323 4.e-323]
-    Maximum SX at Field 0: 4.68160136596826e-310
+    Maximum SX at Field 0: 4.66805439465626e-310
 
 
 
@@ -242,12 +242,12 @@ directions (``XX``, ``XY``, ``XZ``, ``XY``, ``YZ``, and ``XZ``.
       Data:6 components and 2 elementary data 
 
 
-    Maximum data at stress field: [[4.68160185e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+    Maximum data at stress field: [[4.66805488e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
       1.10325826e+011 1.85580244e+011]
      [1.53671424e+013 4.21781549e+008 3.78202198e+012 2.07950475e+011
       1.57995981e+011 1.09972131e+012]]
     Maximum stress tensors at field 0:
-     [4.68160147e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+     [4.66805450e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
      1.10325826e+011 1.85580244e+011]
     Minimum stress field:
      DPF stress_1.s Field
@@ -257,12 +257,12 @@ directions (``XX``, ``XY``, ``XZ``, ``XY``, ``YZ``, and ``XZ``.
       Data:6 components and 2 elementary data 
 
 
-    Minimum data at stress field: [[ 4.68160166e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+    Minimum data at stress field: [[ 4.66805469e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
       -2.42143056e+011 -3.09138563e+011]
      [-1.49601458e+013 -2.63695614e+008 -3.77945626e+012 -3.35432675e+011
       -1.57190152e+011 -9.66123233e+011]]
     Minimum stress tensors at field 0:
-     [ 4.68160144e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+     [ 4.66805447e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
      -2.42143056e+011 -3.09138563e+011]
 
 
@@ -295,7 +295,7 @@ Plot a result by using the ``plot_contour()`` method.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.580 seconds)
+   **Total running time of the script:** ( 0 minutes  3.918 seconds)
 
 
 .. _sphx_glr_download_examples_00-Overview_00-overview_example.py:

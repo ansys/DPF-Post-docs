@@ -240,7 +240,7 @@ Get the maximum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([[4.68160271e-310, 1.07453069e-002, 7.28477714e-005]])
+    DPFArray([[4.66805994e-310, 1.07453069e-002, 7.28477714e-005]])
 
 
 
@@ -266,7 +266,7 @@ Get the minimum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([[ 4.68160111e-310,  0.00000000e+000, -7.28477714e-005]])
+    DPFArray([[ 4.66805558e-310,  0.00000000e+000, -7.28477714e-005]])
 
 
 
@@ -292,7 +292,7 @@ Get the maximum data value over a targeted field.
  .. code-block:: none
 
 
-    DPFArray([4.68160252e-310, 1.07453069e-002, 7.28477714e-005])
+    DPFArray([4.66805567e-310, 1.07453069e-002, 7.28477714e-005])
 
 
 
@@ -318,7 +318,7 @@ Get the minimum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([ 4.68160279e-310,  0.00000000e+000, -7.28477714e-005])
+    DPFArray([ 4.66805482e-310,  0.00000000e+000, -7.28477714e-005])
 
 
 
@@ -502,7 +502,7 @@ to get the elastic strain result.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.736 seconds)
+   **Total running time of the script:** ( 0 minutes  0.876 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_04-transient-analysis.py:
