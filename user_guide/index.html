@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>User Guide &#8212; PyDPF-Post</title>
+    <title>User guide &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -43,9 +44,11 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Loading the Results File" href="post_processing.html" />
+    <link rel="next" title="Load the result file" href="post_processing.html" />
     <link rel="prev" title="Installation" href="../getting_started/install.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -167,7 +170,7 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyDPF-Post</a> » </li>
     
 
-        <li class="nav-item nav-item-this"><a href="">User Guide</a></li> 
+        <li class="nav-item nav-item-this"><a href="">User guide</a></li> 
       </ul>
     </div>
         </div>
@@ -187,30 +190,31 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="post_processing.html">
-   Loading the Results File
+   Load the result file
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="accessing_file_metadata.html">
-   Browsing Result Metadata
+   Browse result metadata
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="accessing_results.html">
-   Accessing Results
+   Access results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plotting.html">
-   Plotting
+   Plot results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="extending_to_core.html">
-   Using DPF-Core for More General Operators
+   Use DPF-Core operators
   </a>
  </li>
  <li class="toctree-l1">
@@ -220,6 +224,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -257,20 +262,20 @@
               <article class="bd-article" role="main">
                 
   <section id="user-guide">
-<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this heading">#</a></h1>
-<p>The DPF-Post package provides a Python interface to DPF (Data
-Processing Framework) that is streamlined for post-processing.</p>
-<p>The following materials explain the conceptual model of DPF-Post along
-with typical usage.</p>
+<span id="ref-user-guide"></span><h1>User guide<a class="headerlink" href="#user-guide" title="Permalink to this heading">#</a></h1>
+<p>DPF-Post provides a Python interface to DPF that is streamlined for
+postprocessing.</p>
+<p>The following content explains the conceptual model of DPF-Post and
+typical usage.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="post_processing.html">Loading the Results File</a></li>
-<li class="toctree-l1"><a class="reference internal" href="accessing_file_metadata.html">Browsing Result Metadata</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="post_processing.html">Load the result file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accessing_file_metadata.html">Browse result metadata</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="accessing_file_metadata.html#mesh">Mesh</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="accessing_results.html">Accessing Results</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="accessing_results.html#structural-rst-result-files">Structural (*.rst) result files</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="accessing_results.html">Access results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="accessing_results.html#structural-result-files">Structural result files</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="accessing_results.html#displacement">Displacement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="accessing_results.html#stress">Stress</a></li>
 <li class="toctree-l3"><a class="reference internal" href="accessing_results.html#strain-elastic-plastic">Strain (elastic, plastic)</a></li>
@@ -278,7 +283,7 @@ with typical usage.</p>
 <li class="toctree-l3"><a class="reference internal" href="accessing_results.html#miscellaneous-results">Miscellaneous results</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="accessing_results.html#thermal-electric-rth-result-files">Thermal/Electric (*.rth) result files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="accessing_results.html#thermal-electric-result-files">Thermal/electric result files</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="accessing_results.html#temperature">Temperature</a></li>
 <li class="toctree-l3"><a class="reference internal" href="accessing_results.html#heat-flux">Heat flux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="accessing_results.html#electric-field">Electric field</a></li>
@@ -287,21 +292,18 @@ with typical usage.</p>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plot results</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="plotting.html#total-deformation">Total deformation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html#normal-stresses">Normal Stresses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#normal-stresses">Normal stresses</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="extending_to_core.html">Using DPF-Core for More General Operators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="extending_to_core.html#export-vtk">Export VTK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extending_to_core.html#export-hdf5">Export HDF5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending_to_core.html">Use DPF-Core operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extending_to_core.html#export-to-vtk-file">Export to VTK file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending_to_core.html#export-to-hdf5-file">Export to HDF5 file</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#using-the-solution">Using the Solution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#invalid-utf-8-error">Invalid UTF-8 Error</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#invalid-utf-8-error">Invalid UTF-8 error</a></li>
 </ul>
 </li>
 </ul>

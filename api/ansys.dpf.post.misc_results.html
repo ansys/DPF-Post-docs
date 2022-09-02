@@ -26,6 +26,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -43,6 +44,8 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -91,19 +94,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -115,7 +118,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -138,7 +141,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -185,6 +188,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="ansys.dpf.post.examples.html">
@@ -193,6 +197,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -234,438 +239,456 @@
               
               <article class="bd-article" role="main">
                 
-  <span class="target" id="module-ansys.dpf.post.misc_results"></span><p>This module contains all the miscallenous results.</p>
+  <span class="target" id="module-ansys.dpf.post.misc_results"></span><p>This module contains all miscellaneous results.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.dpf.post.misc_results.</span></span><span class="sig-name descname"><span class="pre">ComplexMecanicMisc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc" title="Permalink to this definition">#</a></dt>
-<dd><p>This class contains miscellaneous results.</p>
+<dd><p>Contains miscellaneous results.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_accu_eqv_creep_strain">
 <span class="sig-name descname"><span class="pre">elemental_accu_eqv_creep_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_accu_eqv_creep_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_accu_eqv_creep_strain result data.</p>
+<dd><p>Get result data for the elemental accurate equivalent creep strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_accu_eqv_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_accu_eqv_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_accu_eqv_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_accu_eqv_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental accurate eqvivalent plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_artificial_hourglass_energy">
 <span class="sig-name descname"><span class="pre">elemental_artificial_hourglass_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_artificial_hourglass_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_artificial_hourglass_energy result data.</p>
+<dd><p>Get result data for the elemental artificial hourglass energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_co_energy">
 <span class="sig-name descname"><span class="pre">elemental_co_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_co_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_co_energy result data.</p>
+<dd><p>Get result data for the elemental co energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_fluid_penetration_pressure">
 <span class="sig-name descname"><span class="pre">elemental_contact_fluid_penetration_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_fluid_penetration_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_fluid_penetration_pressure result data.</p>
+<dd><p>Get result data for the elemental contact fluid penetration pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_friction_stress">
 <span class="sig-name descname"><span class="pre">elemental_contact_friction_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_friction_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_friction_stress result data.</p>
+<dd><p>Get result data for the elemental contact friction stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_penetration">
 <span class="sig-name descname"><span class="pre">elemental_contact_penetration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_penetration" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_penetration result data.</p>
+<dd><p>Get result data for the elemental contact penetration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_pressure">
 <span class="sig-name descname"><span class="pre">elemental_contact_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_pressure result data.</p>
+<dd><p>Get result data for the elemental contact pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_sliding_distance">
 <span class="sig-name descname"><span class="pre">elemental_contact_sliding_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_sliding_distance" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_sliding_distance result data.</p>
+<dd><p>Get result data for the elemental contact sliding distance.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_status">
 <span class="sig-name descname"><span class="pre">elemental_contact_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_status" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_status result data.</p>
+<dd><p>Get result data for the elemental contact status.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_surface_heat_flux">
 <span class="sig-name descname"><span class="pre">elemental_contact_surface_heat_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_surface_heat_flux" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_surface_heat_flux result data.</p>
+<dd><p>Get result data for the elemental contact surface heat flux.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_total_stress">
 <span class="sig-name descname"><span class="pre">elemental_contact_total_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_total_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_total_stress result data.</p>
+<dd><p>Get result data for the elemental contact total stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contactgap_distance">
 <span class="sig-name descname"><span class="pre">elemental_contactgap_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contactgap_distance" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contactgap_distance result data.</p>
+<dd><p>Get result data for the elemental contact gap distance.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_creep_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_creep_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_creep_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_creep_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental creep strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_elastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_elastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_elastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_elastic_strain result data.</p>
+<dd><p>Get result data for the elemental elastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_elastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_elastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_elastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_elastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental elastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_eqv_stress_parameter">
 <span class="sig-name descname"><span class="pre">elemental_eqv_stress_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_eqv_stress_parameter" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_eqv_stress_parameter result data.</p>
+<dd><p>Get result data for an elemental equivalent stress parameter.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_force">
 <span class="sig-name descname"><span class="pre">elemental_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_force result data.</p>
+<dd><p>Get result data for the elemental force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_hydrostatic_pressure">
 <span class="sig-name descname"><span class="pre">elemental_hydrostatic_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_hydrostatic_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_hydrostatic_pressure result data.</p>
+<dd><p>Get result data for the elemental hydrostatic pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_incremental_energy">
 <span class="sig-name descname"><span class="pre">elemental_incremental_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_incremental_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_incremental_energy result data.</p>
+<dd><p>Get result data for the elemental incremental energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_kinetic_energy">
 <span class="sig-name descname"><span class="pre">elemental_kinetic_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_kinetic_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_kinetic_energy result data.</p>
+<dd><p>Get result data for the elemental kinetic energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_mass">
 <span class="sig-name descname"><span class="pre">elemental_mass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_mass" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_mass result data.</p>
+<dd><p>Get result data for the elemental mass.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_accu_eqv_creep_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_accu_eqv_creep_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_accu_eqv_creep_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_accu_eqv_creep_strain result data.</p>
+<dd><p>Get result data for the elemental nodal accurate equivalent creep strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_accu_eqv_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_accu_eqv_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_accu_eqv_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_accu_eqv_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental nodal accurate eqvivalent plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_creep_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_nodal_creep_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_creep_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_creep_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental nodal creep strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_elastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_elastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_elastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_elastic_strain result data.</p>
+<dd><p>Get result data for the elemental nodal elastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_elastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_nodal_elastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_elastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_elastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental nodal elastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_eqv_stress_parameter">
 <span class="sig-name descname"><span class="pre">elemental_nodal_eqv_stress_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_eqv_stress_parameter" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_eqv_stress_parameter result data.</p>
+<dd><p>Get result data for the elemental nodal equivalent stress parameter.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_force">
 <span class="sig-name descname"><span class="pre">elemental_nodal_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_force result data.</p>
+<dd><p>Get result data for the elemental nodal force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_hydrostatic_pressure">
 <span class="sig-name descname"><span class="pre">elemental_nodal_hydrostatic_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_hydrostatic_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_hydrostatic_pressure result data.</p>
+<dd><p>Get result data for the elemental nodal hydrostatic pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_state_variable">
 <span class="sig-name descname"><span class="pre">elemental_nodal_plastic_state_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_state_variable" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_plastic_state_variable result data.</p>
+<dd><p>Get result data for the elemental nodal plastic state variable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental nodal plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_nodal_plastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_plastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental nodal plastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_stress">
 <span class="sig-name descname"><span class="pre">elemental_nodal_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_stress result data.</p>
+<dd><p>Get result data for the elemental nodal stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_stress_ratio">
 <span class="sig-name descname"><span class="pre">elemental_nodal_stress_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_stress_ratio" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_stress_ratio result data.</p>
+<dd><p>Get result data for the elemental nodal stress ratio.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_structural_temperature">
 <span class="sig-name descname"><span class="pre">elemental_nodal_structural_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_structural_temperature" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_structural_temperature result data.</p>
+<dd><p>Get result data for the elemental nodal structural temperature.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_thermal_strains">
 <span class="sig-name descname"><span class="pre">elemental_nodal_thermal_strains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_thermal_strains" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_thermal_strains result data.</p>
+<dd><p>Get result data for the elemental nodal thermal strains.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_state_variable">
 <span class="sig-name descname"><span class="pre">elemental_plastic_state_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_state_variable" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_plastic_state_variable result data.</p>
+<dd><p>Get result data for the elemental plastic state variable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_plastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_plastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental plastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stiffness_matrix_energy">
 <span class="sig-name descname"><span class="pre">elemental_stiffness_matrix_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stiffness_matrix_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_stiffness_matrix_energy result data.</p>
+<dd><p>Get result data for the elemental stiffness matrix energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress">
 <span class="sig-name descname"><span class="pre">elemental_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_stress result data.</p>
+<dd><p>Get result data for the elemental stress.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress_amplitude">
+<span class="sig-name descname"><span class="pre">elemental_stress_amplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress_amplitude" title="Permalink to this definition">#</a></dt>
+<dd><p>Get result data for the elemental stress amplitude.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress_ratio">
 <span class="sig-name descname"><span class="pre">elemental_stress_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress_ratio" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_stress_ratio result data.</p>
+<dd><p>Get result data for the elemental stress ratio.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_structural_temperature">
 <span class="sig-name descname"><span class="pre">elemental_structural_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_structural_temperature" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_structural_temperature result data.</p>
+<dd><p>Get result data for the elemental structural temperature.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_thermal_dissipation_energy">
 <span class="sig-name descname"><span class="pre">elemental_thermal_dissipation_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_thermal_dissipation_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_thermal_dissipation_energy result data.</p>
+<dd><p>Get result data for the elemental thermal dissipation energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_thermal_strains">
 <span class="sig-name descname"><span class="pre">elemental_thermal_strains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_thermal_strains" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_thermal_strains result data.</p>
+<dd><p>Get result data for the elemental thermal strains.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_volume">
 <span class="sig-name descname"><span class="pre">elemental_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_volume" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_volume result data.</p>
+<dd><p>Get result data for the elemental volume.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.modal_basis">
 <span class="sig-name descname"><span class="pre">modal_basis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.modal_basis" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a modal_basis result data.</p>
+<dd><p>Get result data for the modal basis.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_acceleration">
 <span class="sig-name descname"><span class="pre">nodal_acceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_acceleration" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_acceleration result data.</p>
+<dd><p>Get result data for the nodal acceleration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_accu_eqv_creep_strain">
 <span class="sig-name descname"><span class="pre">nodal_accu_eqv_creep_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_accu_eqv_creep_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_accu_eqv_creep_strain result data.</p>
+<dd><p>Get result data for the nodal accurate equivalent creep strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_accu_eqv_plastic_strain">
 <span class="sig-name descname"><span class="pre">nodal_accu_eqv_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_accu_eqv_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_accu_eqv_plastic_strain result data.</p>
+<dd><p>Get result data for the nodal accurate equivalent plastic strain result data.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_creep_strain_energy_density">
 <span class="sig-name descname"><span class="pre">nodal_creep_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_creep_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_creep_strain_energy_density result data.</p>
+<dd><p>Get result data for the nodal creep strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_displacement">
 <span class="sig-name descname"><span class="pre">nodal_displacement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_displacement" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_displacement result data.</p>
+<dd><p>Get result data for the nodal displacement.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_displacement_amplitude">
+<span class="sig-name descname"><span class="pre">nodal_displacement_amplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_displacement_amplitude" title="Permalink to this definition">#</a></dt>
+<dd><p>Get result data for the nodal displacement amplitude.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_elastic_strain">
 <span class="sig-name descname"><span class="pre">nodal_elastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_elastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_elastic_strain result data.</p>
+<dd><p>Get result data for the nodal elastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_elastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">nodal_elastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_elastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_elastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the nodal elastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_eqv_stress_parameter">
 <span class="sig-name descname"><span class="pre">nodal_eqv_stress_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_eqv_stress_parameter" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_eqv_stress_parameter result data.</p>
+<dd><p>Get result data for the nodal equivalent stress parameter.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_force">
 <span class="sig-name descname"><span class="pre">nodal_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_force result data.</p>
+<dd><p>Get result data for the nodal force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_hydrostatic_pressure">
 <span class="sig-name descname"><span class="pre">nodal_hydrostatic_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_hydrostatic_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_hydrostatic_pressure result data.</p>
+<dd><p>Get result data for the nodal hydrostatic pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_moment">
 <span class="sig-name descname"><span class="pre">nodal_moment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_moment" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_moment result data.</p>
+<dd><p>Get result data for the nodal moment.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_state_variable">
 <span class="sig-name descname"><span class="pre">nodal_plastic_state_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_state_variable" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_plastic_state_variable result data.</p>
+<dd><p>Get result data for the nodal plastic state variable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_strain">
 <span class="sig-name descname"><span class="pre">nodal_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_plastic_strain result data.</p>
+<dd><p>Get result data for the nodal plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">nodal_plastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_plastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the nodal plastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_raw_displacement">
 <span class="sig-name descname"><span class="pre">nodal_raw_displacement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_raw_displacement" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_raw_displacement result data.</p>
+<dd><p>Get result data for the nodal raw displacement.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_raw_reaction_force">
 <span class="sig-name descname"><span class="pre">nodal_raw_reaction_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_raw_reaction_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_raw_reaction_force result data.</p>
+<dd><p>Get result data for the nodal raw reaction force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_reaction_force">
 <span class="sig-name descname"><span class="pre">nodal_reaction_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_reaction_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_reaction_force result data.</p>
+<dd><p>Get result data for the nodal reaction force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress">
 <span class="sig-name descname"><span class="pre">nodal_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_stress result data.</p>
+<dd><p>Get result data for the nodal stress.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress_amplitude">
+<span class="sig-name descname"><span class="pre">nodal_stress_amplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress_amplitude" title="Permalink to this definition">#</a></dt>
+<dd><p>Get result data for the nodal stress amplitude.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress_ratio">
 <span class="sig-name descname"><span class="pre">nodal_stress_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress_ratio" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_stress_ratio result data.</p>
+<dd><p>Get result data for the nodal stress ratio.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_structural_temperature">
 <span class="sig-name descname"><span class="pre">nodal_structural_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_structural_temperature" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_structural_temperature result data.</p>
+<dd><p>Get result data for the nodal structural temperature.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_thermal_strains">
 <span class="sig-name descname"><span class="pre">nodal_thermal_strains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_thermal_strains" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_thermal_strains result data.</p>
+<dd><p>Get result data for the nodal thermal strains.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_velocity">
 <span class="sig-name descname"><span class="pre">nodal_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_velocity" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_velocity result data.</p>
+<dd><p>Get result data for the nodal velocity.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ComplexMecanicMisc.von_mises_stress">
 <span class="sig-name descname"><span class="pre">von_mises_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ComplexMecanicMisc.von_mises_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>von_mises_stress output default location is Nodal.
-Use the location keyword with ‘ElementalNodal’ value to
-get an ElementalNodal result, and the ‘Elemental’ value
-to get Elemental result.</p>
+<dd><p>Get result data for the nodal von Mises stress.</p>
+<p>The default location of this result is nodal.  Use the location keyword
+<code class="docutils literal notranslate"><span class="pre">&quot;ElementalNodal&quot;</span></code> to get an elemental nodal result or <code class="docutils literal notranslate"><span class="pre">&quot;Elemental&quot;</span></code>
+to get an elemental result.</p>
 </dd></dl>
 
 </dd></dl>
@@ -673,433 +696,434 @@ to get Elemental result.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.dpf.post.misc_results.</span></span><span class="sig-name descname"><span class="pre">MecanicMisc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc" title="Permalink to this definition">#</a></dt>
-<dd><dl class="py method">
+<dd><p>Provides the miscellaneous mecanic result.</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_creep_strain">
 <span class="sig-name descname"><span class="pre">elemental_accu_eqv_creep_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_creep_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_accu_eqv_creep_strain result data.</p>
+<dd><p>Get result data for the elemental accurate equivalent creep strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_accu_eqv_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_accu_eqv_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental accurate eqvivalent plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_artificial_hourglass_energy">
 <span class="sig-name descname"><span class="pre">elemental_artificial_hourglass_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_artificial_hourglass_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_artificial_hourglass_energy result data.</p>
+<dd><p>Get result data for the elemental artificial hourglass energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_co_energy">
 <span class="sig-name descname"><span class="pre">elemental_co_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_co_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_co_energy result data.</p>
+<dd><p>Get result data for the elemental co energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_fluid_penetration_pressure">
 <span class="sig-name descname"><span class="pre">elemental_contact_fluid_penetration_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_fluid_penetration_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_fluid_penetration_pressure result data.</p>
+<dd><p>Get result data for the elemental contact fluid penetration pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_friction_stress">
 <span class="sig-name descname"><span class="pre">elemental_contact_friction_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_friction_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_friction_stress result data.</p>
+<dd><p>Get result data for the elemental contact friction stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_penetration">
 <span class="sig-name descname"><span class="pre">elemental_contact_penetration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_penetration" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_penetration result data.</p>
+<dd><p>Get result data for the elemental contact penetration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_pressure">
 <span class="sig-name descname"><span class="pre">elemental_contact_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_pressure result data.</p>
+<dd><p>Get result data for the elemental contact pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_sliding_distance">
 <span class="sig-name descname"><span class="pre">elemental_contact_sliding_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_sliding_distance" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_sliding_distance result data.</p>
+<dd><p>Get result data for the elemental contact sliding distance.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_status">
 <span class="sig-name descname"><span class="pre">elemental_contact_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_status" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_status result data.</p>
+<dd><p>Get result data for the elemental contact status.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_surface_heat_flux">
 <span class="sig-name descname"><span class="pre">elemental_contact_surface_heat_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_surface_heat_flux" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_surface_heat_flux result data.</p>
+<dd><p>Get result data for the elemental contact surface heat flux.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_total_stress">
 <span class="sig-name descname"><span class="pre">elemental_contact_total_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_total_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contact_total_stress result data.</p>
+<dd><p>Get result data for the elemental contact total stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_contactgap_distance">
 <span class="sig-name descname"><span class="pre">elemental_contactgap_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_contactgap_distance" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_contactgap_distance result data.</p>
+<dd><p>Get result data for the elemental contact gap distance.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_creep_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_creep_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_creep_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_creep_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental creep strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_elastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_elastic_strain result data.</p>
+<dd><p>Get result data for the elemental elastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_elastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_elastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental elastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_eqv_stress_parameter">
 <span class="sig-name descname"><span class="pre">elemental_eqv_stress_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_eqv_stress_parameter" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_eqv_stress_parameter result data.</p>
+<dd><p>Get result data for an elemental equivalent stress parameter.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_force">
 <span class="sig-name descname"><span class="pre">elemental_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_force result data.</p>
+<dd><p>Get result data for the elemental force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_hydrostatic_pressure">
 <span class="sig-name descname"><span class="pre">elemental_hydrostatic_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_hydrostatic_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_hydrostatic_pressure result data.</p>
+<dd><p>Get result data for the elemental hydrostatic pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_incremental_energy">
 <span class="sig-name descname"><span class="pre">elemental_incremental_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_incremental_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_incremental_energy result data.</p>
+<dd><p>Get result data for the elemental incremental energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_kinetic_energy">
 <span class="sig-name descname"><span class="pre">elemental_kinetic_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_kinetic_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_kinetic_energy result data.</p>
+<dd><p>Get result data for the elemental kinetic energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_mass">
 <span class="sig-name descname"><span class="pre">elemental_mass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_mass" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_mass result data.</p>
+<dd><p>Get result data for the elemental mass.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_creep_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_accu_eqv_creep_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_creep_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_accu_eqv_creep_strain result data.</p>
+<dd><p>Get result data for the elemental nodal accurate equivalent creep strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_accu_eqv_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_accu_eqv_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental nodal accurate eqvivalent plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_creep_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_nodal_creep_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_creep_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_creep_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental nodal creep strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_elastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_elastic_strain result data.</p>
+<dd><p>Get result data for the elemental nodal elastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_nodal_elastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_elastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental nodal elastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_eqv_stress_parameter">
 <span class="sig-name descname"><span class="pre">elemental_nodal_eqv_stress_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_eqv_stress_parameter" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_eqv_stress_parameter result data.</p>
+<dd><p>Get result data for the elemental nodal equivalent stress parameter.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_force">
 <span class="sig-name descname"><span class="pre">elemental_nodal_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_force result data.</p>
+<dd><p>Get result data for the elemental nodal force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_hydrostatic_pressure">
 <span class="sig-name descname"><span class="pre">elemental_nodal_hydrostatic_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_hydrostatic_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_hydrostatic_pressure result data.</p>
+<dd><p>Get result data for the elemental nodal hydrostatic pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_state_variable">
 <span class="sig-name descname"><span class="pre">elemental_nodal_plastic_state_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_state_variable" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_plastic_state_variable result data.</p>
+<dd><p>Get result data for the elemental nodal plastic state variable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_nodal_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental nodal plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_nodal_plastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_plastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental nodal plastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress">
 <span class="sig-name descname"><span class="pre">elemental_nodal_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_stress result data.</p>
+<dd><p>Get result data for the elemental nodal stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress_ratio">
 <span class="sig-name descname"><span class="pre">elemental_nodal_stress_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress_ratio" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_stress_ratio result data.</p>
+<dd><p>Get result data for the elemental nodal stress ratio.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_structural_temperature">
 <span class="sig-name descname"><span class="pre">elemental_nodal_structural_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_structural_temperature" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_structural_temperature result data.</p>
+<dd><p>Get result data for the elemental nodal structural temperature.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_thermal_strains">
 <span class="sig-name descname"><span class="pre">elemental_nodal_thermal_strains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_thermal_strains" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_nodal_thermal_strains result data.</p>
+<dd><p>Get result data for the elemental nodal thermal strains.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_state_variable">
 <span class="sig-name descname"><span class="pre">elemental_plastic_state_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_state_variable" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_plastic_state_variable result data.</p>
+<dd><p>Get result data for the elemental plastic state variable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain">
 <span class="sig-name descname"><span class="pre">elemental_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_plastic_strain result data.</p>
+<dd><p>Get result data for the elemental plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">elemental_plastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_plastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the elemental plastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_stiffness_matrix_energy">
 <span class="sig-name descname"><span class="pre">elemental_stiffness_matrix_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_stiffness_matrix_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_stiffness_matrix_energy result data.</p>
+<dd><p>Get result data for the elemental stiffness matrix energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_stress">
 <span class="sig-name descname"><span class="pre">elemental_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_stress result data.</p>
+<dd><p>Get result data for the elemental stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_stress_ratio">
 <span class="sig-name descname"><span class="pre">elemental_stress_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress_ratio" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_stress_ratio result data.</p>
+<dd><p>Get result data for the elemental stress ratio.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_structural_temperature">
 <span class="sig-name descname"><span class="pre">elemental_structural_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_structural_temperature" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_structural_temperature result data.</p>
+<dd><p>Get result data for the elemental structural temperature.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_dissipation_energy">
 <span class="sig-name descname"><span class="pre">elemental_thermal_dissipation_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_dissipation_energy" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_thermal_dissipation_energy result data.</p>
+<dd><p>Get result data for the elemental thermal dissipation energy.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_strains">
 <span class="sig-name descname"><span class="pre">elemental_thermal_strains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_strains" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_thermal_strains result data.</p>
+<dd><p>Get result data for the elemental thermal strains.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.elemental_volume">
 <span class="sig-name descname"><span class="pre">elemental_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.elemental_volume" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a elemental_volume result data.</p>
+<dd><p>Get result data for the elemental volume.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.modal_basis">
 <span class="sig-name descname"><span class="pre">modal_basis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.modal_basis" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a modal_basis result data.</p>
+<dd><p>Get result data for the modal basis.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_acceleration">
 <span class="sig-name descname"><span class="pre">nodal_acceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_acceleration" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_acceleration result data.</p>
+<dd><p>Get result data for the nodal acceleration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_creep_strain">
 <span class="sig-name descname"><span class="pre">nodal_accu_eqv_creep_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_creep_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_accu_eqv_creep_strain result data.</p>
+<dd><p>Get result data for the nodal accurate equivalent creep strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_plastic_strain">
 <span class="sig-name descname"><span class="pre">nodal_accu_eqv_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_accu_eqv_plastic_strain result data.</p>
+<dd><p>Get result data for the nodal accurate equivalent plastic strain result data.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_creep_strain_energy_density">
 <span class="sig-name descname"><span class="pre">nodal_creep_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_creep_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_creep_strain_energy_density result data.</p>
+<dd><p>Get result data for the nodal creep strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_displacement">
 <span class="sig-name descname"><span class="pre">nodal_displacement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_displacement" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_displacement result data.</p>
+<dd><p>Get result data for the nodal displacement.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain">
 <span class="sig-name descname"><span class="pre">nodal_elastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_elastic_strain result data.</p>
+<dd><p>Get result data for the nodal elastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">nodal_elastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_elastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the nodal elastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_eqv_stress_parameter">
 <span class="sig-name descname"><span class="pre">nodal_eqv_stress_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_eqv_stress_parameter" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_eqv_stress_parameter result data.</p>
+<dd><p>Get result data for the nodal equivalent stress parameter.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_force">
 <span class="sig-name descname"><span class="pre">nodal_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_force result data.</p>
+<dd><p>Get result data for the nodal force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_hydrostatic_pressure">
 <span class="sig-name descname"><span class="pre">nodal_hydrostatic_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_hydrostatic_pressure" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_hydrostatic_pressure result data.</p>
+<dd><p>Get result data for the nodal hydrostatic pressure.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_moment">
 <span class="sig-name descname"><span class="pre">nodal_moment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_moment" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_moment result data.</p>
+<dd><p>Get result data for the nodal moment.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_state_variable">
 <span class="sig-name descname"><span class="pre">nodal_plastic_state_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_state_variable" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_plastic_state_variable result data.</p>
+<dd><p>Get result data for the nodal plastic state variable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain">
 <span class="sig-name descname"><span class="pre">nodal_plastic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_plastic_strain result data.</p>
+<dd><p>Get result data for the nodal plastic strain.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain_energy_density">
 <span class="sig-name descname"><span class="pre">nodal_plastic_strain_energy_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain_energy_density" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_plastic_strain_energy_density result data.</p>
+<dd><p>Get result data for the nodal plastic strain energy density.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_displacement">
 <span class="sig-name descname"><span class="pre">nodal_raw_displacement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_displacement" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_raw_displacement result data.</p>
+<dd><p>Get result data for the nodal raw displacement.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_reaction_force">
 <span class="sig-name descname"><span class="pre">nodal_raw_reaction_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_reaction_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_raw_reaction_force result data.</p>
+<dd><p>Get result data for the nodal raw reaction force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_reaction_force">
 <span class="sig-name descname"><span class="pre">nodal_reaction_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_reaction_force" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_reaction_force result data.</p>
+<dd><p>Get result data for the nodal reaction force.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_stress">
 <span class="sig-name descname"><span class="pre">nodal_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_stress result data.</p>
+<dd><p>Get result data for the nodal stress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_stress_ratio">
 <span class="sig-name descname"><span class="pre">nodal_stress_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress_ratio" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_stress_ratio result data.</p>
+<dd><p>Get result data for the nodal stress ratio.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_structural_temperature">
 <span class="sig-name descname"><span class="pre">nodal_structural_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_structural_temperature" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_structural_temperature result data.</p>
+<dd><p>Get result data for the nodal structural temperature.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_thermal_strains">
 <span class="sig-name descname"><span class="pre">nodal_thermal_strains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_thermal_strains" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_thermal_strains result data.</p>
+<dd><p>Get result data for the nodal thermal strains.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.nodal_velocity">
 <span class="sig-name descname"><span class="pre">nodal_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.nodal_velocity" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a nodal_velocity result data.</p>
+<dd><p>Get result data for the nodal velocity.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.MecanicMisc.von_mises_stress">
 <span class="sig-name descname"><span class="pre">von_mises_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.MecanicMisc.von_mises_stress" title="Permalink to this definition">#</a></dt>
-<dd><p>von_mises_stress output default location is Nodal.
-Use the location keyword with ‘ElementalNodal’ value to
-get an ElementalNodal result, and the ‘Elemental’ value
-to get Elemental result.</p>
+<dd><p>Get result data for the nodal von Mises stress.</p>
+<p>The default location of this result is nodal.  Use the location keyword
+<code class="docutils literal notranslate"><span class="pre">&quot;ElementalNodal&quot;</span></code> to get an elemental nodal result or <code class="docutils literal notranslate"><span class="pre">&quot;Elemental&quot;</span></code>
+to get an elemental result.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1107,15 +1131,33 @@ to get Elemental result.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.Misc">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.dpf.post.misc_results.</span></span><span class="sig-name descname"><span class="pre">Misc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.Misc" title="Permalink to this definition">#</a></dt>
-<dd><p>This class contains miscellaneous results.</p>
-<p>Here the phase keyword is also available while calling results.</p>
+<dd><p>Contains miscellaneous results.</p>
+<p>In this class, the phase keyword argument is available while calling results.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ThermalMisc">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.dpf.post.misc_results.</span></span><span class="sig-name descname"><span class="pre">ThermalMisc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ThermalMisc" title="Permalink to this definition">#</a></dt>
-<dd><p>This class contains miscellaneous results for thermal analysis.</p>
-<p>Here the phase keyword is also available while calling results.</p>
+<dd><p>Contains miscellaneous results for thermal analysis.</p>
+<p>In this class the phase keyword argument is also available while calling results.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ThermalMisc.nodal_electric_field">
+<span class="sig-name descname"><span class="pre">nodal_electric_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ThermalMisc.nodal_electric_field" title="Permalink to this definition">#</a></dt>
+<dd><p>Get result data for the nodal electric field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ThermalMisc.nodal_electric_potential">
+<span class="sig-name descname"><span class="pre">nodal_electric_potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ThermalMisc.nodal_electric_potential" title="Permalink to this definition">#</a></dt>
+<dd><p>Get result data for the nodal electric potential.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.dpf.post.misc_results.ThermalMisc.nodal_temperature">
+<span class="sig-name descname"><span class="pre">nodal_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.misc_results.ThermalMisc.nodal_temperature" title="Permalink to this definition">#</a></dt>
+<dd><p>Get result data for the nodal thermal.</p>
+</dd></dl>
+
 </dd></dl>
 
 

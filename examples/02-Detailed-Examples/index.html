@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>DPF-Post Detailed Examples &#8212; PyDPF-Post</title>
+    <title>DPF-Post feature examples &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ANSYS DPF Introduction to POST API" href="01-introduction.html" />
-    <link rel="prev" title="ANSYS DPF-Post: Transient Anaysis" href="../01-Different-analysis-types/04-transient-analysis.html" />
+    <link rel="next" title="Introduction" href="01-introduction.html" />
+    <link rel="prev" title="Transient analysis" href="../01-Different-analysis-types/04-transient-analysis.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -168,7 +171,7 @@
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">DPF-Post Detailed Examples</a></li> 
+        <li class="nav-item nav-item-this"><a href="">DPF-Post feature examples</a></li> 
       </ul>
     </div>
         </div>
@@ -188,10 +191,11 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../00-Overview/index.html">
-   DPF-Post Overview
+   DPF-Post overview
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -201,14 +205,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../00-Overview/00-overview_example.html">
-     ANSYS DPF Overview of the POST API
+     DPF-Post overview
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01-Different-analysis-types/index.html">
-   DPF-Post Analysis Types
+   DPF-Post analysis types
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -218,29 +222,29 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/01-static-analysis.html">
-     Static Analysis
+     Static analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/02-modal-analysis.html">
-     ANSYS DPF-Post: Modal Analysis
+     Modal analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/03-harmonic-analysis.html">
-     ANSYS DPF-Post: Harmonic Analysis
+     Harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/04-transient-analysis.html">
-     ANSYS DPF-Post: Transient Anaysis
+     Transient analysis
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   DPF-Post Detailed Examples
+   DPF-Post feature examples
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -250,33 +254,34 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="01-introduction.html">
-     ANSYS DPF Introduction to POST API
+     Introduction
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02-basics.html">
-     ANSYS DPF Basic Features of the POST API
+     Basic features
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03-result_keywords.html">
-     ANSYS DPF-POST Use result keywords
+     Result keywords
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04-complex_results.html">
-     Compute Complex Results from Modal or Harmonic Analyses
+     Complex results from a modal or harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05-result_on_path_of_coordinates.html">
-     ANSYS DPF-Post request results on specific path
+     Request result on a specific path
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -313,24 +318,24 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="dpf-post-detailed-examples">
-<span id="ref-detailed-examples"></span><span id="sphx-glr-examples-02-detailed-examples"></span><h1>DPF-Post Detailed Examples<a class="headerlink" href="#dpf-post-detailed-examples" title="Permalink to this heading">#</a></h1>
-<p>Here are a series of detailed examples with the <code class="docutils literal notranslate"><span class="pre">ansys-dpf-post</span></code> module.</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF Introduction to POST API"><img alt="ANSYS DPF Introduction to POST API" src="../../_images/sphx_glr_01-introduction_thumb.png" />
-<p><a class="reference internal" href="01-introduction.html#sphx-glr-examples-02-detailed-examples-01-introduction-py"><span class="std std-ref">ANSYS DPF Introduction to POST API</span></a></p>
-  <div class="sphx-glr-thumbnail-title">ANSYS DPF Introduction to POST API</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF Basic Features of the POST API"><img alt="ANSYS DPF Basic Features of the POST API" src="../../_images/sphx_glr_02-basics_thumb.png" />
-<p><a class="reference internal" href="02-basics.html#sphx-glr-examples-02-detailed-examples-02-basics-py"><span class="std std-ref">ANSYS DPF Basic Features of the POST API</span></a></p>
-  <div class="sphx-glr-thumbnail-title">ANSYS DPF Basic Features of the POST API</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF-POST Use result keywords"><img alt="ANSYS DPF-POST Use result keywords" src="../../_images/sphx_glr_03-result_keywords_thumb.png" />
-<p><a class="reference internal" href="03-result_keywords.html#sphx-glr-examples-02-detailed-examples-03-result-keywords-py"><span class="std std-ref">ANSYS DPF-POST Use result keywords</span></a></p>
-  <div class="sphx-glr-thumbnail-title">ANSYS DPF-POST Use result keywords</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Compute Complex Results from Modal or Harmonic Analyses"><img alt="Compute Complex Results from Modal or Harmonic Analyses" src="../../_images/sphx_glr_04-complex_results_thumb.png" />
-<p><a class="reference internal" href="04-complex_results.html#sphx-glr-examples-02-detailed-examples-04-complex-results-py"><span class="std std-ref">Compute Complex Results from Modal or Harmonic Analyses</span></a></p>
-  <div class="sphx-glr-thumbnail-title">Compute Complex Results from Modal or Harmonic Analyses</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF-Post request results on specific path"><img alt="ANSYS DPF-Post request results on specific path" src="../../_images/sphx_glr_05-result_on_path_of_coordinates_thumb.png" />
-<p><a class="reference internal" href="05-result_on_path_of_coordinates.html#sphx-glr-examples-02-detailed-examples-05-result-on-path-of-coordinates-py"><span class="std std-ref">ANSYS DPF-Post request results on specific path</span></a></p>
-  <div class="sphx-glr-thumbnail-title">ANSYS DPF-Post request results on specific path</div>
+  <section id="dpf-post-feature-examples">
+<span id="ref-detailed-examples"></span><span id="sphx-glr-examples-02-detailed-examples"></span><h1>DPF-Post feature examples<a class="headerlink" href="#dpf-post-feature-examples" title="Permalink to this heading">#</a></h1>
+<p>These examples show how you use DPF-Post features.</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Introduction"><img alt="Introduction" src="../../_images/sphx_glr_01-introduction_thumb.png" />
+<p><a class="reference internal" href="01-introduction.html#sphx-glr-examples-02-detailed-examples-01-introduction-py"><span class="std std-ref">Introduction</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Introduction</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Basic features"><img alt="Basic features" src="../../_images/sphx_glr_02-basics_thumb.png" />
+<p><a class="reference internal" href="02-basics.html#sphx-glr-examples-02-detailed-examples-02-basics-py"><span class="std std-ref">Basic features</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Basic features</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Result keywords"><img alt="Result keywords" src="../../_images/sphx_glr_03-result_keywords_thumb.png" />
+<p><a class="reference internal" href="03-result_keywords.html#sphx-glr-examples-02-detailed-examples-03-result-keywords-py"><span class="std std-ref">Result keywords</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Result keywords</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Complex results from a modal or harmonic analysis"><img alt="Complex results from a modal or harmonic analysis" src="../../_images/sphx_glr_04-complex_results_thumb.png" />
+<p><a class="reference internal" href="04-complex_results.html#sphx-glr-examples-02-detailed-examples-04-complex-results-py"><span class="std std-ref">Complex results from a modal or harmonic analysis</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Complex results from a modal or harmonic analysis</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Request result on a specific path"><img alt="Request result on a specific path" src="../../_images/sphx_glr_05-result_on_path_of_coordinates_thumb.png" />
+<p><a class="reference internal" href="05-result_on_path_of_coordinates.html#sphx-glr-examples-02-detailed-examples-05-result-on-path-of-coordinates-py"><span class="std std-ref">Request result on a specific path</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Request result on a specific path</div>
 </div></div><div class="toctree-wrapper compound">
 </div>
 </section>

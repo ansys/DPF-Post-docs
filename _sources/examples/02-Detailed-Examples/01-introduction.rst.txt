@@ -20,21 +20,23 @@
 
 .. _ref_introduction:
 
-ANSYS DPF Introduction to POST API
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This tutorial shows the first step to load the post module and to
-access some basic help.
+Introduction
+============
+This example shows how to load a solution and access some basic help.
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-12
+.. GENERATED FROM PYTHON SOURCE LINES 9-12
 
-**Get started**
+Perform required imports
+------------------------
+Perform required imports.
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-15
+.. GENERATED FROM PYTHON SOURCE LINES 12-16
 
 .. code-block:: default
 
-    from ansys.dpf.post import examples
+
     from ansys.dpf import post
+    from ansys.dpf.post import examples
 
 
 
@@ -43,14 +45,17 @@ access some basic help.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-18
+.. GENERATED FROM PYTHON SOURCE LINES 17-21
 
-**Load a solution**: this must be instantiated with the result filepath.
-Load a simple  example file included with DPF-Post
+Get ``Solution`` object
+-----------------------
+Get the ``Solution`` object. This example loads a simple file supplied with
+DPF-Post.
 
-.. GENERATED FROM PYTHON SOURCE LINES 18-21
+.. GENERATED FROM PYTHON SOURCE LINES 21-25
 
 .. code-block:: default
+
 
     simple_bar = examples.simple_bar
     solution = post.load_solution(simple_bar)
@@ -62,18 +67,21 @@ Load a simple  example file included with DPF-Post
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-24
+.. GENERATED FROM PYTHON SOURCE LINES 26-28
 
-Use the helpers
-~~~~~~~~~~~~~~~
+Use helpers
+-----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-27
+.. GENERATED FROM PYTHON SOURCE LINES 30-33
 
-**Solution information**
+Get solution information
+~~~~~~~~~~~~~~~~~~~~~~~~
+Get solution information.
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-29
+.. GENERATED FROM PYTHON SOURCE LINES 33-36
 
 .. code-block:: default
+
 
     print(solution)
 
@@ -100,7 +108,7 @@ Use the helpers
     ------------------------------
     Static analysis
     Unit system: MKS: m, kg, N, s, V, A, degC
-    Physics Type: Mecanic
+    Physics Type: Mechanical
     Available results:
          -  displacement: Nodal Displacement
          -  element_nodal_forces: ElementalNodal Element nodal Forces
@@ -128,14 +136,17 @@ Use the helpers
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-32
+.. GENERATED FROM PYTHON SOURCE LINES 37-41
 
-**Locations information**: the locations are used to defined where
+Get locations information
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Get location information. Locations are used to defined where
 the result must be set.
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-34
+.. GENERATED FROM PYTHON SOURCE LINES 41-44
 
 .. code-block:: default
+
 
     help(post.locations)
 
@@ -203,14 +214,17 @@ the result must be set.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-37
+.. GENERATED FROM PYTHON SOURCE LINES 45-49
 
-**Get the available keywords** that can be used as attribute of a
-**result object**.
+Get available keywords
+~~~~~~~~~~~~~~~~~~~~~~
+Get the available keywords. Keywords can be used as attributes of a
+``Result`` object.
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 49-51
 
 .. code-block:: default
+
 
     post.print_available_keywords()
 
@@ -242,7 +256,7 @@ the result must be set.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.038 seconds)
+   **Total running time of the script:** ( 0 minutes  0.017 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_01-introduction.py:

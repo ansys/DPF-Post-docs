@@ -26,6 +26,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="User Guide" href="../user_guide/index.html" />
-    <link rel="prev" title="Getting Started" href="index.html" />
+    <link rel="next" title="User guide" href="../user_guide/index.html" />
+    <link rel="prev" title="Compatibility" href="compatibility.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -167,7 +170,7 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyDPF-Post</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting Started</a> » </li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting started</a> » </li>
         <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
       </ul>
     </div>
@@ -188,7 +191,13 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="compatibility.html">
+   Compatibility
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Installation
@@ -196,6 +205,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -219,8 +229,23 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#editable-install-development-mode">
-   Editable Install (Development Mode)
+  <a class="reference internal nav-link" href="#install-using-pip">
+   Install using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pip
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-using-a-wheel-file">
+   Install using a wheel file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-in-development-mode">
+   Install in development mode
   </a>
  </li>
 </ul>
@@ -244,21 +269,27 @@
                 
   <section id="installation">
 <span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
-<p>Once you’ve installed Ansys 2021R1 or newer, you can install DPF with:</p>
+<section id="install-using-pip">
+<h2>Install using <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#install-using-pip" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://pypi.org/project/pip/">pip</a> is the package installer for Python.</p>
+<p>To use PyDPF-Post with Ansys 2021 R1 or later, install the latest version
+with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-</span><span class="n">dpf</span><span class="o">-</span><span class="n">post</span>
 </pre></div>
 </div>
-<p>This will install the latest version of <code class="docutils literal notranslate"><span class="pre">ansys-dpf-post</span></code> and all the
-necessary dependencies.</p>
-<p>If you are unable to install the module on the host machine due to
-network isolation, download the latest release wheel at <a class="reference external" href="https://github.com/pyansys/pydpf-post">PyDPF-Post
-GitHub</a> or from PyPi at
-<a class="reference external" href="https://pypi.org/project/ansys-dpf-post/">PyDPF-Post PyPi</a></p>
-<section id="editable-install-development-mode">
-<h2>Editable Install (Development Mode)<a class="headerlink" href="#editable-install-development-mode" title="Permalink to this heading">#</a></h2>
-<p>If you wish to edit and potentially contribute to the DPF-Post python
-module, clone the repository and install it using pip with the <code class="docutils literal notranslate"><span class="pre">-e</span></code>
-development flag.</p>
+</section>
+<section id="install-using-a-wheel-file">
+<h2>Install using a wheel file<a class="headerlink" href="#install-using-a-wheel-file" title="Permalink to this heading">#</a></h2>
+<p>If you are unable to install PyDPF-Post on the host machine due to
+network isolation, download the latest wheel file from <a class="reference external" href="https://github.com/pyansys/pydpf-post">PyDPF-Post
+GitHub</a> or
+<a class="reference external" href="https://pypi.org/project/ansys-dpf-post/">PyDPF-Post PyPi</a>.</p>
+</section>
+<section id="install-in-development-mode">
+<h2>Install in development mode<a class="headerlink" href="#install-in-development-mode" title="Permalink to this heading">#</a></h2>
+<p>If you want to edit and potentially contribute to DPF-Post,
+clone the repository and install it using <code class="docutils literal notranslate"><span class="pre">pip</span></code> with the <code class="docutils literal notranslate"><span class="pre">-e</span></code>
+development flag:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/</span><span class="n">pydpf</span><span class="o">-</span><span class="n">post</span>
 <span class="n">cd</span> <span class="n">pydpf</span><span class="o">-</span><span class="n">post</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>

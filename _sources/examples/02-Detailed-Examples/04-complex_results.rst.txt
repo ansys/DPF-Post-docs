@@ -20,18 +20,21 @@
 
 .. _ref_complex_results:
 
-Compute Complex Results from Modal or Harmonic Analyses
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This tutorial shows how to access complex results using the DPF-POST
-module API.
+Complex results from a modal or harmonic analysis
+-------------------------------------------------
+This example shows how you can access complex results from a modal or
+harmonic analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-12
+.. GENERATED FROM PYTHON SOURCE LINES 11-14
 
-**Get started**
+Perform required imports
+------------------------
+Perform required imports.
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-15
+.. GENERATED FROM PYTHON SOURCE LINES 14-18
 
 .. code-block:: default
+
 
     from ansys.dpf import post
     from ansys.dpf.post import examples
@@ -43,13 +46,16 @@ module API.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-17
+.. GENERATED FROM PYTHON SOURCE LINES 19-22
 
-**Get the solution object**
+Get ``Solution`` object
+-----------------------
+Get the ``Solution`` object.
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-20
+.. GENERATED FROM PYTHON SOURCE LINES 22-26
 
 .. code-block:: default
+
 
     solution = post.load_solution(examples.complex_rst)
     solution.has_complex_result()
@@ -67,16 +73,17 @@ module API.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-25
+.. GENERATED FROM PYTHON SOURCE LINES 27-31
 
-**Get displacement result**
+Get displacement result
+~~~~~~~~~~~~~~~~~~~~~~~
+Get the displacement ``Result`` object. It contain a field for real values
+and a field for imaginary values.
 
-This result will contain a field for real values and a field for
-imaginary values)
-
-.. GENERATED FROM PYTHON SOURCE LINES 25-27
+.. GENERATED FROM PYTHON SOURCE LINES 31-34
 
 .. code-block:: default
+
 
     disp_result = solution.displacement()
 
@@ -87,13 +94,16 @@ imaginary values)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-29
+.. GENERATED FROM PYTHON SOURCE LINES 35-38
 
-**Check if the support has complex frequencies**
+Check if support has complex frequencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Check if the support has complex frequencies.
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-31
+.. GENERATED FROM PYTHON SOURCE LINES 38-41
 
 .. code-block:: default
+
 
     disp_result.has_complex_frequencies()
 
@@ -110,11 +120,11 @@ imaginary values)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-33
+.. GENERATED FROM PYTHON SOURCE LINES 42-43
 
 **Compute the result**
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-36
+.. GENERATED FROM PYTHON SOURCE LINES 43-46
 
 .. code-block:: default
 
@@ -134,13 +144,16 @@ imaginary values)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 47-50
 
-**Deals with phase** (phase unit is degree, phase must be a float)
+Define phase
+~~~~~~~~~~~~
+Define the phase. The phase value must be a float. The phase unit is degrees.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-47
+.. GENERATED FROM PYTHON SOURCE LINES 50-60
 
 .. code-block:: default
+
 
     phase = 39.0
     disp_at_phase = disp_result.vector_at_phase(phase)
@@ -159,20 +172,23 @@ imaginary values)
 
  .. code-block:: none
 
-    Maximum displacement at phase 39.0: [[4.64890691e-310 4.64890677e-310 1.58101007e-322]]
+    Maximum displacement at phase 39.0: [[4.68160185e-310 4.68160159e-310 1.58101007e-322]]
     There are 1 fields
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f2d60077b50>
+    <ansys.dpf.post.result_data.ResultData object at 0x7fee0eecd910>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-49
+.. GENERATED FROM PYTHON SOURCE LINES 61-64
 
-**Get amplitude**
+Get amplitude
+~~~~~~~~~~~~~
+Get the amplitude.
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-52
+.. GENERATED FROM PYTHON SOURCE LINES 64-68
 
 .. code-block:: default
+
 
     disp_ampl = disp_result.vector_amplitude
     disp_ampl.num_fields
@@ -186,14 +202,14 @@ imaginary values)
  .. code-block:: none
 
 
-    DPFArray([[4.64890593e-310, 2.76952555e-009, 4.10914321e-010]])
+    DPFArray([[4.68160279e-310, 2.76952555e-009, 4.10914321e-010]])
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.029 seconds)
+   **Total running time of the script:** ( 0 minutes  0.030 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_04-complex_results.py:

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>ANSYS DPF Introduction to POST API &#8212; PyDPF-Post</title>
+    <title>Introduction &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ANSYS DPF Basic Features of the POST API" href="02-basics.html" />
-    <link rel="prev" title="DPF-Post Detailed Examples" href="index.html" />
+    <link rel="next" title="Basic features" href="02-basics.html" />
+    <link rel="prev" title="DPF-Post feature examples" href="index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -168,8 +171,8 @@
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> » </li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post Detailed Examples</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">ANSYS DPF Introduction to POST API</a></li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post feature examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Introduction</a></li> 
       </ul>
     </div>
         </div>
@@ -189,10 +192,11 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../00-Overview/index.html">
-   DPF-Post Overview
+   DPF-Post overview
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -202,14 +206,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../00-Overview/00-overview_example.html">
-     ANSYS DPF Overview of the POST API
+     DPF-Post overview
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01-Different-analysis-types/index.html">
-   DPF-Post Analysis Types
+   DPF-Post analysis types
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -219,29 +223,29 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/01-static-analysis.html">
-     Static Analysis
+     Static analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/02-modal-analysis.html">
-     ANSYS DPF-Post: Modal Analysis
+     Modal analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/03-harmonic-analysis.html">
-     ANSYS DPF-Post: Harmonic Analysis
+     Harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/04-transient-analysis.html">
-     ANSYS DPF-Post: Transient Anaysis
+     Transient analysis
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   DPF-Post Detailed Examples
+   DPF-Post feature examples
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -251,33 +255,34 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     ANSYS DPF Introduction to POST API
+     Introduction
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02-basics.html">
-     ANSYS DPF Basic Features of the POST API
+     Basic features
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03-result_keywords.html">
-     ANSYS DPF-POST Use result keywords
+     Result keywords
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04-complex_results.html">
-     Compute Complex Results from Modal or Harmonic Analyses
+     Complex results from a modal or harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05-result_on_path_of_coordinates.html">
-     ANSYS DPF-Post request results on specific path
+     Request result on a specific path
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -300,15 +305,43 @@
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   ANSYS DPF Introduction to POST API
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-required-imports">
+   Perform required imports
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-the-helpers">
-   Use the helpers
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-solution-object">
+   Get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Solution
+    </span>
+   </code>
+   object
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-helpers">
+   Use helpers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-solution-information">
+     Get solution information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-locations-information">
+     Get locations information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-available-keywords">
+     Get available keywords
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -334,25 +367,31 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-detailed-examples-01-introduction-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<section class="sphx-glr-example-title" id="ansys-dpf-introduction-to-post-api">
-<span id="ref-introduction"></span><span id="sphx-glr-examples-02-detailed-examples-01-introduction-py"></span><h1>ANSYS DPF Introduction to POST API<a class="headerlink" href="#ansys-dpf-introduction-to-post-api" title="Permalink to this heading">#</a></h1>
-<p>This tutorial shows the first step to load the post module and to
-access some basic help.</p>
-<p><strong>Get started</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
-</pre></div>
-</div>
-<p><strong>Load a solution</strong>: this must be instantiated with the result filepath.
-Load a simple  example file included with DPF-Post</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simple_bar</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">simple_bar</span>
-<span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">simple_bar</span><span class="p">)</span>
+<section class="sphx-glr-example-title" id="introduction">
+<span id="ref-introduction"></span><span id="sphx-glr-examples-02-detailed-examples-01-introduction-py"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>This example shows how to load a solution and access some basic help.</p>
+<section id="perform-required-imports">
+<h2>Perform required imports<a class="headerlink" href="#perform-required-imports" title="Permalink to this heading">#</a></h2>
+<p>Perform required imports.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 </section>
-<section id="use-the-helpers">
-<h1>Use the helpers<a class="headerlink" href="#use-the-helpers" title="Permalink to this heading">#</a></h1>
-<p><strong>Solution information</strong></p>
+<section id="get-solution-object">
+<h2>Get <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object<a class="headerlink" href="#get-solution-object" title="Permalink to this heading">#</a></h2>
+<p>Get the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object. This example loads a simple file supplied with
+DPF-Post.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simple_bar</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">examples</span><span class="o">.</span><span class="n">simple_bar</span></a>
+<span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simple_bar</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="use-helpers">
+<h2>Use helpers<a class="headerlink" href="#use-helpers" title="Permalink to this heading">#</a></h2>
+<section id="get-solution-information">
+<h3>Get solution information<a class="headerlink" href="#get-solution-information" title="Permalink to this heading">#</a></h3>
+<p>Get solution information.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">solution</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -371,7 +410,7 @@ DPF Model
 ------------------------------
 Static analysis
 Unit system: MKS: m, kg, N, s, V, A, degC
-Physics Type: Mecanic
+Physics Type: Mechanical
 Available results:
      -  displacement: Nodal Displacement
      -  element_nodal_forces: ElementalNodal Element nodal Forces
@@ -396,7 +435,10 @@ Cumulative     Time (s)       LoadStep       Substep
 1              1.000000       1              1
 </pre></div>
 </div>
-<p><strong>Locations information</strong>: the locations are used to defined where
+</section>
+<section id="get-locations-information">
+<h3>Get locations information<a class="headerlink" href="#get-locations-information" title="Permalink to this heading">#</a></h3>
+<p>Get location information. Locations are used to defined where
 the result must be set.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="p">)</span>
 </pre></div>
@@ -454,8 +496,11 @@ class locations(builtins.object)
  |  time_freq_step = &#39;TimeFreq_steps&#39;
 </pre></div>
 </div>
-<p><strong>Get the available keywords</strong> that can be used as attribute of a
-<strong>result object</strong>.</p>
+</section>
+<section id="get-available-keywords">
+<h3>Get available keywords<a class="headerlink" href="#get-available-keywords" title="Permalink to this heading">#</a></h3>
+<p>Get the available keywords. Keywords can be used as attributes of a
+<code class="docutils literal notranslate"><span class="pre">Result</span></code> object.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">post</span><span class="o">.</span><span class="n">print_available_keywords</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -474,7 +519,7 @@ time: float
 time_scoping: list, int or dpf.core.Scoping
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.038 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-detailed-examples-01-introduction-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/662e1018713f6c0212eefc28b95b6ddb/01-introduction.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">01-introduction.py</span></code></a></p>
@@ -484,6 +529,8 @@ time_scoping: list, int or dpf.core.Scoping
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+</section>
 </section>
 
 

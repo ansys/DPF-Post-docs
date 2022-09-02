@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>ANSYS DPF Basic Features of the POST API &#8212; PyDPF-Post</title>
+    <title>Basic features &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ANSYS DPF-POST Use result keywords" href="03-result_keywords.html" />
-    <link rel="prev" title="ANSYS DPF Introduction to POST API" href="01-introduction.html" />
+    <link rel="next" title="Result keywords" href="03-result_keywords.html" />
+    <link rel="prev" title="Introduction" href="01-introduction.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -168,8 +171,8 @@
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> » </li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post Detailed Examples</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">ANSYS DPF Basic Features of the POST API</a></li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post feature examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Basic features</a></li> 
       </ul>
     </div>
         </div>
@@ -189,10 +192,11 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../00-Overview/index.html">
-   DPF-Post Overview
+   DPF-Post overview
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -202,14 +206,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../00-Overview/00-overview_example.html">
-     ANSYS DPF Overview of the POST API
+     DPF-Post overview
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01-Different-analysis-types/index.html">
-   DPF-Post Analysis Types
+   DPF-Post analysis types
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -219,29 +223,29 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/01-static-analysis.html">
-     Static Analysis
+     Static analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/02-modal-analysis.html">
-     ANSYS DPF-Post: Modal Analysis
+     Modal analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/03-harmonic-analysis.html">
-     ANSYS DPF-Post: Harmonic Analysis
+     Harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/04-transient-analysis.html">
-     ANSYS DPF-Post: Transient Anaysis
+     Transient analysis
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   DPF-Post Detailed Examples
+   DPF-Post feature examples
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -251,33 +255,34 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="01-introduction.html">
-     ANSYS DPF Introduction to POST API
+     Introduction
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     ANSYS DPF Basic Features of the POST API
+     Basic features
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03-result_keywords.html">
-     ANSYS DPF-POST Use result keywords
+     Result keywords
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04-complex_results.html">
-     Compute Complex Results from Modal or Harmonic Analyses
+     Complex results from a modal or harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05-result_on_path_of_coordinates.html">
-     ANSYS DPF-Post request results on specific path
+     Request result on a specific path
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -294,9 +299,63 @@
     
     <div class="toc-item">
       
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-required-imports">
+   Perform required imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-solution-object">
+   Get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Solution
+    </span>
+   </code>
+   object
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-result-objects">
+   Get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Result
+    </span>
+   </code>
+   objects
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-displacement-result">
+     Get displacement result
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-information-on-result">
+     Get information on result
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-stress-result">
+     Get stress result
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Get information on result
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
     </div>
     
@@ -319,27 +378,39 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-detailed-examples-02-basics-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<section class="sphx-glr-example-title" id="ansys-dpf-basic-features-of-the-post-api">
-<span id="ref-basics"></span><span id="sphx-glr-examples-02-detailed-examples-02-basics-py"></span><h1>ANSYS DPF Basic Features of the POST API<a class="headerlink" href="#ansys-dpf-basic-features-of-the-post-api" title="Permalink to this heading">#</a></h1>
-<p>This tutorial shows how to get a result object from <code class="docutils literal notranslate"><span class="pre">ansys.dpf.post</span></code>
-and its basic usage.</p>
-<p><strong>Get started</strong></p>
+<section class="sphx-glr-example-title" id="basic-features">
+<span id="ref-basics"></span><span id="sphx-glr-examples-02-detailed-examples-02-basics-py"></span><h1>Basic features<a class="headerlink" href="#basic-features" title="Permalink to this heading">#</a></h1>
+<p>This example shows you how you can get and use a <code class="docutils literal notranslate"><span class="pre">Result</span></code> object.</p>
+<section id="perform-required-imports">
+<h2>Perform required imports<a class="headerlink" href="#perform-required-imports" title="Permalink to this heading">#</a></h2>
+<p>Perform required imports.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
 <span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p><strong>Get the solution object</strong>: must be instantiated with the result filepath</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">example_path</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_all_kinds_of_complexity</span><span class="p">()</span>
-<span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">example_path</span><span class="p">)</span>
+</section>
+<section id="get-solution-object">
+<h2>Get <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object<a class="headerlink" href="#get-solution-object" title="Permalink to this heading">#</a></h2>
+<p>Get the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object and instantiate with the path for the result
+file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">example_path</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_all_kinds_of_complexity</span><span class="p">()</span>
+<span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">example_path</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Get a displacement result from the result object</strong>
-First will be created a displacement result.</p>
+</section>
+<section id="get-result-objects">
+<h2>Get <code class="docutils literal notranslate"><span class="pre">Result</span></code> objects<a class="headerlink" href="#get-result-objects" title="Permalink to this heading">#</a></h2>
+<section id="get-displacement-result">
+<h3>Get displacement result<a class="headerlink" href="#get-displacement-result" title="Permalink to this heading">#</a></h3>
+<p>Get the displacement <code class="docutils literal notranslate"><span class="pre">Result</span></code> object.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">displacement_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
 <span class="n">displacement</span> <span class="o">=</span> <span class="n">displacement_result</span><span class="o">.</span><span class="n">vector</span>
 </pre></div>
 </div>
-<p><strong>Use the displacement result</strong></p>
+</section>
+<section id="get-information-on-result">
+<h3>Get information on result<a class="headerlink" href="#get-information-on-result" title="Permalink to this heading">#</a></h3>
+<p>Get information on the displacement result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">displacement</span><span class="o">.</span><span class="n">num_fields</span>
 <span class="n">disp_data</span> <span class="o">=</span> <span class="n">displacement</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">disp_data</span><span class="p">)</span>
@@ -352,16 +423,23 @@ First will be created a displacement result.</p>
 <span class="n">displacement</span><span class="o">.</span><span class="n">min_data</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([[ 4.64890520e-310, -1.04473039e+001, -2.94677257e-004]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([[ 4.68160278e-310, -1.04473039e+001, -2.94677257e-004]])
 </pre></div>
 </div>
-<p><strong>Get a stress result from the result object (nodal or elemental location)</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">el_stress_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">elemental</span><span class="p">)</span>
-<span class="n">nod_stress_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span>
-    <span class="n">location</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">nodal</span>
-<span class="p">)</span>  <span class="c1"># note: the default location is nodal</span>
-
-<span class="n">el_stress</span> <span class="o">=</span> <span class="n">el_stress_result</span><span class="o">.</span><span class="n">tensor</span>
+</section>
+<section id="get-stress-result">
+<h3>Get stress result<a class="headerlink" href="#get-stress-result" title="Permalink to this heading">#</a></h3>
+<p>Get the stress <code class="docutils literal notranslate"><span class="pre">Result</span></code> object for a tensor. You can get the nodal or
+elemental location. The default is the nodal location.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">el_stress_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">elemental</span></a><span class="p">)</span>
+<span class="n">nod_stress_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">nodal</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3>Get information on result<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Get information on the stress result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">el_stress</span> <span class="o">=</span> <span class="n">el_stress_result</span><span class="o">.</span><span class="n">tensor</span>
 <span class="n">nod_stress</span> <span class="o">=</span> <span class="n">nod_stress_result</span><span class="o">.</span><span class="n">tensor</span>
 
 <span class="n">el_field</span> <span class="o">=</span> <span class="n">el_stress</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -373,11 +451,11 @@ First will be created a displacement result.</p>
 <span class="n">el_stress</span><span class="o">.</span><span class="n">get_max_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([4.64890801e-310, 2.72813681e-008, 3.21780912e+009,
-          4.87186215e+007, 7.36908062e+007, 1.88455508e+009])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([4.68160718e-310, 3.94412425e+009, 4.40791214e+009,
+          2.82004580e+009, 1.90183439e+009, 4.26474819e+009])
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.170 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.196 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-detailed-examples-02-basics-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ad41983c2ea0f85f3de0da6ff04ac4fa/02-basics.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">02-basics.py</span></code></a></p>
@@ -387,6 +465,8 @@ First will be created a displacement result.</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+</section>
 </section>
 
 

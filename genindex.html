@@ -25,6 +25,7 @@
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
@@ -42,6 +43,8 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -90,19 +93,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -114,7 +117,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -137,7 +140,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -184,6 +187,8 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
+    
     
   </div>
 </nav>
@@ -454,6 +459,8 @@
 </li>
       <li><a href="api/ansys.dpf.post.vector.html#ansys.dpf.post.vector.ComplexVector">ComplexVector (class in ansys.dpf.post.vector)</a>
 </li>
+      <li><a href="api/ansys.dpf.post.dpf_path.html#ansys.dpf.post.dpf_path.DpfPath.coordinates">coordinates (ansys.dpf.post.dpf_path.DpfPath property)</a>
+</li>
       <li><a href="api/ansys.dpf.post.errors.html#ansys.dpf.post.errors.CoreVersionError">CoreVersionError</a>
 </li>
       <li><a href="api/ansys.dpf.post.misc.html#ansys.dpf.post.misc.Report.cpu_count">cpu_count (ansys.dpf.post.misc.Report property)</a>
@@ -470,7 +477,7 @@
 </li>
       <li><a href="api/ansys.dpf.post.result_definition.html#ansys.dpf.post.result_definition.Definition">Definition (class in ansys.dpf.post.result_definition)</a>
 </li>
-      <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement">Displacement (class in ansys.dpf.post.displacement)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.displacement.Displacement">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.displacement.Displacement.html#ansys.dpf.post.displacement.Displacement">Displacement (class in ansys.dpf.post.displacement)</a>, <a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfMecanicComplexSolution.displacement">displacement() (ansys.dpf.post.dpf_solution.DpfMecanicComplexSolution method)</a>
 
@@ -494,7 +501,7 @@
 </li>
       <li><a href="api/ansys.dpf.post.dpf_path.html#ansys.dpf.post.dpf_path.DpfPath">DpfPath (class in ansys.dpf.post.dpf_path)</a>
 </li>
-      <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution">DpfSolution (class in ansys.dpf.post.dpf_solution)</a>, <a href="api/solution.html#ansys.dpf.post.dpf_solution.DpfSolution">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.dpf_solution.DpfSolution.html#ansys.dpf.post.dpf_solution.DpfSolution">DpfSolution (class in ansys.dpf.post.dpf_solution)</a>, <a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfThermalSolution">DpfThermalSolution (class in ansys.dpf.post.dpf_solution)</a>
 </li>
@@ -518,7 +525,7 @@
         <li><a href="api/ansys.dpf.post.transient_analysis.html#ansys.dpf.post.transient_analysis.TransientAnalysisSolution.elastic_strain">(ansys.dpf.post.transient_analysis.TransientAnalysisSolution method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain">ElasticStrain (class in ansys.dpf.post.strain)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.html#ansys.dpf.post.strain.ElasticStrain">ElasticStrain (class in ansys.dpf.post.strain)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfThermalSolution.electric_field">electric_field() (ansys.dpf.post.dpf_solution.DpfThermalSolution method)</a>
 
@@ -536,130 +543,130 @@
         <li><a href="api/ansys.dpf.post.transient_analysis.html#ansys.dpf.post.transient_analysis.ThermalTransientAnalysisSolution.electric_potential">(ansys.dpf.post.transient_analysis.ThermalTransientAnalysisSolution method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField">ElectricField (class in ansys.dpf.post.electric_results)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricField">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricField.html#ansys.dpf.post.electric_results.ElectricField">ElectricField (class in ansys.dpf.post.electric_results)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField">[1]</a>
 </li>
-      <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricPotential">ElectricPotential (class in ansys.dpf.post.electric_results)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricPotential">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricPotential.html#ansys.dpf.post.electric_results.ElectricPotential">ElectricPotential (class in ansys.dpf.post.electric_results)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricPotential">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.result_definition.html#ansys.dpf.post.result_definition.Definition.element_scoping">element_scoping (ansys.dpf.post.result_definition.Definition property)</a>
 </li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_accu_eqv_creep_strain">elemental_accu_eqv_creep_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_creep_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_creep_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_creep_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_creep_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_creep_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_accu_eqv_plastic_strain">elemental_accu_eqv_plastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_plastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_plastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_accu_eqv_plastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_artificial_hourglass_energy">elemental_artificial_hourglass_energy() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_artificial_hourglass_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_artificial_hourglass_energy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_artificial_hourglass_energy.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_artificial_hourglass_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_artificial_hourglass_energy">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_co_energy">elemental_co_energy() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_co_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_co_energy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_co_energy.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_co_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_co_energy">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_fluid_penetration_pressure">elemental_contact_fluid_penetration_pressure() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_fluid_penetration_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_fluid_penetration_pressure">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_fluid_penetration_pressure.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_fluid_penetration_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_fluid_penetration_pressure">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_friction_stress">elemental_contact_friction_stress() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_friction_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_friction_stress">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_friction_stress.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_friction_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_friction_stress">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_penetration">elemental_contact_penetration() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_penetration">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_penetration">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_penetration.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_penetration">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_penetration">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_pressure">elemental_contact_pressure() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_pressure">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_pressure.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_pressure">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_sliding_distance">elemental_contact_sliding_distance() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_sliding_distance">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_sliding_distance">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_sliding_distance.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_sliding_distance">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_sliding_distance">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_status">elemental_contact_status() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_status">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_status">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_status.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_status">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_status">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_surface_heat_flux">elemental_contact_surface_heat_flux() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_surface_heat_flux">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_surface_heat_flux">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_surface_heat_flux.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_surface_heat_flux">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_surface_heat_flux">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contact_total_stress">elemental_contact_total_stress() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_total_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_total_stress">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_total_stress.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_total_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contact_total_stress">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_contactgap_distance">elemental_contactgap_distance() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contactgap_distance">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contactgap_distance">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_contactgap_distance.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contactgap_distance">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_contactgap_distance">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_creep_strain_energy_density">elemental_creep_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_creep_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_creep_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_creep_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_creep_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_creep_strain_energy_density">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_elastic_strain">elemental_elastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_elastic_strain_energy_density">elemental_elastic_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_elastic_strain_energy_density">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_eqv_stress_parameter">elemental_eqv_stress_parameter() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_eqv_stress_parameter">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_eqv_stress_parameter">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_eqv_stress_parameter.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_eqv_stress_parameter">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_eqv_stress_parameter">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_force">elemental_force() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_force">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_force.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_force">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_hydrostatic_pressure">elemental_hydrostatic_pressure() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_hydrostatic_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_hydrostatic_pressure">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_hydrostatic_pressure.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_hydrostatic_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_hydrostatic_pressure">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_incremental_energy">elemental_incremental_energy() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_incremental_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_incremental_energy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_incremental_energy.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_incremental_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_incremental_energy">[1]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -667,163 +674,165 @@
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_kinetic_energy">elemental_kinetic_energy() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_kinetic_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_kinetic_energy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_kinetic_energy.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_kinetic_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_kinetic_energy">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_mass">elemental_mass() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_mass">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_mass">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_mass.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_mass">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_mass">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_accu_eqv_creep_strain">elemental_nodal_accu_eqv_creep_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_creep_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_creep_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_creep_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_creep_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_creep_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_accu_eqv_plastic_strain">elemental_nodal_accu_eqv_plastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_plastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_plastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_accu_eqv_plastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_creep_strain_energy_density">elemental_nodal_creep_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_creep_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_creep_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_creep_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_creep_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_creep_strain_energy_density">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_elastic_strain">elemental_nodal_elastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_elastic_strain_energy_density">elemental_nodal_elastic_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_elastic_strain_energy_density">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_eqv_stress_parameter">elemental_nodal_eqv_stress_parameter() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_eqv_stress_parameter">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_eqv_stress_parameter">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_eqv_stress_parameter.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_eqv_stress_parameter">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_eqv_stress_parameter">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_force">elemental_nodal_force() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_force">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_force.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_force">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_hydrostatic_pressure">elemental_nodal_hydrostatic_pressure() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_hydrostatic_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_hydrostatic_pressure">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_hydrostatic_pressure.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_hydrostatic_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_hydrostatic_pressure">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_state_variable">elemental_nodal_plastic_state_variable() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_state_variable">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_state_variable">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_state_variable.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_state_variable">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_state_variable">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_strain">elemental_nodal_plastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_plastic_strain_energy_density">elemental_nodal_plastic_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_plastic_strain_energy_density">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_stress">elemental_nodal_stress() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_stress_ratio">elemental_nodal_stress_ratio() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress_ratio">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress_ratio">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress_ratio.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress_ratio">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_stress_ratio">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_structural_temperature">elemental_nodal_structural_temperature() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_structural_temperature">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_structural_temperature">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_structural_temperature.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_structural_temperature">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_structural_temperature">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_nodal_thermal_strains">elemental_nodal_thermal_strains() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_thermal_strains">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_thermal_strains">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_thermal_strains.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_thermal_strains">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_nodal_thermal_strains">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_state_variable">elemental_plastic_state_variable() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_state_variable">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_state_variable">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_state_variable.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_state_variable">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_state_variable">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_strain">elemental_plastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_plastic_strain_energy_density">elemental_plastic_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_plastic_strain_energy_density">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stiffness_matrix_energy">elemental_stiffness_matrix_energy() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stiffness_matrix_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stiffness_matrix_energy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_stiffness_matrix_energy.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stiffness_matrix_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stiffness_matrix_energy">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress">elemental_stress() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_stress.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress">[1]</a>
 </li>
       </ul></li>
+      <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress_amplitude">elemental_stress_amplitude() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
+</li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_stress_ratio">elemental_stress_ratio() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress_ratio">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress_ratio">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_stress_ratio.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress_ratio">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_stress_ratio">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_structural_temperature">elemental_structural_temperature() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_structural_temperature">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_structural_temperature">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_structural_temperature.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_structural_temperature">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_structural_temperature">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_thermal_dissipation_energy">elemental_thermal_dissipation_energy() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_dissipation_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_dissipation_energy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_dissipation_energy.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_dissipation_energy">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_dissipation_energy">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_thermal_strains">elemental_thermal_strains() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_strains">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_strains">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_strains.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_strains">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_thermal_strains">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.elemental_volume">elemental_volume() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_volume">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_volume">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.elemental_volume.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_volume">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.elemental_volume">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.result_evaluation.html#ansys.dpf.post.result_evaluation.ResultEvaluator.evaluate_result">evaluate_result() (ansys.dpf.post.result_evaluation.ResultEvaluator method)</a>
@@ -842,20 +851,20 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_all_label_spaces">get_all_label_spaces() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.get_all_label_spaces">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.get_all_label_spaces.html#ansys.dpf.post.result_data.ResultData.get_all_label_spaces">get_all_label_spaces() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_all_label_spaces">[1]</a>
 </li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_data_at_field">get_data_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.get_data_at_field">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.get_data_at_field.html#ansys.dpf.post.result_data.ResultData.get_data_at_field">get_data_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_data_at_field">[1]</a>
 </li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_max_data_at_field">get_max_data_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.get_max_data_at_field">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.get_max_data_at_field.html#ansys.dpf.post.result_data.ResultData.get_max_data_at_field">get_max_data_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_max_data_at_field">[1]</a>
 </li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_min_data_at_field">get_min_data_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.get_min_data_at_field">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.get_min_data_at_field.html#ansys.dpf.post.result_data.ResultData.get_min_data_at_field">get_min_data_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_min_data_at_field">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfMecanicComplexSolution.get_result_info">get_result_info() (ansys.dpf.post.dpf_solution.DpfMecanicComplexSolution method)</a>
 
       <ul>
         <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfMecanicSolution.get_result_info">(ansys.dpf.post.dpf_solution.DpfMecanicSolution method)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution.get_result_info">(ansys.dpf.post.dpf_solution.DpfSolution method)</a>, <a href="api/solution.html#ansys.dpf.post.dpf_solution.DpfSolution.get_result_info">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.dpf_solution.DpfSolution.get_result_info.html#ansys.dpf.post.dpf_solution.DpfSolution.get_result_info">(ansys.dpf.post.dpf_solution.DpfSolution method)</a>, <a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution.get_result_info">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfThermalSolution.get_result_info">(ansys.dpf.post.dpf_solution.DpfThermalSolution method)</a>
 </li>
@@ -874,7 +883,7 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_scoping_at_field">get_scoping_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.get_scoping_at_field">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.get_scoping_at_field.html#ansys.dpf.post.result_data.ResultData.get_scoping_at_field">get_scoping_at_field() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.get_scoping_at_field">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.result_definition.html#ansys.dpf.post.result_definition.Definition.grouping">grouping (ansys.dpf.post.result_definition.Definition property)</a>
 </li>
@@ -891,11 +900,13 @@
       <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.ComplexDisplacement.has_complex_frequencies">has_complex_frequencies() (ansys.dpf.post.displacement.ComplexDisplacement method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.has_complex_frequencies">(ansys.dpf.post.displacement.Displacement method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.displacement.Displacement.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.displacement.Displacement.has_complex_frequencies.html#ansys.dpf.post.displacement.Displacement.has_complex_frequencies">(ansys.dpf.post.displacement.Displacement method)</a>, <a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.has_complex_frequencies">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.has_complex_frequencies">(ansys.dpf.post.electric_results.ElectricField method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricField.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricField.has_complex_frequencies.html#ansys.dpf.post.electric_results.ElectricField.has_complex_frequencies">(ansys.dpf.post.electric_results.ElectricField method)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.has_complex_frequencies">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricPotential.has_complex_frequencies">(ansys.dpf.post.electric_results.ElectricPotential method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricPotential.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricPotential.has_complex_frequencies.html#ansys.dpf.post.electric_results.ElectricPotential.has_complex_frequencies">(ansys.dpf.post.electric_results.ElectricPotential method)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricPotential.has_complex_frequencies">[1]</a>
+</li>
+        <li><a href="api/_autosummary/ansys.dpf.post.result_object.Result.has_complex_frequencies.html#ansys.dpf.post.result_object.Result.has_complex_frequencies">(ansys.dpf.post.result_object.Result method)</a>, <a href="api/ansys.dpf.post.result_object.html#ansys.dpf.post.result_object.Result.has_complex_frequencies">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.scalar.html#ansys.dpf.post.scalar.ComplexScalar.has_complex_frequencies">(ansys.dpf.post.scalar.ComplexScalar method)</a>
 </li>
@@ -905,21 +916,21 @@
 </li>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.has_complex_frequencies">(ansys.dpf.post.strain.ComplexPlasticStrain method)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.has_complex_frequencies">(ansys.dpf.post.strain.ElasticStrain method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.has_complex_frequencies.html#ansys.dpf.post.strain.ElasticStrain.has_complex_frequencies">(ansys.dpf.post.strain.ElasticStrain method)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.has_complex_frequencies">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.has_complex_frequencies">(ansys.dpf.post.strain.PlasticStrain method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.has_complex_frequencies.html#ansys.dpf.post.strain.PlasticStrain.has_complex_frequencies">(ansys.dpf.post.strain.PlasticStrain method)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.has_complex_frequencies">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.has_complex_frequencies">(ansys.dpf.post.stress.ComplexStress method)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.has_complex_frequencies">(ansys.dpf.post.stress.Stress method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.has_complex_frequencies.html#ansys.dpf.post.stress.Stress.has_complex_frequencies">(ansys.dpf.post.stress.Stress method)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.has_complex_frequencies">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.ComplexStructuralTemperature.has_complex_frequencies">(ansys.dpf.post.temperature.ComplexStructuralTemperature method)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.has_complex_frequencies">(ansys.dpf.post.temperature.HeatFlux method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.HeatFlux.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.HeatFlux.has_complex_frequencies.html#ansys.dpf.post.temperature.HeatFlux.has_complex_frequencies">(ansys.dpf.post.temperature.HeatFlux method)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.has_complex_frequencies">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.StructuralTemperature.has_complex_frequencies">(ansys.dpf.post.temperature.StructuralTemperature method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.StructuralTemperature.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.StructuralTemperature.has_complex_frequencies.html#ansys.dpf.post.temperature.StructuralTemperature.has_complex_frequencies">(ansys.dpf.post.temperature.StructuralTemperature method)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.StructuralTemperature.has_complex_frequencies">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.Temperature.has_complex_frequencies">(ansys.dpf.post.temperature.Temperature method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.Temperature.has_complex_frequencies">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.Temperature.has_complex_frequencies.html#ansys.dpf.post.temperature.Temperature.has_complex_frequencies">(ansys.dpf.post.temperature.Temperature method)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.Temperature.has_complex_frequencies">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.has_complex_frequencies">(ansys.dpf.post.tensor.ComplexTensor method)</a>
 </li>
@@ -948,7 +959,7 @@
         <li><a href="api/ansys.dpf.post.transient_analysis.html#ansys.dpf.post.transient_analysis.ThermalTransientAnalysisSolution.heat_flux">(ansys.dpf.post.transient_analysis.ThermalTransientAnalysisSolution method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux">HeatFlux (class in ansys.dpf.post.temperature)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.HeatFlux">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.temperature.HeatFlux.html#ansys.dpf.post.temperature.HeatFlux">HeatFlux (class in ansys.dpf.post.temperature)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux">[1]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -956,8 +967,14 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ansys.dpf.post.post_utility.html#ansys.dpf.post.post_utility.load_solution">load_solution() (in module ansys.dpf.post.post_utility)</a>
+      <li><a href="api/ansys.dpf.post.errors.html#ansys.dpf.post.errors.LabelSpaceError">LabelSpaceError</a>
 </li>
+      <li><a href="api/_autosummary/ansys.dpf.post.load_solution.html#ansys.dpf.post.load_solution">load_solution() (in module ansys.dpf.post)</a>
+
+      <ul>
+        <li><a href="api/ansys.dpf.post.post_utility.html#ansys.dpf.post.post_utility.load_solution">(in module ansys.dpf.post.post_utility)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ansys.dpf.post.result_definition.html#ansys.dpf.post.result_definition.Definition.location">location (ansys.dpf.post.result_definition.Definition property)</a>
@@ -972,18 +989,18 @@
 </li>
       <li><a href="api/ansys.dpf.post.result_definition.html#ansys.dpf.post.result_definition.Definition.mapdl_grouping">mapdl_grouping (ansys.dpf.post.result_definition.Definition property)</a>
 </li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.max">max (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.max">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.max.html#ansys.dpf.post.result_data.ResultData.max">max (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.max">[1]</a>
 </li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.max_data">max_data (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.max_data">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.max_data.html#ansys.dpf.post.result_data.ResultData.max_data">max_data (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.max_data">[1]</a>
 </li>
-      <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc">MecanicMisc (class in ansys.dpf.post.misc_results)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.html#ansys.dpf.post.misc_results.MecanicMisc">MecanicMisc (class in ansys.dpf.post.misc_results)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfMecanicComplexSolution.mesh">mesh (ansys.dpf.post.dpf_solution.DpfMecanicComplexSolution property)</a>
 
       <ul>
         <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfMecanicSolution.mesh">(ansys.dpf.post.dpf_solution.DpfMecanicSolution property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution.mesh">(ansys.dpf.post.dpf_solution.DpfSolution property)</a>, <a href="api/solution.html#ansys.dpf.post.dpf_solution.DpfSolution.mesh">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.dpf_solution.DpfSolution.mesh.html#ansys.dpf.post.dpf_solution.DpfSolution.mesh">(ansys.dpf.post.dpf_solution.DpfSolution property)</a>, <a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution.mesh">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfThermalSolution.mesh">(ansys.dpf.post.dpf_solution.DpfThermalSolution property)</a>
 </li>
@@ -1000,9 +1017,9 @@
         <li><a href="api/ansys.dpf.post.transient_analysis.html#ansys.dpf.post.transient_analysis.TransientAnalysisSolution.mesh">(ansys.dpf.post.transient_analysis.TransientAnalysisSolution property)</a>
 </li>
       </ul></li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.min">min (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.min">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.min.html#ansys.dpf.post.result_data.ResultData.min">min (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.min">[1]</a>
 </li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.min_data">min_data (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.min_data">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.min_data.html#ansys.dpf.post.result_data.ResultData.min_data">min_data (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.min_data">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.Misc">Misc (class in ansys.dpf.post.misc_results)</a>
 </li>
@@ -1011,7 +1028,7 @@
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.modal_basis">modal_basis() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.modal_basis">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.modal_basis">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.modal_basis.html#ansys.dpf.post.misc_results.MecanicMisc.modal_basis">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.modal_basis">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.modal_analysis.html#ansys.dpf.post.modal_analysis.ModalAnalysisSolution">ModalAnalysisSolution (class in ansys.dpf.post.modal_analysis)</a>
@@ -1086,85 +1103,91 @@
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_acceleration">nodal_acceleration() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_acceleration">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_acceleration">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_acceleration.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_acceleration">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_acceleration">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_accu_eqv_creep_strain">nodal_accu_eqv_creep_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_creep_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_creep_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_creep_strain.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_creep_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_creep_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_accu_eqv_plastic_strain">nodal_accu_eqv_plastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_plastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_plastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_accu_eqv_plastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_creep_strain_energy_density">nodal_creep_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_creep_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_creep_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_creep_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_creep_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_creep_strain_energy_density">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_displacement">nodal_displacement() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_displacement">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_displacement">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_displacement.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_displacement">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_displacement">[1]</a>
 </li>
       </ul></li>
+      <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_displacement_amplitude">nodal_displacement_amplitude() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
+</li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_elastic_strain">nodal_elastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_elastic_strain_energy_density">nodal_elastic_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_elastic_strain_energy_density">[1]</a>
 </li>
       </ul></li>
+      <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ThermalMisc.nodal_electric_field">nodal_electric_field() (ansys.dpf.post.misc_results.ThermalMisc method)</a>
+</li>
+      <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ThermalMisc.nodal_electric_potential">nodal_electric_potential() (ansys.dpf.post.misc_results.ThermalMisc method)</a>
+</li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_eqv_stress_parameter">nodal_eqv_stress_parameter() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_eqv_stress_parameter">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_eqv_stress_parameter">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_eqv_stress_parameter.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_eqv_stress_parameter">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_eqv_stress_parameter">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_force">nodal_force() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_force">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_force.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_force">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_hydrostatic_pressure">nodal_hydrostatic_pressure() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_hydrostatic_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_hydrostatic_pressure">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_hydrostatic_pressure.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_hydrostatic_pressure">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_hydrostatic_pressure">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_moment">nodal_moment() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_moment">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_moment">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_moment.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_moment">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_moment">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_state_variable">nodal_plastic_state_variable() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_state_variable">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_state_variable">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_state_variable.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_state_variable">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_state_variable">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_strain">nodal_plastic_strain() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_plastic_strain_energy_density">nodal_plastic_strain_energy_density() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain_energy_density">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain_energy_density.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain_energy_density">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_plastic_strain_energy_density">[1]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1172,49 +1195,53 @@
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_raw_displacement">nodal_raw_displacement() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_displacement">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_displacement">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_displacement.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_displacement">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_displacement">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_raw_reaction_force">nodal_raw_reaction_force() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_reaction_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_reaction_force">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_reaction_force.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_reaction_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_raw_reaction_force">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_reaction_force">nodal_reaction_force() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_reaction_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_reaction_force">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_reaction_force.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_reaction_force">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_reaction_force">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress">nodal_stress() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_stress.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress">[1]</a>
 </li>
       </ul></li>
+      <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress_amplitude">nodal_stress_amplitude() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
+</li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_stress_ratio">nodal_stress_ratio() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress_ratio">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress_ratio">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_stress_ratio.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress_ratio">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_stress_ratio">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_structural_temperature">nodal_structural_temperature() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_structural_temperature">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_structural_temperature">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_structural_temperature.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_structural_temperature">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_structural_temperature">[1]</a>
 </li>
       </ul></li>
+      <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ThermalMisc.nodal_temperature">nodal_temperature() (ansys.dpf.post.misc_results.ThermalMisc method)</a>
+</li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_thermal_strains">nodal_thermal_strains() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_thermal_strains">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_thermal_strains">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_thermal_strains.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_thermal_strains">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_thermal_strains">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.nodal_velocity">nodal_velocity() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_velocity">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_velocity">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.nodal_velocity.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_velocity">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.nodal_velocity">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.errors.html#ansys.dpf.post.errors.NodalLocationError">NodalLocationError</a>
@@ -1224,11 +1251,11 @@
       <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.ComplexDisplacement.norm">norm (ansys.dpf.post.displacement.ComplexDisplacement property)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.norm">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.displacement.Displacement.norm">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.displacement.Displacement.norm.html#ansys.dpf.post.displacement.Displacement.norm">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.norm">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.norm">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricField.norm">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricField.norm.html#ansys.dpf.post.electric_results.ElectricField.norm">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.norm">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.norm">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.HeatFlux.norm">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.HeatFlux.norm.html#ansys.dpf.post.temperature.HeatFlux.norm">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.norm">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.vector.html#ansys.dpf.post.vector.ComplexVector.norm">(ansys.dpf.post.vector.ComplexVector property)</a>
 </li>
@@ -1247,7 +1274,7 @@
         <li><a href="api/ansys.dpf.post.vector.html#ansys.dpf.post.vector.ComplexVector.norm_at_phase">(ansys.dpf.post.vector.ComplexVector method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.num_fields">num_fields (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.num_fields">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.num_fields.html#ansys.dpf.post.result_data.ResultData.num_fields">num_fields (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.num_fields">[1]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1273,24 +1300,24 @@
         <li><a href="api/ansys.dpf.post.transient_analysis.html#ansys.dpf.post.transient_analysis.TransientAnalysisSolution.plastic_strain">(ansys.dpf.post.transient_analysis.TransientAnalysisSolution method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain">PlasticStrain (class in ansys.dpf.post.strain)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.html#ansys.dpf.post.strain.PlasticStrain">PlasticStrain (class in ansys.dpf.post.strain)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.misc.html#ansys.dpf.post.misc.Report.platform">platform (ansys.dpf.post.misc.Report property)</a>
 </li>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.plot_contour">plot_contour() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData.plot_contour">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.plot_contour.html#ansys.dpf.post.result_data.ResultData.plot_contour">plot_contour() (ansys.dpf.post.result_data.ResultData method)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.plot_contour">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexElasticStrain.principal_1">principal_1 (ansys.dpf.post.strain.ComplexElasticStrain property)</a>
 
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.principal_1">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.principal_1">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.principal_1">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.principal_1.html#ansys.dpf.post.strain.ElasticStrain.principal_1">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.principal_1">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.principal_1">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.principal_1">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.principal_1.html#ansys.dpf.post.strain.PlasticStrain.principal_1">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.principal_1">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.principal_1">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.principal_1">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.principal_1">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.principal_1.html#ansys.dpf.post.stress.Stress.principal_1">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.principal_1">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.principal_1">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1322,13 +1349,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.principal_2">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.principal_2">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.principal_2">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.principal_2.html#ansys.dpf.post.strain.ElasticStrain.principal_2">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.principal_2">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.principal_2">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.principal_2">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.principal_2.html#ansys.dpf.post.strain.PlasticStrain.principal_2">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.principal_2">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.principal_2">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.principal_2">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.principal_2">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.principal_2.html#ansys.dpf.post.stress.Stress.principal_2">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.principal_2">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.principal_2">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1362,13 +1389,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.principal_3">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.principal_3">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.principal_3">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.principal_3.html#ansys.dpf.post.strain.ElasticStrain.principal_3">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.principal_3">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.principal_3">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.principal_3">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.principal_3.html#ansys.dpf.post.strain.PlasticStrain.principal_3">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.principal_3">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.principal_3">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.principal_3">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.principal_3">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.principal_3.html#ansys.dpf.post.stress.Stress.principal_3">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.principal_3">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.principal_3">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1407,9 +1434,13 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ansys.dpf.post.misc.html#ansys.dpf.post.misc.Report">Report (class in ansys.dpf.post.misc)</a>
 </li>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_object.Result.html#ansys.dpf.post.result_object.Result">Result (class in ansys.dpf.post.result_object)</a>, <a href="api/ansys.dpf.post.result_object.html#ansys.dpf.post.result_object.Result">[1]</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData">ResultData (class in ansys.dpf.post.result_data)</a>, <a href="api/result_data.html#ansys.dpf.post.result_data.ResultData">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.result_fields_container.html#ansys.dpf.post.result_data.ResultData.result_fields_container">result_fields_container (ansys.dpf.post.result_data.ResultData property)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.result_fields_container">[1]</a>
+</li>
+      <li><a href="api/_autosummary/ansys.dpf.post.result_data.ResultData.html#ansys.dpf.post.result_data.ResultData">ResultData (class in ansys.dpf.post.result_data)</a>, <a href="api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.result_evaluation.html#ansys.dpf.post.result_evaluation.ResultEvaluator">ResultEvaluator (class in ansys.dpf.post.result_evaluation)</a>
 </li>
@@ -1419,7 +1450,7 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricPotential.scalar">scalar (ansys.dpf.post.electric_results.ElectricPotential property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricPotential.scalar">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricPotential.scalar.html#ansys.dpf.post.electric_results.ElectricPotential.scalar">scalar (ansys.dpf.post.electric_results.ElectricPotential property)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricPotential.scalar">[1]</a>
 
       <ul>
         <li><a href="api/ansys.dpf.post.scalar.html#ansys.dpf.post.scalar.ComplexScalar.scalar">(ansys.dpf.post.scalar.ComplexScalar property)</a>
@@ -1428,9 +1459,9 @@
 </li>
         <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.ComplexStructuralTemperature.scalar">(ansys.dpf.post.temperature.ComplexStructuralTemperature property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.StructuralTemperature.scalar">(ansys.dpf.post.temperature.StructuralTemperature property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.StructuralTemperature.scalar">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.StructuralTemperature.scalar.html#ansys.dpf.post.temperature.StructuralTemperature.scalar">(ansys.dpf.post.temperature.StructuralTemperature property)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.StructuralTemperature.scalar">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.Temperature.scalar">(ansys.dpf.post.temperature.Temperature property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.Temperature.scalar">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.Temperature.scalar.html#ansys.dpf.post.temperature.Temperature.scalar">(ansys.dpf.post.temperature.Temperature property)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.Temperature.scalar">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.scalar.html#ansys.dpf.post.scalar.Scalar">Scalar (class in ansys.dpf.post.scalar)</a>
@@ -1451,7 +1482,7 @@
 </li>
       <li><a href="api/ansys.dpf.post.static_analysis.html#ansys.dpf.post.static_analysis.StaticAnalysisSolution">StaticAnalysisSolution (class in ansys.dpf.post.static_analysis)</a>
 </li>
-      <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress">Stress (class in ansys.dpf.post.stress)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.html#ansys.dpf.post.stress.Stress">Stress (class in ansys.dpf.post.stress)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress">[1]</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -1483,7 +1514,7 @@
         <li><a href="api/ansys.dpf.post.transient_analysis.html#ansys.dpf.post.transient_analysis.TransientAnalysisSolution.structural_temperature">(ansys.dpf.post.transient_analysis.TransientAnalysisSolution method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.StructuralTemperature">StructuralTemperature (class in ansys.dpf.post.temperature)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.StructuralTemperature">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.temperature.StructuralTemperature.html#ansys.dpf.post.temperature.StructuralTemperature">StructuralTemperature (class in ansys.dpf.post.temperature)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.StructuralTemperature">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.misc.html#ansys.dpf.post.misc.Report.sys_version">sys_version (ansys.dpf.post.misc.Report property)</a>
 </li>
@@ -1495,7 +1526,7 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.Temperature">Temperature (class in ansys.dpf.post.temperature)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.Temperature">[1]</a>
+      <li><a href="api/_autosummary/ansys.dpf.post.temperature.Temperature.html#ansys.dpf.post.temperature.Temperature">Temperature (class in ansys.dpf.post.temperature)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.Temperature">[1]</a>
 </li>
       <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfThermalSolution.temperature">temperature() (ansys.dpf.post.dpf_solution.DpfThermalSolution method)</a>
 
@@ -1510,13 +1541,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.tensor">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.tensor">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.tensor">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.tensor.html#ansys.dpf.post.strain.ElasticStrain.tensor">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.tensor">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.tensor">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.tensor">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.tensor.html#ansys.dpf.post.strain.PlasticStrain.tensor">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.tensor">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.tensor">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.tensor">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.tensor">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.tensor.html#ansys.dpf.post.stress.Stress.tensor">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.tensor">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.tensor">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1560,7 +1591,7 @@
       <ul>
         <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfMecanicSolution.time_freq_support">(ansys.dpf.post.dpf_solution.DpfMecanicSolution property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution.time_freq_support">(ansys.dpf.post.dpf_solution.DpfSolution property)</a>, <a href="api/solution.html#ansys.dpf.post.dpf_solution.DpfSolution.time_freq_support">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.dpf_solution.DpfSolution.time_freq_support.html#ansys.dpf.post.dpf_solution.DpfSolution.time_freq_support">(ansys.dpf.post.dpf_solution.DpfSolution property)</a>, <a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution.time_freq_support">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfThermalSolution.time_freq_support">(ansys.dpf.post.dpf_solution.DpfThermalSolution property)</a>
 </li>
@@ -1594,11 +1625,11 @@
       <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.ComplexDisplacement.vector">vector (ansys.dpf.post.displacement.ComplexDisplacement property)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.vector">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.displacement.Displacement.vector">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.displacement.Displacement.vector.html#ansys.dpf.post.displacement.Displacement.vector">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.vector">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.vector">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricField.vector">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricField.vector.html#ansys.dpf.post.electric_results.ElectricField.vector">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.vector">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.vector">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.HeatFlux.vector">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.HeatFlux.vector.html#ansys.dpf.post.temperature.HeatFlux.vector">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.vector">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.vector.html#ansys.dpf.post.vector.ComplexVector.vector">(ansys.dpf.post.vector.ComplexVector property)</a>
 </li>
@@ -1624,7 +1655,7 @@
       <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.von_mises">von_mises (ansys.dpf.post.stress.ComplexStress property)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.von_mises">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.von_mises">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.von_mises.html#ansys.dpf.post.stress.Stress.von_mises">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.von_mises">[1]</a>
 </li>
       </ul></li>
       <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.von_mises_amplitude">von_mises_amplitude (ansys.dpf.post.stress.ComplexStress property)</a>
@@ -1634,7 +1665,7 @@
       <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.ComplexMecanicMisc.von_mises_stress">von_mises_stress() (ansys.dpf.post.misc_results.ComplexMecanicMisc method)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.von_mises_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.misc_results.MecanicMisc.von_mises_stress">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.misc_results.MecanicMisc.von_mises_stress.html#ansys.dpf.post.misc_results.MecanicMisc.von_mises_stress">(ansys.dpf.post.misc_results.MecanicMisc method)</a>, <a href="api/ansys.dpf.post.misc_results.html#ansys.dpf.post.misc_results.MecanicMisc.von_mises_stress">[1]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1646,6 +1677,8 @@
       <li><a href="api/ansys.dpf.post.errors.html#ansys.dpf.post.errors.CoreVersionError.with_traceback">with_traceback() (ansys.dpf.post.errors.CoreVersionError method)</a>
 
       <ul>
+        <li><a href="api/ansys.dpf.post.errors.html#ansys.dpf.post.errors.LabelSpaceError.with_traceback">(ansys.dpf.post.errors.LabelSpaceError method)</a>
+</li>
         <li><a href="api/ansys.dpf.post.errors.html#ansys.dpf.post.errors.NodalLocationError.with_traceback">(ansys.dpf.post.errors.NodalLocationError method)</a>
 </li>
       </ul></li>
@@ -1658,11 +1691,11 @@
       <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.ComplexDisplacement.x">x (ansys.dpf.post.displacement.ComplexDisplacement property)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.x">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.displacement.Displacement.x">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.displacement.Displacement.x.html#ansys.dpf.post.displacement.Displacement.x">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.x">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.x">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricField.x">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricField.x.html#ansys.dpf.post.electric_results.ElectricField.x">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.x">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.x">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.HeatFlux.x">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.HeatFlux.x.html#ansys.dpf.post.temperature.HeatFlux.x">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.x">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.vector.html#ansys.dpf.post.vector.ComplexVector.x">(ansys.dpf.post.vector.ComplexVector property)</a>
 </li>
@@ -1686,13 +1719,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.xx">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.xx">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.xx">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.xx.html#ansys.dpf.post.strain.ElasticStrain.xx">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.xx">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.xx">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.xx">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.xx.html#ansys.dpf.post.strain.PlasticStrain.xx">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.xx">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.xx">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.xx">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.xx">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.xx.html#ansys.dpf.post.stress.Stress.xx">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.xx">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.xx">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1724,13 +1757,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.xy">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.xy">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.xy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.xy.html#ansys.dpf.post.strain.ElasticStrain.xy">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.xy">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.xy">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.xy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.xy.html#ansys.dpf.post.strain.PlasticStrain.xy">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.xy">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.xy">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.xy">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.xy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.xy.html#ansys.dpf.post.stress.Stress.xy">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.xy">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.xy">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1764,13 +1797,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.xz">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.xz">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.xz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.xz.html#ansys.dpf.post.strain.ElasticStrain.xz">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.xz">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.xz">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.xz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.xz.html#ansys.dpf.post.strain.PlasticStrain.xz">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.xz">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.xz">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.xz">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.xz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.xz.html#ansys.dpf.post.stress.Stress.xz">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.xz">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.xz">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1806,11 +1839,11 @@
       <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.ComplexDisplacement.y">y (ansys.dpf.post.displacement.ComplexDisplacement property)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.y">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.displacement.Displacement.y">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.displacement.Displacement.y.html#ansys.dpf.post.displacement.Displacement.y">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.y">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.y">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricField.y">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricField.y.html#ansys.dpf.post.electric_results.ElectricField.y">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.y">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.y">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.HeatFlux.y">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.HeatFlux.y.html#ansys.dpf.post.temperature.HeatFlux.y">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.y">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.vector.html#ansys.dpf.post.vector.ComplexVector.y">(ansys.dpf.post.vector.ComplexVector property)</a>
 </li>
@@ -1834,13 +1867,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.yy">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.yy">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.yy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.yy.html#ansys.dpf.post.strain.ElasticStrain.yy">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.yy">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.yy">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.yy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.yy.html#ansys.dpf.post.strain.PlasticStrain.yy">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.yy">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.yy">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.yy">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.yy">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.yy.html#ansys.dpf.post.stress.Stress.yy">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.yy">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.yy">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1874,13 +1907,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.yz">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.yz">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.yz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.yz.html#ansys.dpf.post.strain.ElasticStrain.yz">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.yz">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.yz">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.yz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.yz.html#ansys.dpf.post.strain.PlasticStrain.yz">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.yz">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.yz">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.yz">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.yz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.yz.html#ansys.dpf.post.stress.Stress.yz">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.yz">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.yz">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>
@@ -1916,11 +1949,11 @@
       <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.ComplexDisplacement.z">z (ansys.dpf.post.displacement.ComplexDisplacement property)</a>
 
       <ul>
-        <li><a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.z">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.displacement.Displacement.z">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.displacement.Displacement.z.html#ansys.dpf.post.displacement.Displacement.z">(ansys.dpf.post.displacement.Displacement property)</a>, <a href="api/ansys.dpf.post.displacement.html#ansys.dpf.post.displacement.Displacement.z">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.z">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.electric_results.ElectricField.z">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.electric_results.ElectricField.z.html#ansys.dpf.post.electric_results.ElectricField.z">(ansys.dpf.post.electric_results.ElectricField property)</a>, <a href="api/ansys.dpf.post.electric_results.html#ansys.dpf.post.electric_results.ElectricField.z">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.z">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.temperature.HeatFlux.z">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.temperature.HeatFlux.z.html#ansys.dpf.post.temperature.HeatFlux.z">(ansys.dpf.post.temperature.HeatFlux property)</a>, <a href="api/ansys.dpf.post.temperature.html#ansys.dpf.post.temperature.HeatFlux.z">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.vector.html#ansys.dpf.post.vector.ComplexVector.z">(ansys.dpf.post.vector.ComplexVector property)</a>
 </li>
@@ -1944,13 +1977,13 @@
       <ul>
         <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ComplexPlasticStrain.zz">(ansys.dpf.post.strain.ComplexPlasticStrain property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.zz">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.ElasticStrain.zz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.ElasticStrain.zz.html#ansys.dpf.post.strain.ElasticStrain.zz">(ansys.dpf.post.strain.ElasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.ElasticStrain.zz">[1]</a>
 </li>
-        <li><a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.zz">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.strain.PlasticStrain.zz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.strain.PlasticStrain.zz.html#ansys.dpf.post.strain.PlasticStrain.zz">(ansys.dpf.post.strain.PlasticStrain property)</a>, <a href="api/ansys.dpf.post.strain.html#ansys.dpf.post.strain.PlasticStrain.zz">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.ComplexStress.zz">(ansys.dpf.post.stress.ComplexStress property)</a>
 </li>
-        <li><a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.zz">(ansys.dpf.post.stress.Stress property)</a>, <a href="user_guide/accessing_results.html#ansys.dpf.post.stress.Stress.zz">[1]</a>
+        <li><a href="api/_autosummary/ansys.dpf.post.stress.Stress.zz.html#ansys.dpf.post.stress.Stress.zz">(ansys.dpf.post.stress.Stress property)</a>, <a href="api/ansys.dpf.post.stress.html#ansys.dpf.post.stress.Stress.zz">[1]</a>
 </li>
         <li><a href="api/ansys.dpf.post.tensor.html#ansys.dpf.post.tensor.ComplexTensor.zz">(ansys.dpf.post.tensor.ComplexTensor property)</a>
 </li>

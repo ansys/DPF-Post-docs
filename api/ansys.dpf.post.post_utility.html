@@ -26,6 +26,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -43,6 +44,8 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -91,19 +94,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -115,7 +118,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -138,7 +141,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -185,6 +188,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="ansys.dpf.post.examples.html">
@@ -193,6 +197,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -234,28 +239,32 @@
               
               <article class="bd-article" role="main">
                 
-  <span class="target" id="module-ansys.dpf.post.post_utility"></span><p>Module containing the method to instantiate the result
-object. Initialization of post objects.</p>
+  <span class="target" id="module-ansys.dpf.post.post_utility"></span><p>Module containing the method to instantiate the result object.</p>
+<p>This module is used for the initialization of DPF-Post objects.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="ansys.dpf.post.post_utility.load_solution">
 <span class="sig-prename descclassname"><span class="pre">ansys.dpf.post.post_utility.</span></span><span class="sig-name descname"><span class="pre">load_solution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_sources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.post_utility.load_solution" title="Permalink to this definition">#</a></dt>
-<dd><p>Return a <code class="docutils literal notranslate"><span class="pre">Result</span></code> object which can provide information on a given
-set, on a given scoping.</p>
-<dl class="field-list simple">
+<dd><p>Loads a solution and returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.dpf.post.Result</span></code> object.</p>
+<p>This class provides information on a given set on a given scoping.</p>
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data_sources</strong> (<em>str</em><em> or </em><em>dpf.core.DataSources</em>) – filepath to the file you want to open, or a dpf.core.DataSources().</p></li>
-<li><p><strong>physics_type</strong> (<em>common._PhysicsType</em><em>, </em><em>str</em><em>, </em><em>optional</em>) – [“mecanic”, “thermal”] optionally specify the type of physics described in
-the ‘’data_sources’’. If nothing is specified, the ‘’data_sources’’ are
-read to evaluate the ‘’physics_type’’.</p></li>
-<li><p><strong>analysis_type</strong> (<em>common._AnalysisType</em><em>, </em><em>str</em><em>, </em><em>optional</em>) – [“static”, “modal”, “harmonic”, “transient”] optionally specify the type of
-analysis described in the ‘’data_sources’’.
-If nothing is specified, the ‘’data_sources’’ are read to evaluate
-the ‘’analysis_type’’.</p></li>
-</ul>
+<dd class="field-odd"><dl>
+<dt><strong>data_sources</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.dpf.core.DataSources</span></code></span></dt><dd><p>Path to the file to open or the <code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.dpf.core.DataSources</span></code> class.</p>
+</dd>
+<dt><strong>physics_type</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">common._PhysicsType</span></code>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Type of phsyics described in the specified data sources. Options are
+<code class="docutils literal notranslate"><span class="pre">&quot;mecanic&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;thermal&quot;</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case
+the data sources are read to determine the physics type.</p>
+</dd>
+<dt><strong>analysis_type</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">common._AnalysisType</span></code>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Type of analysis described in the specified data sources. Options are
+<code class="docutils literal notranslate"><span class="pre">&quot;static&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;modal&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;harmonic&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;transient&quot;</span></code>. The
+default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case the data sources are read to determine
+the analysis type.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
+<p>Load the example static result.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">static_rst</span><span class="p">)</span>

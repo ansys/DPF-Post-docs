@@ -4,9 +4,9 @@
 
 .. _ref_overview:
 
-DPF-Post Overview
-~~~~~~~~~~~~~~~~~
-Here are a quick overview of DPF-Post module with ``ansys-dpf-post``.
+DPF-Post overview
+-----------------
+This example provides an overview of how you use DPF-Post.
 
 
 
@@ -17,18 +17,18 @@ Here are a quick overview of DPF-Post module with ``ansys-dpf-post``.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="ANSYS DPF Overview of the POST API">
+    <div class="sphx-glr-thumbcontainer" tooltip="DPF-Post overview">
 
 .. only:: html
 
   .. image:: /examples/00-Overview/images/thumb/sphx_glr_00-overview_example_thumb.png
-    :alt: ANSYS DPF Overview of the POST API
+    :alt: DPF-Post overview
 
   :ref:`sphx_glr_examples_00-Overview_00-overview_example.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">ANSYS DPF Overview of the POST API</div>
+      <div class="sphx-glr-thumbnail-title">DPF-Post overview</div>
     </div>
 
 

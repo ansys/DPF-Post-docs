@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>ANSYS DPF-Post: Transient Anaysis &#8212; PyDPF-Post</title>
+    <title>Transient analysis &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="DPF-Post Detailed Examples" href="../02-Detailed-Examples/index.html" />
-    <link rel="prev" title="ANSYS DPF-Post: Harmonic Analysis" href="03-harmonic-analysis.html" />
+    <link rel="next" title="DPF-Post feature examples" href="../02-Detailed-Examples/index.html" />
+    <link rel="prev" title="Harmonic analysis" href="03-harmonic-analysis.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -168,8 +171,8 @@
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> » </li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post Analysis Types</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">ANSYS DPF-Post: Transient Anaysis</a></li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post analysis types</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Transient analysis</a></li> 
       </ul>
     </div>
         </div>
@@ -189,10 +192,11 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../00-Overview/index.html">
-   DPF-Post Overview
+   DPF-Post overview
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -202,14 +206,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../00-Overview/00-overview_example.html">
-     ANSYS DPF Overview of the POST API
+     DPF-Post overview
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   DPF-Post Analysis Types
+   DPF-Post analysis types
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -219,29 +223,29 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="01-static-analysis.html">
-     Static Analysis
+     Static analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02-modal-analysis.html">
-     ANSYS DPF-Post: Modal Analysis
+     Modal analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03-harmonic-analysis.html">
-     ANSYS DPF-Post: Harmonic Analysis
+     Harmonic analysis
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     ANSYS DPF-Post: Transient Anaysis
+     Transient analysis
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02-Detailed-Examples/index.html">
-   DPF-Post Detailed Examples
+   DPF-Post feature examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -251,33 +255,34 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/01-introduction.html">
-     ANSYS DPF Introduction to POST API
+     Introduction
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/02-basics.html">
-     ANSYS DPF Basic Features of the POST API
+     Basic features
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/03-result_keywords.html">
-     ANSYS DPF-POST Use result keywords
+     Result keywords
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/04-complex_results.html">
-     Compute Complex Results from Modal or Harmonic Analyses
+     Complex results from a modal or harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/05-result_on_path_of_coordinates.html">
-     ANSYS DPF-Post request results on specific path
+     Request result on a specific path
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -300,42 +305,101 @@
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   ANSYS DPF-Post: Transient Anaysis
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-required-imports">
+   Perform required imports
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#get-started">
-   Get started
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-solution-object">
+   Get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Solution
+    </span>
+   </code>
+   object
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#get-the-solution-object">
-   Get the solution object
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#get-result-objects">
-   Get result objects
+   Get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Result
+    </span>
+   </code>
+   objects
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#get-a-displacement-result-and-compute-data">
-     Get a displacement result and compute data
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-displacement-result">
+     Get displacement result
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#get-a-stress-result-and-plot-a-contour">
-     Get a stress result and plot a contour
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-number-of-fields">
+     Check number of fields
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#get-an-elastic-strain-result-and-plot-a-chart">
-     Get an elastic_strain result and plot a chart
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-data-from-field">
+     Get data from field
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-maximum-data-value-over-all-fields">
+     Get maximum data value over all fields
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-minimum-data-value-over-all-fields">
+     Get minimum data value over all fields
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-maximum-data-value-over-targeted-field">
+     Get maximum data value over targeted field
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Get minimum data value over all fields
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-stress-result">
+   Get stress result
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Check number of fields
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-shell-field">
+     Get shell field
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-solid-field">
+     Get solid field
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-contour">
+     Plot contour
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-elastic-strain-result">
+   Get elastic strain result
+  </a>
  </li>
 </ul>
 
@@ -361,24 +425,23 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-different-analysis-types-04-transient-analysis-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<section class="sphx-glr-example-title" id="ansys-dpf-post-transient-anaysis">
-<span id="ref-trasient-analysis"></span><span id="sphx-glr-examples-01-different-analysis-types-04-transient-analysis-py"></span><h1>ANSYS DPF-Post: Transient Anaysis<a class="headerlink" href="#ansys-dpf-post-transient-anaysis" title="Permalink to this heading">#</a></h1>
-<p>This tutorial shows how post-process a transient analysis result file
-using API of the POST module.</p>
-</section>
-<section id="get-started">
-<h1>Get started<a class="headerlink" href="#get-started" title="Permalink to this heading">#</a></h1>
+<section class="sphx-glr-example-title" id="transient-analysis">
+<span id="ref-trasient-analysis"></span><span id="sphx-glr-examples-01-different-analysis-types-04-transient-analysis-py"></span><h1>Transient analysis<a class="headerlink" href="#transient-analysis" title="Permalink to this heading">#</a></h1>
+<p>This example shows how you can postprocess a result file for a transient analysis
+using DPF-Post.</p>
+<section id="perform-required-imports">
+<h2>Perform required imports<a class="headerlink" href="#perform-required-imports" title="Permalink to this heading">#</a></h2>
+<p>Perform required imports.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
 <span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 </section>
-<section id="get-the-solution-object">
-<h1>Get the solution object<a class="headerlink" href="#get-the-solution-object" title="Permalink to this heading">#</a></h1>
-<p>The following file is the result of a transient analysis computed
-using Ansys Mechanical.</p>
-<p>here we load the solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">msup_transient</span><span class="p">)</span>
+<section id="get-solution-object">
+<h2>Get <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object<a class="headerlink" href="#get-solution-object" title="Permalink to this heading">#</a></h2>
+<p>Get the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object. This example loads a result file for a transient
+analysis computed in Ansys Mechanical.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">examples</span><span class="o">.</span><span class="n">msup_transient</span></a><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">solution</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -397,7 +460,7 @@ DPF Model
 ------------------------------
 Transient analysis
 Unit system: MKS: m, kg, N, s, V, A, degC
-Physics Type: Mecanic
+Physics Type: Mechanical
 Available results:
      -  displacement: Nodal Displacement
      -  velocity: Nodal Velocity
@@ -446,22 +509,28 @@ Cumulative     Time (s)       LoadStep       Substep
 </div>
 </section>
 <section id="get-result-objects">
-<h1>Get result objects<a class="headerlink" href="#get-result-objects" title="Permalink to this heading">#</a></h1>
-<section id="get-a-displacement-result-and-compute-data">
-<h2>Get a displacement result and compute data<a class="headerlink" href="#get-a-displacement-result-and-compute-data" title="Permalink to this heading">#</a></h2>
-<p><strong>Get the result</strong></p>
+<h2>Get <code class="docutils literal notranslate"><span class="pre">Result</span></code> objects<a class="headerlink" href="#get-result-objects" title="Permalink to this heading">#</a></h2>
+<section id="get-displacement-result">
+<h3>Get displacement result<a class="headerlink" href="#get-displacement-result" title="Permalink to this heading">#</a></h3>
+<p>Get the displacement <code class="docutils literal notranslate"><span class="pre">Result</span></code> object.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
 <span class="n">disp</span> <span class="o">=</span> <span class="n">disp_result</span><span class="o">.</span><span class="n">vector</span>
 </pre></div>
 </div>
-<p><strong>Check the number of fields</strong></p>
+</section>
+<section id="check-number-of-fields">
+<h3>Check number of fields<a class="headerlink" href="#check-number-of-fields" title="Permalink to this heading">#</a></h3>
+<p>Check the number of fields.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">num_fields</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
-<p><strong>Get data from a field</strong></p>
+</section>
+<section id="get-data-from-field">
+<h3>Get data from field<a class="headerlink" href="#get-data-from-field" title="Permalink to this heading">#</a></h3>
+<p>Get data from a field.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -474,48 +543,68 @@ Cumulative     Time (s)       LoadStep       Substep
           [-8.04523717e-07,  4.03115424e-03, -6.41884020e-05]])
 </pre></div>
 </div>
-<p><strong>Get maximum data value over all fields</strong></p>
+</section>
+<section id="get-maximum-data-value-over-all-fields">
+<h3>Get maximum data value over all fields<a class="headerlink" href="#get-maximum-data-value-over-all-fields" title="Permalink to this heading">#</a></h3>
+<p>Get the maximum data value over all fields.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">max_data</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([[4.64890800e-310, 1.07453069e-002, 7.28477714e-005]])
-</pre></div>
-</div>
-<p><strong>Get minimum data value over all fields</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">min_data</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([[ 4.64890536e-310,  0.00000000e+000, -7.28477714e-005]])
-</pre></div>
-</div>
-<p><strong>Get maximum data value over a targeted field</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">get_max_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([4.64890804e-310, 1.07453069e-002, 7.28477714e-005])
-</pre></div>
-</div>
-<p><strong>Get minimum data value over all fields</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">get_min_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([ 4.64890806e-310,  0.00000000e+000, -7.28477714e-005])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([[4.68160271e-310, 1.07453069e-002, 7.28477714e-005]])
 </pre></div>
 </div>
 </section>
-<section id="get-a-stress-result-and-plot-a-contour">
-<h2>Get a stress result and plot a contour<a class="headerlink" href="#get-a-stress-result-and-plot-a-contour" title="Permalink to this heading">#</a></h2>
-<p><strong>Get the result</strong></p>
+<section id="get-minimum-data-value-over-all-fields">
+<h3>Get minimum data value over all fields<a class="headerlink" href="#get-minimum-data-value-over-all-fields" title="Permalink to this heading">#</a></h3>
+<p>Get the minimum data value over all fields.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">min_data</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([[ 4.68160111e-310,  0.00000000e+000, -7.28477714e-005]])
+</pre></div>
+</div>
+</section>
+<section id="get-maximum-data-value-over-targeted-field">
+<h3>Get maximum data value over targeted field<a class="headerlink" href="#get-maximum-data-value-over-targeted-field" title="Permalink to this heading">#</a></h3>
+<p>Get the maximum data value over a targeted field.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">get_max_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([4.68160252e-310, 1.07453069e-002, 7.28477714e-005])
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3>Get minimum data value over all fields<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Get the minimum data value over all fields.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="o">.</span><span class="n">get_min_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DPFArray([ 4.68160279e-310,  0.00000000e+000, -7.28477714e-005])
+</pre></div>
+</div>
+</section>
+</section>
+<section id="get-stress-result">
+<h2>Get stress result<a class="headerlink" href="#get-stress-result" title="Permalink to this heading">#</a></h2>
+<p>Get the stress <code class="docutils literal notranslate"><span class="pre">Result</span></code> object for a tensor.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stress_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">()</span>
 <span class="n">stress</span> <span class="o">=</span> <span class="n">stress_result</span><span class="o">.</span><span class="n">tensor</span>
-<span class="c1"># shell and solid elements are in distinct fields.</span>
-<span class="n">stress</span><span class="o">.</span><span class="n">num_fields</span>
+</pre></div>
+</div>
+<section id="id2">
+<h3>Check number of fields<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Check the number of shell and solid elements in distinct fields.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stress</span><span class="o">.</span><span class="n">num_fields</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
-<p><strong>Get the shell field</strong></p>
+</section>
+<section id="get-shell-field">
+<h3>Get shell field<a class="headerlink" href="#get-shell-field" title="Permalink to this heading">#</a></h3>
+<p>Get the shell field.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shell_field</span> <span class="o">=</span> <span class="n">stress</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">shell_field</span><span class="o">.</span><span class="n">shell_layers</span>
 </pre></div>
@@ -523,18 +612,25 @@ Cumulative     Time (s)       LoadStep       Substep
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;shell_layers.nonelayer: 5&gt;
 </pre></div>
 </div>
-<p><strong>Get the solid field field</strong></p>
+</section>
+<section id="get-solid-field">
+<h3>Get solid field<a class="headerlink" href="#get-solid-field" title="Permalink to this heading">#</a></h3>
+<p>Get the solid field.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solid_field</span> <span class="o">=</span> <span class="n">stress</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p><strong>Plot the contour</strong></p>
+</section>
+<section id="plot-contour">
+<h3>Plot contour<a class="headerlink" href="#plot-contour" title="Permalink to this heading">#</a></h3>
+<p>Plot the contour.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stress</span><span class="o">.</span><span class="n">plot_contour</span><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_04-transient-analysis_001.png" srcset="../../_images/sphx_glr_04-transient-analysis_001.png" alt="04 transient analysis" class = "sphx-glr-single-img"/></section>
-<section id="get-an-elastic-strain-result-and-plot-a-chart">
-<h2>Get an elastic_strain result and plot a chart<a class="headerlink" href="#get-an-elastic-strain-result-and-plot-a-chart" title="Permalink to this heading">#</a></h2>
-<p><strong>Get the result</strong></p>
+</section>
+<section id="get-elastic-strain-result">
+<h2>Get elastic strain result<a class="headerlink" href="#get-elastic-strain-result" title="Permalink to this heading">#</a></h2>
+<p>Get an elastic strain result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">elastic_strain_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">elastic_strain</span><span class="p">()</span>
 <span class="n">elastic_strain</span> <span class="o">=</span> <span class="n">elastic_strain_result</span><span class="o">.</span><span class="n">tensor</span>
 <span class="c1"># shell and solid elements are in distinct fields.</span>
@@ -544,9 +640,20 @@ Cumulative     Time (s)       LoadStep       Substep
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
-<p><strong>It is also possible to deal with plastic_strain and temperature this way.</strong>
-The result file must contain those results.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.510 seconds)</p>
+<p>If the result file contains results, you can use this method
+to get the elastic strain result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">elastic_strain</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Tensor object.
+
+Object properties:
+ - location   : Nodal
+
+Elastic strain object.
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.736 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-different-analysis-types-04-transient-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/a435e153b99ea303f01ab9d825262c2b/04-transient-analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">04-transient-analysis.py</span></code></a></p>

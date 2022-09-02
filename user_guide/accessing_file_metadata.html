@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Browsing Result Metadata &#8212; PyDPF-Post</title>
+    <title>Browse result metadata &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Accessing Results" href="accessing_results.html" />
-    <link rel="prev" title="Loading the Results File" href="post_processing.html" />
+    <link rel="next" title="Access results" href="accessing_results.html" />
+    <link rel="prev" title="Load the result file" href="post_processing.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -167,8 +170,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyDPF-Post</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Browsing Result Metadata</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Browse result metadata</a></li> 
       </ul>
     </div>
         </div>
@@ -188,30 +191,31 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="post_processing.html">
-   Loading the Results File
+   Load the result file
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Browsing Result Metadata
+   Browse result metadata
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="accessing_results.html">
-   Accessing Results
+   Access results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plotting.html">
-   Plotting
+   Plot results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="extending_to_core.html">
-   Using DPF-Core for More General Operators
+   Use DPF-Core operators
   </a>
  </li>
  <li class="toctree-l1">
@@ -221,6 +225,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -267,20 +272,19 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="browsing-result-metadata">
-<span id="user-guide-accessing-file-metadata"></span><h1>Browsing Result Metadata<a class="headerlink" href="#browsing-result-metadata" title="Permalink to this heading">#</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object is the entry point for browsing the contents
-of a result file (see <a class="reference internal" href="post_processing.html#user-guide-post-processing"><span class="std std-ref">Loading the Results File</span></a>). It provides
-access to important metadata such as the analysis type and listings of
-available results.</p>
-<p>This information is accessible as follows.</p>
+  <section id="browse-result-metadata">
+<span id="user-guide-accessing-file-metadata"></span><h1>Browse result metadata<a class="headerlink" href="#browse-result-metadata" title="Permalink to this heading">#</a></h1>
+<p>In addition to the <a class="reference internal" href="../api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution" title="ansys.dpf.post.dpf_solution.DpfSolution"><code class="xref py py-class docutils literal notranslate"><span class="pre">DpfSolution</span></code></a>
+object being the entry point for browsing the contents of a result file, it provides
+important metadata, such as the analysis type and the available results.</p>
+<p>Here is how you browse result metadata:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Instantiate</span> <span class="n">the</span> <span class="n">solution</span> <span class="nb">object</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
 
-<span class="n">Access</span> <span class="n">the</span> <span class="n">result</span> <span class="n">information</span>
+<span class="n">Browse</span> <span class="n">result</span> <span class="n">metadata</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">result_info</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">get_result_info</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result_info</span><span class="p">)</span>
@@ -302,23 +306,23 @@ available results.</p>
      <span class="o">-</span>  <span class="n">temperature</span>
 </pre></div>
 </div>
-<p>Four different analysis types are presently supported in DPF-Post:</p>
+<p>DPF-Post supports four different analysis types:</p>
 <ul class="simple">
-<li><p>static analysis</p></li>
-<li><p>modal analysis</p></li>
-<li><p>harmonic analysis</p></li>
-<li><p>transient analysis</p></li>
+<li><p>Static analysis</p></li>
+<li><p>Modal analysis</p></li>
+<li><p>Harmonic analysis</p></li>
+<li><p>Transient analysis</p></li>
 </ul>
 <section id="mesh">
 <h2>Mesh<a class="headerlink" href="#mesh" title="Permalink to this heading">#</a></h2>
-<p>The mesh can also be accessed from the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object.</p>
+<p>From the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object, you can also access the mesh:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Instantiate</span> <span class="n">the</span> <span class="n">solution</span> <span class="nb">object</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
 
-<span class="n">Get</span> <span class="n">the</span> <span class="n">mesh</span>
+<span class="n">Access</span> <span class="n">the</span> <span class="n">mesh</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mesh</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">mesh</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>

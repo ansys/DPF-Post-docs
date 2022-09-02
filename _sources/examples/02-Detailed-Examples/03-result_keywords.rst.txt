@@ -20,18 +20,21 @@
 
 .. _ref_result_keywords:
 
-ANSYS DPF-POST Use result keywords
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This tutorial shows how to get more precise result with keywords while
-calling a result from a solution object.
+Result keywords
+===============
+This example shows how to you can get more precise result with keywords while
+calling a ``Result`` object from a ``Solution`` object.
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-12
+.. GENERATED FROM PYTHON SOURCE LINES 11-14
 
-**Get started**
+Perform required imports
+------------------------
+Perform required imports.
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-15
+.. GENERATED FROM PYTHON SOURCE LINES 14-18
 
 .. code-block:: default
+
 
     from ansys.dpf import post
     from ansys.dpf.post import examples
@@ -43,11 +46,13 @@ calling a result from a solution object.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-17
+.. GENERATED FROM PYTHON SOURCE LINES 19-22
 
-**Get the solution object**
+Get ``Solution`` object
+-----------------------
+Get the ``Solution`` object.
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-20
+.. GENERATED FROM PYTHON SOURCE LINES 22-25
 
 .. code-block:: default
 
@@ -61,15 +66,19 @@ calling a result from a solution object.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-22
+.. GENERATED FROM PYTHON SOURCE LINES 26-29
 
-**Get the keyword list**
+Get keyword list
+~~~~~~~~~~~~~~~~
+Get the keyword list.
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-24
+.. GENERATED FROM PYTHON SOURCE LINES 29-33
 
 .. code-block:: default
 
+
     post.print_available_keywords()
+
 
 
 
@@ -97,20 +106,45 @@ calling a result from a solution object.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-26
+.. GENERATED FROM PYTHON SOURCE LINES 34-36
 
-**Use a scoping on result**
+Get ``Result`` objects
+----------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-42
+.. GENERATED FROM PYTHON SOURCE LINES 38-42
+
+Get displacement result using scoping
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the displacement ``Result`` object using scoping. The default location
+is nodal.
+
+.. GENERATED FROM PYTHON SOURCE LINES 42-48
 
 .. code-block:: default
 
 
-    # default location is nodal
     displacement_result = solution.displacement(
         location=post.locations.nodal, node_scoping=[1, 2, 3]
     )
     displacement = displacement_result.vector
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 49-52
+
+Get information on result
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Get information on the displacement result.
+
+.. GENERATED FROM PYTHON SOURCE LINES 52-62
+
+.. code-block:: default
+
 
     displacement.get_data_at_field(0)
 
@@ -149,11 +183,13 @@ calling a result from a solution object.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-44
+.. GENERATED FROM PYTHON SOURCE LINES 63-66
 
-**Use a named selection on result**
+Use named selection on result
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use a named selection on the displacement result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-52
+.. GENERATED FROM PYTHON SOURCE LINES 66-74
 
 .. code-block:: default
 
@@ -178,13 +214,16 @@ calling a result from a solution object.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-54
+.. GENERATED FROM PYTHON SOURCE LINES 75-78
 
-**Get a subresult**
+Get a subresult
+~~~~~~~~~~~~~~
+Get a subresult.
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-61
+.. GENERATED FROM PYTHON SOURCE LINES 78-86
 
 .. code-block:: default
+
 
     disp_x = displacement_result.x
 
@@ -202,17 +241,20 @@ calling a result from a solution object.
  .. code-block:: none
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f2d8b6373d0>
+    <ansys.dpf.post.result_data.ResultData object at 0x7fee0eec6370>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-63
+.. GENERATED FROM PYTHON SOURCE LINES 87-90
 
-**Filter on a time / time_scoping / a set**
+Filter result
+~~~~~~~~~~~~~
+Filter the result on a time, time scoping, and a set.
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-75
+.. GENERATED FROM PYTHON SOURCE LINES 90-103
 
 .. code-block:: default
+
 
     print(solution.time_freq_support)
 
@@ -240,22 +282,42 @@ calling a result from a solution object.
     1              1.000000       1              1               
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f2d8b6384c0>
+    <ansys.dpf.post.result_data.ResultData object at 0x7fee0eecda00>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-77
+.. GENERATED FROM PYTHON SOURCE LINES 104-107
 
-**Make a grouping**
+Make grouping
+~~~~~~~~~~~~~
+Make a grouping.
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-85
+.. GENERATED FROM PYTHON SOURCE LINES 107-111
 
 .. code-block:: default
+
 
     displacement_result = solution.displacement(grouping=post.grouping.by_el_shape)
     displacement_by_el_shape = displacement_result.vector
 
-    # filter only MAPDL elements of type solid 186
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 112-115
+
+Filter MAPDL elements
+~~~~~~~~~~~~~~~~~~~~~
+Filter for only MAPDL elements of type solid 186.
+
+.. GENERATED FROM PYTHON SOURCE LINES 115-120
+
+.. code-block:: default
+
+
     stress_result = solution.stress(mapdl_grouping=186)
     stress_on_solid_186 = stress_result.tensor
     stress_on_solid_186
@@ -269,17 +331,20 @@ calling a result from a solution object.
  .. code-block:: none
 
 
-    <ansys.dpf.post.result_data.ResultData object at 0x7f2d8b6616a0>
+    <ansys.dpf.post.result_data.ResultData object at 0x7fee0efa8be0>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-87
+.. GENERATED FROM PYTHON SOURCE LINES 121-124
 
-**Manipulate the result object and change its definition**
+Manipulate result and change its definition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manipulate the result and change its definition.
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-96
+.. GENERATED FROM PYTHON SOURCE LINES 124-134
 
 .. code-block:: default
+
 
     print(stress_on_ns_result)
     print(stress_on_ns_result.definition.location)
@@ -298,14 +363,14 @@ calling a result from a solution object.
 
  .. code-block:: none
 
-    Stress Tensor object. 
+    Stress Tensor object.
 
     Object properties:
      - location   : ElementalNodal
      - named_selection : SELECTION
 
     ElementalNodal
-    Stress Tensor object. 
+    Stress Tensor object.
 
     Object properties:
      - location   : Elemental
@@ -316,15 +381,17 @@ calling a result from a solution object.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-100
+.. GENERATED FROM PYTHON SOURCE LINES 135-139
 
-**Use the misc. results**
-Same keywords can be used here. For complex result, the keyword
-"phase" (float) can also be used.
+Use miscellaneous results
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Use miscellaneous results. You can use the same keywords here. For a complex
+result, you can also use the keyword ``phase``, which has a float value.
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-102
+.. GENERATED FROM PYTHON SOURCE LINES 139-142
 
 .. code-block:: default
+
 
     stress_ratio = solution.misc.elemental_stress_ratio(node_scoping=[1, 32], time=1.0)
     print(stress_ratio)
@@ -341,7 +408,7 @@ Same keywords can be used here. For complex result, the keyword
     This result has been computed using dpf.core.Operator objects, which
     have been chained together according to the following list:
     - ENL_SRAT: Result operator. Compute the desired result.
-    - to_elemental_fc: This operator will compute the elemental averaging of a fields container.
+    - to_elemental_fc: This operator computes the elemental averaging of a fields container.
 
 
 
@@ -350,7 +417,7 @@ Same keywords can be used here. For complex result, the keyword
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.087 seconds)
+   **Total running time of the script:** ( 0 minutes  0.093 seconds)
 
 
 .. _sphx_glr_download_examples_02-Detailed-Examples_03-result_keywords.py:

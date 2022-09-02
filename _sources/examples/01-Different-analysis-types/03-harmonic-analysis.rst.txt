@@ -20,19 +20,21 @@
 
 .. _ref_harmonic_analysis:
 
-ANSYS DPF-Post: Harmonic Analysis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This tutorial shows how post-process a harmonic analysis result file
-using API of the DPF-POST module.
+Harmonic analysis
+=================
+This example shows how you can postprocess a result file for an harmonic analysis
+using DPF-Post.
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-13
+.. GENERATED FROM PYTHON SOURCE LINES 11-14
 
-Get started
-~~~~~~~~~~~
+Perform required imports
+------------------------
+Perform required imports.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-16
+.. GENERATED FROM PYTHON SOURCE LINES 14-18
 
 .. code-block:: default
+
 
     from ansys.dpf import post
     from ansys.dpf.post import examples
@@ -44,18 +46,19 @@ Get started
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-23
+.. GENERATED FROM PYTHON SOURCE LINES 19-23
 
-Get the solution object
-~~~~~~~~~~~~~~~~~~~~~~~
-The following file is the result of a harmonic analysis computed
-using Ansys Mechanical.
+Get ``Solution`` object
+-----------------------
+Get the ``Solution`` object. This example loads a result file for an harmonic
+analysis computed in Ansys Mechanical.
 
-Here we load the solution
-
-.. GENERATED FROM PYTHON SOURCE LINES 23-26
+.. GENERATED FROM PYTHON SOURCE LINES 23-29
 
 .. code-block:: default
+
+
+    example_path = examples.download_all_kinds_of_complexity()
 
     solution = post.load_solution(examples.complex_rst)
     print(solution)
@@ -83,7 +86,7 @@ Here we load the solution
     ------------------------------
     Harmonic analysis
     Unit system: MKS: m, kg, N, s, V, A, degC
-    Physics Type: Mecanic
+    Physics Type: Mechanical
     Available results:
          -  displacement: Nodal Displacement
          -  reaction_force: Nodal Force   
@@ -120,24 +123,22 @@ Here we load the solution
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-29
+.. GENERATED FROM PYTHON SOURCE LINES 30-32
 
-Get result objects
-~~~~~~~~~~~~~~~~~~
+Get ``Result`` objects
+----------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-33
+.. GENERATED FROM PYTHON SOURCE LINES 34-38
 
-Get a displacement result
-=========================
+Get displacement result
+~~~~~~~~~~~~~~~~~~~~~~~
+Get the displacement ``Result`` object. It contains a field for real values
+and a field for imaginary values.
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-37
-
-**Get the result**: it will contain a field for real values and a
-field for imaginary values.
-
-.. GENERATED FROM PYTHON SOURCE LINES 37-40
+.. GENERATED FROM PYTHON SOURCE LINES 38-42
 
 .. code-block:: default
+
 
     disp_result = solution.displacement()
     disp = disp_result.vector
@@ -149,13 +150,16 @@ field for imaginary values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-42
+.. GENERATED FROM PYTHON SOURCE LINES 43-46
 
-**Check the number of fields**
+Check number of fields
+~~~~~~~~~~~~~~~~~~~~~~
+Check the number of fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-44
+.. GENERATED FROM PYTHON SOURCE LINES 46-49
 
 .. code-block:: default
+
 
     disp.num_fields
 
@@ -172,13 +176,16 @@ field for imaginary values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-46
+.. GENERATED FROM PYTHON SOURCE LINES 50-53
 
-**Get data from a field**
+Get data from field
+~~~~~~~~~~~~~~~~~~~
+Get data from a field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-48
+.. GENERATED FROM PYTHON SOURCE LINES 53-56
 
 .. code-block:: default
+
 
     disp.get_data_at_field(0)
 
@@ -201,13 +208,16 @@ field for imaginary values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-50
+.. GENERATED FROM PYTHON SOURCE LINES 57-60
 
-**Get maximum data value over all fields**
+Get maximum data value over all fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the maximum data value over all fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-52
+.. GENERATED FROM PYTHON SOURCE LINES 60-63
 
 .. code-block:: default
+
 
     disp.max_data
 
@@ -225,13 +235,16 @@ field for imaginary values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-54
+.. GENERATED FROM PYTHON SOURCE LINES 64-67
 
-**Get minimum data value over all fields**
+Get minimum data value over all fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the minimum data value over all fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-56
+.. GENERATED FROM PYTHON SOURCE LINES 67-70
 
 .. code-block:: default
+
 
     disp.min_data
 
@@ -244,18 +257,21 @@ field for imaginary values.
  .. code-block:: none
 
 
-    DPFArray([[ 4.64890682e-310, -2.76952549e-009,  0.00000000e+000],
+    DPFArray([[ 4.68160191e-310,  4.68159941e-310,  0.00000000e+000],
               [-6.53727285e-013, -6.53452004e-013, -1.66091913e-013]])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-58
+.. GENERATED FROM PYTHON SOURCE LINES 71-74
 
-**Get maximum data value over a targeted field**
+Get maximum data value over targeted field
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the maximum data value over a targeted field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-60
+.. GENERATED FROM PYTHON SOURCE LINES 74-77
 
 .. code-block:: default
+
 
     disp.get_max_data_at_field(0)
 
@@ -268,17 +284,20 @@ field for imaginary values.
  .. code-block:: none
 
 
-    DPFArray([0.00000000e+00, 2.76940199e-09, 4.10914311e-10])
+    DPFArray([4.68160191e-310, 2.76940199e-009, 4.10914311e-010])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-62
+.. GENERATED FROM PYTHON SOURCE LINES 78-81
 
-**Get minimum data value over all fields**
+Get minimum data value over all fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the minimum data value over all fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-64
+.. GENERATED FROM PYTHON SOURCE LINES 81-84
 
 .. code-block:: default
+
 
     disp.get_min_data_at_field(0)
 
@@ -291,22 +310,21 @@ field for imaginary values.
  .. code-block:: none
 
 
-    DPFArray([4.64890680e-310, 4.64890391e-310, 0.00000000e+000])
+    DPFArray([ 4.68160715e-310, -2.76952549e-009,  0.00000000e+000])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-67
+.. GENERATED FROM PYTHON SOURCE LINES 85-89
 
-Get a stress result and deals with amplitude
-============================================
+Get stress result
+-----------------
+Get a stress result that deals with amplitude. It contains a field for real
+values and a field for imaginary values.
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-70
-
-**Get the result**
-
-.. GENERATED FROM PYTHON SOURCE LINES 70-72
+.. GENERATED FROM PYTHON SOURCE LINES 89-92
 
 .. code-block:: default
+
 
     stress_result = solution.stress()
 
@@ -317,13 +335,16 @@ Get a stress result and deals with amplitude
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-74
+.. GENERATED FROM PYTHON SOURCE LINES 93-96
 
-**Check if the support has complex frequencies**
+Check if support has complex frequencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Check if the support has complex frequencies.
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-76
+.. GENERATED FROM PYTHON SOURCE LINES 96-99
 
 .. code-block:: default
+
 
     stress_result.has_complex_frequencies()
 
@@ -340,18 +361,26 @@ Get a stress result and deals with amplitude
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-78
+.. GENERATED FROM PYTHON SOURCE LINES 100-103
 
-**Get the tensor result**
+Get tensor result
+~~~~~~~~~~~~~~~~~
+Get the ``Result`` for a tensor.
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-84
+.. GENERATED FROM PYTHON SOURCE LINES 103-115
 
 .. code-block:: default
 
+
     stress = stress_result.tensor
-    # shell and solid elements are in distinct fields.
-    # so we have four fields : the solid-real one, the solid-imaginary one,
-    # the shell-real one and the shell_imaginary one.
+
+    # Check number of fields
+    # ~~~~~~~~~~~~~~~~~~~~~~
+    # Check the number of shell and solid elements in distinct fields. Shell and
+    # solid elements are in distinct fields. Thus, you have four fields: the
+    # solid-real one, the solid-imaginary one, the shell-real one, and the
+    # shell-imaginary one.
+
     stress.num_fields
 
 
@@ -367,13 +396,16 @@ Get a stress result and deals with amplitude
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-86
+.. GENERATED FROM PYTHON SOURCE LINES 116-119
 
-**Get the shell field**
+Get shell field
+~~~~~~~~~~~~~~~
+Get the shell field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-89
+.. GENERATED FROM PYTHON SOURCE LINES 119-123
 
 .. code-block:: default
+
 
     shell_field = stress[0]
     shell_field.shell_layers
@@ -391,13 +423,16 @@ Get a stress result and deals with amplitude
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-91
+.. GENERATED FROM PYTHON SOURCE LINES 124-127
 
-**Get the solid field field**
+Get solid field
+~~~~~~~~~~~~~~~~
+Get the solid field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-93
+.. GENERATED FROM PYTHON SOURCE LINES 127-130
 
 .. code-block:: default
+
 
     solid_field = stress[1]
 
@@ -408,13 +443,16 @@ Get a stress result and deals with amplitude
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-95
+.. GENERATED FROM PYTHON SOURCE LINES 131-134
 
-**Plot the amplitude contour**
+Plot amplitude contour
+~~~~~~~~~~~~~~~~~~~~~~
+Plot the amplitude contour.
 
-.. GENERATED FROM PYTHON SOURCE LINES 95-98
+.. GENERATED FROM PYTHON SOURCE LINES 134-138
 
 .. code-block:: default
+
 
     amplitude = stress_result.tensor_amplitude
     amplitude.plot_contour()
@@ -431,19 +469,17 @@ Get a stress result and deals with amplitude
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-101
+.. GENERATED FROM PYTHON SOURCE LINES 139-143
 
-Get an elastic_strain result and deals with phase
-=================================================
+Get elastic strain result
+=========================
+Get an elastic strain result that deals with phase. It contains a field for
+real values and a field for imaginary values.
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-105
-
-**Get the result**: it will contain a field for real values and a
-field for imaginary values.
-
-.. GENERATED FROM PYTHON SOURCE LINES 105-110
+.. GENERATED FROM PYTHON SOURCE LINES 143-149
 
 .. code-block:: default
+
 
     elastic_strain_result = solution.elastic_strain()
     elastic_strain = elastic_strain_result.tensor
@@ -463,13 +499,16 @@ field for imaginary values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-112
+.. GENERATED FROM PYTHON SOURCE LINES 150-153
 
-**Deal with phase**: phase unit is degree, phase must be a float.
+Define phase
+~~~~~~~~~~~~
+Define the phase. The phase must be a float value. The unit is degrees.
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-118
+.. GENERATED FROM PYTHON SOURCE LINES 153-160
 
 .. code-block:: default
+
 
     es_at_phase = elastic_strain_result.tensor_at_phase(39.0)
     es_at_phase.max_data
@@ -484,15 +523,41 @@ field for imaginary values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-121
+.. GENERATED FROM PYTHON SOURCE LINES 161-163
 
-**It is also possible to deal with plastic_strain and temperature this way.**
-The result file must contain those results.
+If the result file contains results, you can use this method
+to get the elastic strain result.
+
+.. GENERATED FROM PYTHON SOURCE LINES 163-165
+
+.. code-block:: default
+
+
+    print(solution.elastic_strain())
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Complex tensor object.
+
+    Tensor object.
+
+    Object properties:
+     - location   : Nodal
+
+    Complex elastic strain object.
+
+
+
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.704 seconds)
+   **Total running time of the script:** ( 0 minutes  0.888 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_03-harmonic-analysis.py:

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Plotting &#8212; PyDPF-Post</title>
+    <title>Plot results &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using DPF-Core for More General Operators" href="extending_to_core.html" />
-    <link rel="prev" title="Accessing Results" href="accessing_results.html" />
+    <link rel="next" title="Use DPF-Core operators" href="extending_to_core.html" />
+    <link rel="prev" title="Access results" href="accessing_results.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -167,8 +170,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyDPF-Post</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Plotting</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Plot results</a></li> 
       </ul>
     </div>
         </div>
@@ -188,30 +191,31 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="post_processing.html">
-   Loading the Results File
+   Load the result file
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="accessing_file_metadata.html">
-   Browsing Result Metadata
+   Browse result metadata
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="accessing_results.html">
-   Accessing Results
+   Access results
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Plotting
+   Plot results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="extending_to_core.html">
-   Using DPF-Core for More General Operators
+   Use DPF-Core operators
   </a>
  </li>
  <li class="toctree-l1">
@@ -221,6 +225,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -250,7 +255,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#normal-stresses">
-   Normal Stresses
+   Normal stresses
   </a>
  </li>
 </ul>
@@ -272,16 +277,22 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="plotting">
-<span id="user-guide-plotting"></span><h1>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">#</a></h1>
-<p>The DPF-Post package also provides functionality to conveniently plot
-your result.  It suffices to load the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object with the
-results file, request a <code class="docutils literal notranslate"><span class="pre">Result</span></code> object, and obtain the scalar field
-of interest.  The <code class="docutils literal notranslate"><span class="pre">plot_contour</span></code> method will be ready to render it.</p>
+  <section id="plot-results">
+<span id="user-guide-plotting"></span><h1>Plot results<a class="headerlink" href="#plot-results" title="Permalink to this heading">#</a></h1>
+<p>DPF-Post provides functionality for plotting results. Here is a summary of
+the steps:</p>
+<ol class="arabic simple">
+<li><p>Load the <a class="reference internal" href="../api/ansys.dpf.post.dpf_solution.html#ansys.dpf.post.dpf_solution.DpfSolution" title="ansys.dpf.post.dpf_solution.DpfSolution"><code class="xref py py-class docutils literal notranslate"><span class="pre">DpfSolution</span></code></a> object
+with the result file.</p></li>
+<li><p>Request a <a class="reference internal" href="../api/ansys.dpf.post.result_object.html#ansys.dpf.post.result_object.Result" title="ansys.dpf.post.result_object.Result"><code class="xref py py-class docutils literal notranslate"><span class="pre">Result</span></code></a> object and
+obtain the scalar field of interest.</p></li>
+<li><p>Use the <a class="reference internal" href="../api/ansys.dpf.post.result_data.html#ansys.dpf.post.result_data.ResultData.plot_contour" title="ansys.dpf.post.result_data.ResultData.plot_contour"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot_contour</span></code></a>
+method to render it.</p></li>
+</ol>
+<p>Subsequent sections provide some plotting examples.</p>
 <section id="total-deformation">
 <h2>Total deformation<a class="headerlink" href="#total-deformation" title="Permalink to this heading">#</a></h2>
-<p>Use the following code to <strong>plot the total deformation</strong>
-(norm of the displacement vector field):</p>
+<p>You can plot the total deformation (norm of the displacement vector field) with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Instantiate</span> <span class="n">the</span> <span class="n">solution</span> <span class="nb">object</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
@@ -300,8 +311,8 @@ of interest.  The <code class="docutils literal notranslate"><span class="pre">p
 </div>
 </section>
 <section id="normal-stresses">
-<h2>Normal Stresses<a class="headerlink" href="#normal-stresses" title="Permalink to this heading">#</a></h2>
-<p>Use the following code to <strong>plot the normal x-component of stress</strong>:</p>
+<h2>Normal stresses<a class="headerlink" href="#normal-stresses" title="Permalink to this heading">#</a></h2>
+<p>You can plot the normal x-component of stress with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Instantiate</span> <span class="n">the</span> <span class="n">solution</span> <span class="nb">object</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>

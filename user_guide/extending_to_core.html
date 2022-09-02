@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Using DPF-Core for More General Operators &#8212; PyDPF-Post</title>
+    <title>Use DPF-Core operators &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
-    <link rel="prev" title="Plotting" href="plotting.html" />
+    <link rel="prev" title="Plot results" href="plotting.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -167,8 +170,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyDPF-Post</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Using DPF-Core for More General Operators</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Use DPF-Core operators</a></li> 
       </ul>
     </div>
         </div>
@@ -188,30 +191,31 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="post_processing.html">
-   Loading the Results File
+   Load the result file
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="accessing_file_metadata.html">
-   Browsing Result Metadata
+   Browse result metadata
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="accessing_results.html">
-   Accessing Results
+   Access results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plotting.html">
-   Plotting
+   Plot results
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Using DPF-Core for More General Operators
+   Use DPF-Core operators
   </a>
  </li>
  <li class="toctree-l1">
@@ -221,6 +225,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -244,13 +249,13 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#export-vtk">
-   Export VTK
+  <a class="reference internal nav-link" href="#export-to-vtk-file">
+   Export to VTK file
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#export-hdf5">
-   Export HDF5
+  <a class="reference internal nav-link" href="#export-to-hdf5-file">
+   Export to HDF5 file
   </a>
  </li>
 </ul>
@@ -272,78 +277,99 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="using-dpf-core-for-more-general-operators">
-<span id="user-guide-extending-to-core"></span><h1>Using DPF-Core for More General Operators<a class="headerlink" href="#using-dpf-core-for-more-general-operators" title="Permalink to this heading">#</a></h1>
-<p>The DPF-Post package provides a Python interface to DPF (Data
-Processing Framework) that is streamlined for post-processing. It also
-works hand-in-hand with the wider DPF-Core package that is especially
-suited for representing more general data transformations with the use
-of powerful, scalable operators.</p>
-<p>DPF-Core is equipped to access data from Ansys solver result files as
-well as third-party formats. Various <strong>operators</strong> are available to
-facilitate data manipulation and transformation. DPF-Core allows
-arbitrarily complex workflows to be assembled from simpler building
-blocks, by chaining together operators. The data in DPF is represented
-by physics-agnostic mathematical quantities described in a
-self-sufficient entity called a <strong>field</strong>.</p>
-<p>Because DPF-Post is based on DPF-Core, it is helpful to see their
-interplay to appreciate their range of capabilities, as done in the
-following examples.</p>
-<section id="export-vtk">
-<h2>Export VTK<a class="headerlink" href="#export-vtk" title="Permalink to this heading">#</a></h2>
-<p>The following code shows how to proceed to <strong>export a fields container
-in VTK format</strong>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># instantiate the solution object</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># instantiate a result object</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># this is a displacement result</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">displacement</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># this is the result data (data container)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">norm</span> <span class="o">=</span> <span class="n">displacement</span><span class="o">.</span><span class="n">norm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># the result fields_container is extracted from the result data</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fields_container</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">result_fields_container</span>
+  <section id="use-dpf-core-operators">
+<span id="user-guide-extending-to-core"></span><h1>Use DPF-Core operators<a class="headerlink" href="#use-dpf-core-operators" title="Permalink to this heading">#</a></h1>
+<p>DPF-Post is based on DPF-Core, but it is streamlined for postprocessing.
+Because DPF-Post works hand-in-hand with DPF-Core, you can use the powerful,
+scalable  <a class="reference external" href="https://dpfdocs.pyansys.com/operator_reference.html">operators</a>
+in DPF-Core to facilitate data manipulation and more general data transformations.</p>
+<p>DPF-Core can access data from Ansys solver result files as well as from
+third-party file formats. With DPF-Core, you can assemble complex workflows
+from simpler building blocks by chaining them together with operators.
+The data in DPF is represented by physics-agnostic mathematical quantities
+described in a self-sufficient entity called a <code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code>.</p>
+<p>To show the range of DPF-Core and DPF-Post capabilities, the following
+examples show they work together.</p>
+<section id="export-to-vtk-file">
+<h2>Export to VTK file<a class="headerlink" href="#export-to-vtk-file" title="Permalink to this heading">#</a></h2>
+<p>This code shows how to export a fields container to a VTK file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Instantiate the solution object.</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now the Core API need to be imported</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">core</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># a dedicated operator need to be instantiated</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">vtk_operator</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">Operator</span><span class="p">(</span><span class="s2">&quot;vtk_export&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># connections must be set</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">vtk_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">vtk_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">file_path</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;vtk_example.vtk&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">vtk_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">fields1</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">fields_container</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># the operator need to be run</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">vtk_operator</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
+
+<span class="n">Instantiate</span> <span class="n">a</span> <span class="n">result</span> <span class="nb">object</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">displacement</span> <span class="n">result</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">displacement</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
+
+<span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">result</span> <span class="n">data</span> <span class="p">(</span><span class="n">data</span> <span class="n">container</span><span class="p">)</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">displacement</span><span class="o">.</span><span class="n">norm</span>
+
+<span class="n">Extract</span> <span class="n">the</span> <span class="n">fields_container</span> <span class="n">result</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">result</span> <span class="n">data</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">fields_container</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">result_fields_container</span>
+
+<span class="n">Import</span> <span class="n">the</span> <span class="n">DFP</span><span class="o">-</span><span class="n">Core</span> <span class="n">API</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">core</span>
+
+<span class="c1"># Instantiate a dedicated operator</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">vtk_operator</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">Operator</span><span class="p">(</span><span class="s2">&quot;vtk_export&quot;</span><span class="p">)</span>
+
+<span class="n">Set</span> <span class="n">connections</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">vtk_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">vtk_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">file_path</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;vtk_example.vtk&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">vtk_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">fields1</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">fields_container</span><span class="p">)</span>
+
+<span class="n">Run</span> <span class="n">the</span> <span class="n">operator</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">vtk_operator</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
-<section id="export-hdf5">
-<h2>Export HDF5<a class="headerlink" href="#export-hdf5" title="Permalink to this heading">#</a></h2>
-<p>The following code shows how to proceed to <strong>export a fields container
-in HDF5 format</strong>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># instantiate the solution object</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># instantiate a result object</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># this is a displacement result</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">displacement</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># this is the result data (data container)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">norm</span> <span class="o">=</span> <span class="n">displacement</span><span class="o">.</span><span class="n">norm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># the result fields_container is extracted from the result data</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fields_container</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">result_fields_container</span>
+<section id="export-to-hdf5-file">
+<h2>Export to HDF5 file<a class="headerlink" href="#export-to-hdf5-file" title="Permalink to this heading">#</a></h2>
+<p>This code shows how to export the same fields container
+to an HDF5 file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Instantiate</span> <span class="n">the</span> <span class="n">solution</span> <span class="nb">object</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now the Core API need to be imported</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">core</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># a dedicated operator need to be instantiated</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h5_operator</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">Operator</span><span class="p">(</span><span class="s2">&quot;serialize_to_hdf5&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># connections must be set</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h5_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h5_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">file_path</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;hdf5_example.h5&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h5_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">fields_container</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># the operator need to be evaluated</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">h5_operator</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
+
+<span class="n">Instantiate</span> <span class="n">a</span> <span class="n">result</span> <span class="nb">object</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">displacement</span> <span class="n">result</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">displacement</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
+
+<span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">result</span> <span class="n">data</span> <span class="p">(</span><span class="n">data</span> <span class="n">container</span><span class="p">)</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">displacement</span><span class="o">.</span><span class="n">norm</span>
+
+<span class="n">Extract</span> <span class="n">the</span> <span class="n">fields_container</span> <span class="n">result</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">result</span> <span class="n">data</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">fields_container</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">result_fields_container</span>
+
+<span class="n">Import</span> <span class="n">the</span> <span class="n">DPF</span><span class="o">-</span><span class="n">Core</span> <span class="n">API</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">core</span>
+
+<span class="n">Initialize</span> <span class="n">a</span> <span class="n">dedicated</span> <span class="n">operator</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">h5_operator</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">Operator</span><span class="p">(</span><span class="s2">&quot;serialize_to_hdf5&quot;</span><span class="p">)</span>
+
+<span class="n">Set</span> <span class="n">the</span> <span class="n">connection</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">h5_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">h5_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">file_path</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;hdf5_example.h5&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">h5_operator</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">fields_container</span><span class="p">)</span>
+
+<span class="n">Evaluate</span> <span class="n">the</span> <span class="n">operator</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">h5_operator</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>

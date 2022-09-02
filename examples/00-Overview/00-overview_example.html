@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>ANSYS DPF Overview of the POST API &#8212; PyDPF-Post</title>
+    <title>DPF-Post overview &#8212; PyDPF-Post</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -26,6 +26,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -43,10 +44,12 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="DPF-Post Analysis Types" href="../01-Different-analysis-types/index.html" />
-    <link rel="prev" title="DPF-Post Overview" href="index.html" />
+    <link rel="next" title="DPF-Post analysis types" href="../01-Different-analysis-types/index.html" />
+    <link rel="prev" title="DPF-Post overview" href="index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -93,19 +96,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api/index.html">
-  DPF-Post API
+  API reference
  </a>
 </li>
 
@@ -117,7 +120,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../contributing.html">
-  Contributing
+  Contribute
  </a>
 </li>
 
@@ -140,7 +143,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/DPF-Post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/pyansys/pydpf-post" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -168,8 +171,8 @@
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> » </li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post Overview</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">ANSYS DPF Overview of the POST API</a></li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">DPF-Post overview</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">DPF-Post overview</a></li> 
       </ul>
     </div>
         </div>
@@ -189,10 +192,11 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   DPF-Post Overview
+   DPF-Post overview
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -202,14 +206,14 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     ANSYS DPF Overview of the POST API
+     DPF-Post overview
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01-Different-analysis-types/index.html">
-   DPF-Post Analysis Types
+   DPF-Post analysis types
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -219,29 +223,29 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/01-static-analysis.html">
-     Static Analysis
+     Static analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/02-modal-analysis.html">
-     ANSYS DPF-Post: Modal Analysis
+     Modal analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/03-harmonic-analysis.html">
-     ANSYS DPF-Post: Harmonic Analysis
+     Harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01-Different-analysis-types/04-transient-analysis.html">
-     ANSYS DPF-Post: Transient Anaysis
+     Transient analysis
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02-Detailed-Examples/index.html">
-   DPF-Post Detailed Examples
+   DPF-Post feature examples
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -251,33 +255,34 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/01-introduction.html">
-     ANSYS DPF Introduction to POST API
+     Introduction
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/02-basics.html">
-     ANSYS DPF Basic Features of the POST API
+     Basic features
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/03-result_keywords.html">
-     ANSYS DPF-POST Use result keywords
+     Result keywords
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/04-complex_results.html">
-     Compute Complex Results from Modal or Harmonic Analyses
+     Complex results from a modal or harmonic analysis
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02-Detailed-Examples/05-result_on_path_of_coordinates.html">
-     ANSYS DPF-Post request results on specific path
+     Request result on a specific path
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
+    
   </div>
 </nav>
   </div>
@@ -301,23 +306,35 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#start-ansys-post-module">
-   Start ansys.post module
+  <a class="reference internal nav-link" href="#perform-required-imports">
+   Perform required imports
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare-a-solution-object">
-   Prepare a solution object
+  <a class="reference internal nav-link" href="#get-solution-object">
+   Get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Solution
+    </span>
+   </code>
+   object
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#get-the-mesh-and-the-time-freq-support">
-   Get the mesh and the time_freq_support
+  <a class="reference internal nav-link" href="#get-mesh-and-time-frequency-support">
+   Get mesh and time frequency support
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#get-a-result-object-from-the-solution-object">
-   Get a result object from the solution object
+  <a class="reference internal nav-link" href="#get-result-object">
+   Get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Result
+    </span>
+   </code>
+   object
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -326,8 +343,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#display-a-result">
-   Display a result
+  <a class="reference internal nav-link" href="#plot-result">
+   Plot result
   </a>
  </li>
 </ul>
@@ -354,49 +371,47 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-overview-00-overview-example-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<section class="sphx-glr-example-title" id="ansys-dpf-overview-of-the-post-api">
-<span id="ref-overview-example"></span><span id="sphx-glr-examples-00-overview-00-overview-example-py"></span><h1>ANSYS DPF Overview of the POST API<a class="headerlink" href="#ansys-dpf-overview-of-the-post-api" title="Permalink to this heading">#</a></h1>
-<p>This tutorial shows quickly how to use the DPF-POST API.  For more
-details, you can read the detailed tutorials in the examples gallery.</p>
-<section id="start-ansys-post-module">
-<h2>Start ansys.post module<a class="headerlink" href="#start-ansys-post-module" title="Permalink to this heading">#</a></h2>
-<p>Here we load the post module.</p>
+<section class="sphx-glr-example-title" id="dpf-post-overview">
+<span id="ref-overview-example"></span><span id="sphx-glr-examples-00-overview-00-overview-example-py"></span><h1>DPF-Post overview<a class="headerlink" href="#dpf-post-overview" title="Permalink to this heading">#</a></h1>
+<p>This example provides an overview of how you use DPF-Post.</p>
+<section id="perform-required-imports">
+<h2>Perform required imports<a class="headerlink" href="#perform-required-imports" title="Permalink to this heading">#</a></h2>
+<p>Perform required imports. # This example uses a supplied file that you can
+get by importing the DPF <code class="docutils literal notranslate"><span class="pre">examples</span></code> package.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 </section>
-<section id="prepare-a-solution-object">
-<h2>Prepare a solution object<a class="headerlink" href="#prepare-a-solution-object" title="Permalink to this heading">#</a></h2>
-<p>We will first get the solution object that allows to access the
-result.  It must be instantiated with the result filepath like
-<code class="docutils literal notranslate"><span class="pre">&quot;C:/Users/user/my_result.rst&quot;</span></code> or on Linux <code class="docutils literal notranslate"><span class="pre">&quot;/home/user/my_result.rst&quot;</span></code></p>
-<p>In this example, we use a built-in example included with this
-module, which you can get by importing the examples module from
-<code class="docutils literal notranslate"><span class="pre">ansys.dpf.post</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
-
-<span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
+<section id="get-solution-object">
+<h2>Get <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object<a class="headerlink" href="#get-solution-object" title="Permalink to this heading">#</a></h2>
+<p>Get the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object that allows access to the result. The <code class="docutils literal notranslate"><span class="pre">Solution</span></code>
+object must be instantiated with the path for the result file. For example,
+<code class="docutils literal notranslate"><span class="pre">&quot;C:/Users/user/my_result.rst&quot;</span></code> on Windows or <code class="docutils literal notranslate"><span class="pre">&quot;/home/user/my_result.rst&quot;</span></code>
+on Linux.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span></a><span class="p">)</span>
 </pre></div>
 </div>
 </section>
-<section id="get-the-mesh-and-the-time-freq-support">
-<h2>Get the mesh and the time_freq_support<a class="headerlink" href="#get-the-mesh-and-the-time-freq-support" title="Permalink to this heading">#</a></h2>
-<p>The mesh is the support of the model.
-The time freq support is the time/frequence representation of the model.</p>
+<section id="get-mesh-and-time-frequency-support">
+<h2>Get mesh and time frequency support<a class="headerlink" href="#get-mesh-and-time-frequency-support" title="Permalink to this heading">#</a></h2>
+<p>Get the mesh and time frequency support. The mesh is the support of the model.
+The time frequency support is the time/frequency representation of the model.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">mesh</span>
 <span class="n">time_freq_support</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">time_freq_support</span>
 </pre></div>
 </div>
 </section>
-<section id="get-a-result-object-from-the-solution-object">
-<h2>Get a result object from the solution object<a class="headerlink" href="#get-a-result-object-from-the-solution-object" title="Permalink to this heading">#</a></h2>
-<p>The result can be: stress, plastic_strain, elastic_strain, temperature,
-displacement).</p>
+<section id="get-result-object">
+<h2>Get <code class="docutils literal notranslate"><span class="pre">Result</span></code> object<a class="headerlink" href="#get-result-object" title="Permalink to this heading">#</a></h2>
+<p>Get a <code class="docutils literal notranslate"><span class="pre">Result</span></code> object from the <code class="docutils literal notranslate"><span class="pre">Solution</span></code> object. The <code class="docutils literal notranslate"><span class="pre">Result</span></code> object
+can be a stress, plastic strain, elastic strain, temperature, or displacement.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">post</span><span class="o">.</span><span class="n">print_available_keywords</span><span class="p">()</span>
-<span class="n">stress</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">nodal</span><span class="p">,</span> <span class="n">time_scoping</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">stress</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">nodal</span></a><span class="p">,</span> <span class="n">time_scoping</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
-<span class="c1"># both the location and time_scoping are available in the definition of</span>
-<span class="c1"># the stress result</span>
+<span class="c1"># Both location and ``time_scoping`` are available in the definition of</span>
+<span class="c1"># the stress result.</span>
+
 <span class="n">stress</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">location</span>
 <span class="n">stress</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">time_scoping</span>
 
@@ -427,9 +442,9 @@ Object properties:
 </section>
 <section id="compute-data">
 <h2>Compute data<a class="headerlink" href="#compute-data" title="Permalink to this heading">#</a></h2>
-<p>Here is shown how to get a subresult such as SX, the stress tensor
-in the XX direction.</p>
+<p>Compute data.</p>
 <p><strong>SX subresult</strong></p>
+<p>This code gets the subresult <code class="docutils literal notranslate"><span class="pre">SX</span></code>, which is the stress tensor in the XX direction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sx</span> <span class="o">=</span> <span class="n">stress</span><span class="o">.</span><span class="n">xx</span>
 <span class="n">sx</span><span class="o">.</span><span class="n">num_fields</span>
 <span class="n">sx_field</span> <span class="o">=</span> <span class="n">sx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -453,31 +468,31 @@ Maximum Stress Field:
 
 
 Maximum data at stress field: [1.e-323 4.e-323]
-Maximum SX at Field 0: 4.64890578701365e-310
+Maximum SX at Field 0: 4.68160136596826e-310
 </pre></div>
 </div>
-<p><strong>Stress tensor result</strong>
-Here we get the minimum and maximum stresses at a field for all
-directions, including ‘XX’, ‘XY, ‘XZ’, ‘XY’, ‘YZ’, and ‘XZ’.</p>
+<p><strong>Stress tensor result</strong></p>
+<p>This code gets the minimum and maximum stresses at a field for all
+directions (<code class="docutils literal notranslate"><span class="pre">XX</span></code>, <code class="docutils literal notranslate"><span class="pre">XY</span></code>, <code class="docutils literal notranslate"><span class="pre">XZ</span></code>, <code class="docutils literal notranslate"><span class="pre">XY</span></code>, <code class="docutils literal notranslate"><span class="pre">YZ</span></code>, and <code class="docutils literal notranslate"><span class="pre">XZ</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">stress</span><span class="o">.</span><span class="n">tensor</span>
 <span class="n">s_field</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">s_data</span> <span class="o">=</span> <span class="n">sx</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Length of the data:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_data</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum Stress Field:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum stress field:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum data at stress field:&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">max_data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum Stress Tensors at Field 0:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">get_max_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum stress tensors at field 0:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">get_max_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum Stress Field:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum stress field:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum data at stress field:&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">min_data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum Stress Tensors at Field 0:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">get_min_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum stress tensors at field 0:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">get_min_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Length of the data: 6854
 
-Maximum Stress Field:
+Maximum stress field:
  DPF stress_1.s Field
   Location: Nodal
   Unit: Pa
@@ -485,14 +500,14 @@ Maximum Stress Field:
   Data:6 components and 2 elementary data
 
 
-Maximum data at stress field: [[4.64890579e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+Maximum data at stress field: [[4.68160185e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
   1.10325826e+011 1.85580244e+011]
  [1.53671424e+013 4.21781549e+008 3.78202198e+012 2.07950475e+011
   1.57995981e+011 1.09972131e+012]]
-Maximum Stress Tensors at Field 0:
- [4.64890577e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
+Maximum stress tensors at field 0:
+ [4.68160147e-310 8.74460905e+011 4.95394439e+011 6.01889079e+011
  1.10325826e+011 1.85580244e+011]
-Minimum Stress Field:
+Minimum stress field:
  DPF stress_1.s Field
   Location: Nodal
   Unit: Pa
@@ -500,23 +515,23 @@ Minimum Stress Field:
   Data:6 components and 2 elementary data
 
 
-Minimum data at stress field: [[ 4.64890577e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+Minimum data at stress field: [[ 4.68160166e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
   -2.42143056e+011 -3.09138563e+011]
  [-1.49601458e+013 -2.63695614e+008 -3.77945626e+012 -3.35432675e+011
   -1.57190152e+011 -9.66123233e+011]]
-Minimum Stress Tensors at Field 0:
- [ 4.64890576e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
+Minimum stress tensors at field 0:
+ [ 4.68160144e-310 -7.35604867e+011 -2.41200931e+011 -2.98145939e+011
  -2.42143056e+011 -3.09138563e+011]
 </pre></div>
 </div>
 </section>
-<section id="display-a-result">
-<h2>Display a result<a class="headerlink" href="#display-a-result" title="Permalink to this heading">#</a></h2>
-<p>Use &lt;subresult&gt;.plot_contour() to plot a result.</p>
+<section id="plot-result">
+<h2>Plot result<a class="headerlink" href="#plot-result" title="Permalink to this heading">#</a></h2>
+<p>Plot a result by using the <code class="docutils literal notranslate"><span class="pre">plot_contour()</span></code> method.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">plot_contour</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_00-overview_example_001.png" srcset="../../_images/sphx_glr_00-overview_example_001.png" alt="00 overview example" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.362 seconds)</p>
+<img src="../../_images/sphx_glr_00-overview_example_001.png" srcset="../../_images/sphx_glr_00-overview_example_001.png" alt="00 overview example" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.580 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-overview-00-overview-example-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/718efad33463bc65efac681b69f168d0/00-overview_example.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">00-overview_example.py</span></code></a></p>

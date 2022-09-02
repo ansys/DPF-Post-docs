@@ -20,19 +20,21 @@
 
 .. _ref_static_analysis:
 
-Static Analysis
-~~~~~~~~~~~~~~~
-This tutorial shows how post-process a static analysis result file
-using API of the POST module.
+Static analysis
+===============
+This example shows how you can postprocess a result file for a static analysis
+using DPF-Post.
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-13
+.. GENERATED FROM PYTHON SOURCE LINES 11-14
 
-Get started
-~~~~~~~~~~~
+Perform required imports
+------------------------
+Perform required imports.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-16
+.. GENERATED FROM PYTHON SOURCE LINES 14-18
 
 .. code-block:: default
+
 
     from ansys.dpf import post
     from ansys.dpf.post import examples
@@ -44,21 +46,20 @@ Get started
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-23
+.. GENERATED FROM PYTHON SOURCE LINES 19-23
 
-Get the solution object
-~~~~~~~~~~~~~~~~~~~~~~~
-The following file is the result of a static analysis computed using
-Ansys Mechanical.
+Get ``Solution`` object
+-----------------------
+Get the ``Solution`` object. This example loads a result file for a static analysis
+computed in Ansys Mechanical.
 
-Here we load the solution
-
-.. GENERATED FROM PYTHON SOURCE LINES 23-28
+.. GENERATED FROM PYTHON SOURCE LINES 23-29
 
 .. code-block:: default
 
 
     example_path = examples.download_all_kinds_of_complexity()
+
     solution = post.load_solution(example_path)
     print(solution)
 
@@ -85,7 +86,7 @@ Here we load the solution
     ------------------------------
     Static analysis
     Unit system: MKS: m, kg, N, s, V, A, degC
-    Physics Type: Mecanic
+    Physics Type: Mechanical
     Available results:
          -  displacement: Nodal Displacement
          -  reaction_force: Nodal Force   
@@ -119,23 +120,21 @@ Here we load the solution
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-31
+.. GENERATED FROM PYTHON SOURCE LINES 30-32
 
-Get result objects
-~~~~~~~~~~~~~~~~~~
+Get ``Result`` objects
+----------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-35
+.. GENERATED FROM PYTHON SOURCE LINES 34-37
 
-Get a displacement result
-=========================
+Get displacement result
+~~~~~~~~~~~~~~~~~~~~~~~
+Get the displacement ``Result`` object.
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
-
-**Get the result**
-
-.. GENERATED FROM PYTHON SOURCE LINES 38-42
+.. GENERATED FROM PYTHON SOURCE LINES 37-42
 
 .. code-block:: default
+
 
     disp_result = solution.displacement()
     disp = disp_result.vector
@@ -159,13 +158,16 @@ Get a displacement result
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-44
+.. GENERATED FROM PYTHON SOURCE LINES 43-46
 
-**Check the number of fields**
+Check number of fields
+~~~~~~~~~~~~~~~~~~~~~~
+Check the number of fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-46
+.. GENERATED FROM PYTHON SOURCE LINES 46-49
 
 .. code-block:: default
+
 
     disp.num_fields
 
@@ -182,13 +184,16 @@ Get a displacement result
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-48
+.. GENERATED FROM PYTHON SOURCE LINES 50-53
 
-**Get data from a field**
+Get data from field
+~~~~~~~~~~~~~~~~~~~
+Get data from a field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-50
+.. GENERATED FROM PYTHON SOURCE LINES 53-56
 
 .. code-block:: default
+
 
     disp.get_data_at_field(0)
 
@@ -211,13 +216,16 @@ Get a displacement result
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-52
+.. GENERATED FROM PYTHON SOURCE LINES 57-60
 
-**Get maximum data value over all fields**
+Get maximum data value over all fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the maximum data value over all fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-54
+.. GENERATED FROM PYTHON SOURCE LINES 60-63
 
 .. code-block:: default
+
 
     disp.max_data
 
@@ -230,17 +238,20 @@ Get a displacement result
  .. code-block:: none
 
 
-    DPFArray([[4.64890537e-310, 1.04659292e+001, 3.73620870e+005]])
+    DPFArray([[4.68160286e-310, 1.04659292e+001, 3.73620870e+005]])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-56
+.. GENERATED FROM PYTHON SOURCE LINES 64-67
 
-**Get minimum data value over all fields**
+Get minimum data value over all fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the minimum data value over all fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-58
+.. GENERATED FROM PYTHON SOURCE LINES 67-70
 
 .. code-block:: default
+
 
     disp.min_data
 
@@ -253,17 +264,20 @@ Get a displacement result
  .. code-block:: none
 
 
-    DPFArray([[ 4.64890537e-310, -1.04473039e+001, -2.94677257e-004]])
+    DPFArray([[ 4.68160249e-310, -1.04473039e+001, -2.94677257e-004]])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-60
+.. GENERATED FROM PYTHON SOURCE LINES 71-74
 
-**Get maximum data value over a targeted field**
+Get maximum data value over targeted field
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the maximum data value over a targeted field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-62
+.. GENERATED FROM PYTHON SOURCE LINES 74-77
 
 .. code-block:: default
+
 
     disp.get_max_data_at_field(0)
 
@@ -276,17 +290,20 @@ Get a displacement result
  .. code-block:: none
 
 
-    DPFArray([4.64890702e-310, 1.04659292e+001, 3.73620870e+005])
+    DPFArray([4.68160144e-310, 1.04659292e+001, 3.73620870e+005])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-64
+.. GENERATED FROM PYTHON SOURCE LINES 78-81
 
-**Get minimum data value over all fields**
+Get minimum data value over all fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get the minimum data value over all fields.
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-66
+.. GENERATED FROM PYTHON SOURCE LINES 81-84
 
 .. code-block:: default
+
 
     disp.get_min_data_at_field(0)
 
@@ -299,26 +316,42 @@ Get a displacement result
  .. code-block:: none
 
 
-    DPFArray([ 4.64890697e-310, -1.04473039e+001, -2.94677257e-004])
+    DPFArray([ 4.68160254e-310, -1.04473039e+001, -2.94677257e-004])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-69
+.. GENERATED FROM PYTHON SOURCE LINES 85-88
 
-Get a stress result
-===================
+Get stress result
+-----------------
+Get the stress ``Result`` object for a tensor.
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-72
-
-**Get the result**
-
-.. GENERATED FROM PYTHON SOURCE LINES 72-77
+.. GENERATED FROM PYTHON SOURCE LINES 88-92
 
 .. code-block:: default
 
+
     stress_result = solution.stress()
     stress = stress_result.tensor
-    # shell and solid elements are in distinct fields.
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 93-96
+
+Check number of fields
+~~~~~~~~~~~~~~~~~~~~~~
+Check the number of shell and solid elements in distinct fields.
+
+.. GENERATED FROM PYTHON SOURCE LINES 96-99
+
+.. code-block:: default
+
+
     stress.num_fields
 
 
@@ -334,13 +367,16 @@ Get a stress result
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-79
+.. GENERATED FROM PYTHON SOURCE LINES 100-103
 
-**Get the shell field**
+Get shell field
+~~~~~~~~~~~~~~~
+Get the shell field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-82
+.. GENERATED FROM PYTHON SOURCE LINES 103-107
 
 .. code-block:: default
+
 
     shell_field = stress[0]
     shell_field.shell_layers
@@ -354,17 +390,20 @@ Get a stress result
  .. code-block:: none
 
 
-    <shell_layers.topbottommid: 4>
+    <shell_layers.nonelayer: 5>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-84
+.. GENERATED FROM PYTHON SOURCE LINES 108-111
 
-**Get the solid field field**
+Get solid field
+~~~~~~~~~~~~~~~
+Get the solid field.
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-86
+.. GENERATED FROM PYTHON SOURCE LINES 111-114
 
 .. code-block:: default
+
 
     solid_field = stress[1]
 
@@ -375,13 +414,16 @@ Get a stress result
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-88
+.. GENERATED FROM PYTHON SOURCE LINES 115-118
 
-**Plot the contour**
+Plot contour
+~~~~~~~~~~~~
+Plot the contour.
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-90
+.. GENERATED FROM PYTHON SOURCE LINES 118-121
 
 .. code-block:: default
+
 
     stress.plot_contour()
 
@@ -397,22 +439,37 @@ Get a stress result
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-93
+.. GENERATED FROM PYTHON SOURCE LINES 122-125
 
-Get an elastic_strain result
-============================
+Get elastic strain result
+-------------------------
+Get an elastic strain result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 95-96
-
-**Get the result**
-
-.. GENERATED FROM PYTHON SOURCE LINES 96-101
+.. GENERATED FROM PYTHON SOURCE LINES 125-129
 
 .. code-block:: default
 
+
     elastic_strain_result = solution.elastic_strain()
     elastic_strain = elastic_strain_result.tensor
-    # shell and solid elements are in distinct fields.
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 130-133
+
+Check number of fields
+~~~~~~~~~~~~~~~~~~~~~~
+Check the number of shell and solid elements in distinct fields.
+
+.. GENERATED FROM PYTHON SOURCE LINES 133-135
+
+.. code-block:: default
+
     elastic_strain.num_fields
 
 
@@ -428,16 +485,15 @@ Get an elastic_strain result
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 102-106
+.. GENERATED FROM PYTHON SOURCE LINES 136-138
 
-**It is also possible to deal with plastic_strain and temperature this way.**
-The result file must contain those results.
+If the result file contains results, you can use this method
+to get the elastic strain result.
 
-Here is the plastic strain result
-
-.. GENERATED FROM PYTHON SOURCE LINES 106-108
+.. GENERATED FROM PYTHON SOURCE LINES 138-141
 
 .. code-block:: default
+
 
     print(solution.plastic_strain())
 
@@ -449,23 +505,24 @@ Here is the plastic strain result
 
  .. code-block:: none
 
-    Tensor object. 
+    Tensor object.
 
     Object properties:
      - location   : Nodal
 
-    This is a plastic strain object.
+    Plastic strain object.
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-110
+.. GENERATED FROM PYTHON SOURCE LINES 142-143
 
-and the temperature result
+You can also use this method to get the temperature result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-111
+.. GENERATED FROM PYTHON SOURCE LINES 143-145
 
 .. code-block:: default
+
 
     print(solution.structural_temperature())
 
@@ -476,12 +533,12 @@ and the temperature result
 
  .. code-block:: none
 
-    Scalar object. 
+    Scalar object.
 
     Object properties:
      - location   : Nodal
 
-    This is a temperature object.
+    Structural temperature object.
 
 
 
@@ -489,7 +546,7 @@ and the temperature result
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.354 seconds)
+   **Total running time of the script:** ( 0 minutes  1.633 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_01-static-analysis.py:
