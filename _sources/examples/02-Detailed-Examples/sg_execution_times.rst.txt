@@ -5,16 +5,16 @@
 
 Computation times
 =================
-**00:01.723** total execution time for **examples_02-Detailed-Examples** files:
+**00:01.345** total execution time for **examples_02-Detailed-Examples** files:
 
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_02-Detailed-Examples_05-result_on_path_of_coordinates.py` (``05-result_on_path_of_coordinates.py``) | 00:01.307 | 0.0 MB |
+| :ref:`sphx_glr_examples_02-Detailed-Examples_05-result_on_path_of_coordinates.py` (``05-result_on_path_of_coordinates.py``) | 00:01.047 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_02-Detailed-Examples_02-basics.py` (``02-basics.py``)                                               | 00:00.241 | 0.0 MB |
+| :ref:`sphx_glr_examples_02-Detailed-Examples_02-basics.py` (``02-basics.py``)                                               | 00:00.171 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_02-Detailed-Examples_03-result_keywords.py` (``03-result_keywords.py``)                             | 00:00.114 | 0.0 MB |
+| :ref:`sphx_glr_examples_02-Detailed-Examples_03-result_keywords.py` (``03-result_keywords.py``)                             | 00:00.083 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_02-Detailed-Examples_04-complex_results.py` (``04-complex_results.py``)                             | 00:00.041 | 0.0 MB |
+| :ref:`sphx_glr_examples_02-Detailed-Examples_04-complex_results.py` (``04-complex_results.py``)                             | 00:00.028 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_examples_02-Detailed-Examples_01-introduction.py` (``01-introduction.py``)                                   | 00:00.020 | 0.0 MB |
+| :ref:`sphx_glr_examples_02-Detailed-Examples_01-introduction.py` (``01-introduction.py``)                                   | 00:00.015 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+

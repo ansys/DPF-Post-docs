@@ -238,7 +238,7 @@ Get the maximum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([[4.66805468e-310, 1.04659292e+001, 3.73620870e+005]])
+    DPFArray([[4.67558725e-310, 1.04659292e+001, 3.73620870e+005]])
 
 
 
@@ -264,7 +264,7 @@ Get the minimum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([[ 4.66805462e-310, -1.04473039e+001, -2.94677257e-004]])
+    DPFArray([[ 4.67558636e-310, -1.04473039e+001, -2.94677257e-004]])
 
 
 
@@ -290,7 +290,7 @@ Get the maximum data value over a targeted field.
  .. code-block:: none
 
 
-    DPFArray([4.66805555e-310, 1.04659292e+001, 3.73620870e+005])
+    DPFArray([4.67558668e-310, 1.04659292e+001, 3.73620870e+005])
 
 
 
@@ -316,7 +316,7 @@ Get the minimum data value over all fields.
  .. code-block:: none
 
 
-    DPFArray([ 4.66805587e-310, -1.04473039e+001, -2.94677257e-004])
+    DPFArray([ 4.67558672e-310, -1.04473039e+001, -2.94677257e-004])
 
 
 
@@ -546,7 +546,7 @@ You can also use this method to get the temperature result.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.046 seconds)
+   **Total running time of the script:** ( 0 minutes  1.456 seconds)
 
 
 .. _sphx_glr_download_examples_01-Different-analysis-types_01-static-analysis.py:
